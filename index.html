@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <title>Hello, world!</title>
+
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <meta name="description" content="" />
+
+  <link rel="stylesheet" href="index.css"/>
+
+</head>
+<img src="Images/CharacterSheet.webp">
+
+<body>
+<form class="personalInfo">
+<input type="text" id="nameOfPC">
+<input type="text" id="align">
+<input type="text" id="player">
+<input type="text" id="characterLevel">
+<input type="text" id="deity">
+<input type="text" id="home">
+<input type="text" id="race">
+<input type="text" id="gender">
+
+
+
+<button id="submit" onclick="getName()"></button>
+</form>
+
+
+
+  <script>
+    function getName() {
+
+      var name = {};
+      name.name = document.getElementById("nameOfPC").value;
+      console.log(JSON.stringify(name));
+
+    }
+  </script>
+</body>
+
+</html>

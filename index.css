@@ -1,0 +1,61 @@
+body{
+
+background-color: black;
+
+}
+
+img{
+
+    width:60%;
+    height:auto;
+    position:absolute;
+    left:20%;
+
+}
+.personalInfo{
+
+    position: absolute;
+    left:43.8%;
+    top:5%;
+    width: 32%;
+
+}
+input{
+
+    font-size: 1vw;
+    width:35%;   
+    margin-bottom:2%;
+
+
+}
+/* 30 is the magic number*/
+#nameOfPC{
+
+    width:13vw;
+
+}
+#align{
+
+    width:2vw;
+
+}
+#player{
+
+    width:15vw;
+    
+}
+#characterLevel{
+
+    width:15vw;
+    
+}
+#deity{
+
+    width:5vw;
+    
+}
+#home{
+
+    width:10vw;
+    
+}
