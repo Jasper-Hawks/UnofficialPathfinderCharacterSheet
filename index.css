@@ -12,7 +12,25 @@ img{
     left:20%;
 
 }
-.personalInfo{
+h6{
+
+    margin: 0px;
+    font-size:.7vw;
+    margin-top:3px;
+
+}
+hr{
+
+    margin:0px;
+
+}
+div{
+
+    display:inline-block;
+    margin-right:10px;
+
+}
+.personalInfo{ /* Make this container scale down when on mobile devices*/
 
     position: absolute;
     left:43.8%;
@@ -23,39 +41,55 @@ img{
 input{
 
     font-size: 1vw;
-    width:35%;   
-    margin-bottom:2%;
-
+    width:100%;   
+    background-color: transparent;
+    border-color: transparent;
 
 }
-/* 30 is the magic number*/
-#nameOfPC{
+/* 29 is the magic number DO A CODE REVIEW AFTER THIS SECTION*/
+.nameOfPCC{
 
     width:13vw;
 
 }
-#align{
+.alignC{
 
-    width:2vw;
+    width:3.5vw;
 
 }
-#player{
+
+.playerC{
+
+    width:13vw;
+    
+}
+.characterLevelC{
 
     width:15vw;
     
 }
-#characterLevel{
-
-    width:15vw;
-    
-}
-#deity{
+.deityC{
 
     width:5vw;
     
 }
-#home{
+.homeC{
 
-    width:10vw;
+    width:9vw;
     
+}
+.raceC{
+
+    width: 8vw;
+
+}
+.genderC{
+
+    width:4vw
+
+}
+.sizeC{
+
+    width:4vw
+
 }
