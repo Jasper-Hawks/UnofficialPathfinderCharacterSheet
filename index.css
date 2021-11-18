@@ -1,16 +1,24 @@
 body{
 
-background-color: black;
+    background-color: white;
 
 }
+.sheet{
 
-img{
-
-    width:60%;
-    height:auto;
     position:absolute;
+    width:60%;
     left:20%;
+    top:0%;
+    
+}
+.logo{
 
+    position: relative;
+    left:20%;
+    padding-top: 1%;
+    width:26vw;
+    height: auto;
+     
 }
 h6{
 
@@ -32,21 +40,25 @@ div{
 }
 .personalInfo{ /* Make this container scale down when on mobile devices*/
 
-    position: absolute;
-    left:43.8%;
-    top:5%;
-    width: 32%;
+    position: relative;
+    left:20%;
+    padding-top:1%;
+    width: 32vw;
+    display:inline-block;
+    /* height:auto; */
 
 }
 input{
 
     font-size: 1vw;
-    width:100%;   
+    width:100%;
+    margin:0px;
     background-color: transparent;
     border-color: transparent;
 
 }
 /* 29 is the magic number DO A CODE REVIEW AFTER THIS SECTION*/
+
 .nameOfPCC{
 
     width:13vw;
@@ -85,11 +97,32 @@ input{
 }
 .genderC{
 
-    width:4vw
+    width:4vw;
 
 }
 .sizeC{
 
-    width:4vw
+    width:4vw;
+
+}
+.weightC{
+
+    width: 6vw;
+
+}
+.heightC{
+
+    width: 6vw;
+
+}
+
+/* ATTRIBUTES CONTAINER*/
+.attributes{
+
+    position:absolute;
+    top:45%;
+    left:23%;
+    width: 20%;
+    display:inline-block;
 
 }
