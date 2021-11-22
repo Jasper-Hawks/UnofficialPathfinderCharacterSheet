@@ -9,6 +9,7 @@ body{
     width:60%;
     left:20%;
     top:0%;
+    /* display:none; */
     
 }
 .logo{
@@ -20,17 +21,30 @@ body{
     height: auto;
      
 }
-h6{
+h5{
 
     margin: 0px;
     font-size:.7vw;
     margin-top:3px;
+    display:inline-block;
+    text-align: center;
 
+}
+h6{
+
+    font-size: .6vw;
+    display:inline-block;
+    text-align:center;
+    margin-top:5px;
+    width:50px;
+    margin-right: 1px;
+    margin-bottom: 10px;
+    /* margin-left: 10px; */ 
+    
 }
 hr{
 
     margin:0px;
-
 }
 div{
 
@@ -119,10 +133,42 @@ input{
 /* ATTRIBUTES CONTAINER*/
 .attributes{
 
-    position:absolute;
+    position:relative;
     top:45%;
-    left:23%;
-    width: 20%;
+    left:22.5%;
+    width: 15%;
+    /* display:inline-block; */
+
+}
+.attributeTC{
+
+    width:100%;
+    
+    
+}
+.atttributeC{
+
+    width:100%;
+    
+}
+.boxT{
+
+    background-color: black;
+    color:white;
+    text-align: center;
+    font-size: .6vw;
+    padding-top: 10px;
+    font-weight: bold;
+    width:2.5vw;
+    height:30px;
+    margin-right:2px;
     display:inline-block;
+
+} /* TODO eventually maek all of the input fields align with the titles*/
+.attributeInputFields{
+
+    width:12%;
+    margin-left: 8px;
+    border-color: black;
 
 }
