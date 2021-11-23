@@ -9,7 +9,7 @@ body{
     width:60%;
     left:20%;
     top:0%;
-    /* display:none; */
+    display:none;
     
 }
 .logo{
@@ -171,4 +171,16 @@ input{
     margin-left: 8px;
     border-color: black;
 
+}
+/*hpInit */
+.hpInit{
+
+    position:absolute;
+    left: 5%;
+    top:250%;
+    background-color: black;
+    height:200px;
+    width:15%;
+    /* display:inline-block; */
+    
 }
