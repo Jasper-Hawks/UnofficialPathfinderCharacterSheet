@@ -1,21 +1,24 @@
 body{
 
     background-color: white;
+    width:60%;
+    position: absolute;
+    left:20%;
 
 }
 .sheet{
 
     position:absolute;
-    width:60%;
-    left:20%;
+    width:100%;
     top:0%;
     display:none;
+    z-index: -1;
     
 }
 .logo{
 
     position: relative;
-    left:20%;
+    /* left:20%; */
     padding-top: 1%;
     width:26vw;
     height: auto;
@@ -55,7 +58,6 @@ div{
 .personalInfo{ /* Make this container scale down when on mobile devices*/
 
     position: relative;
-    left:20%;
     padding-top:1%;
     width: 32vw;
     display:inline-block;
@@ -133,11 +135,11 @@ input{
 /* ATTRIBUTES CONTAINER*/
 .attributes{
 
-    position:relative;
-    top:45%;
-    left:22.5%;
-    width: 15%;
-    /* display:inline-block; */
+    /* position:relative; */
+    /* top:85%; */
+    /* left:22.5%; */
+    width: 25%;
+    display:inline-block;
 
 }
 .attributeTC{
@@ -159,7 +161,7 @@ input{
     font-size: .6vw;
     padding-top: 10px;
     font-weight: bold;
-    width:2.5vw;
+    width:3vw;
     height:30px;
     margin-right:2px;
     display:inline-block;
@@ -174,13 +176,64 @@ input{
 }
 /*hpInit */
 .hpInit{
+  
+    width:25%;
+    display:inline-block;
+    height: 280px;
+    position:relative;
+    top:-90%;
+    
+}
+.hpInitInputFields{
 
-    position:absolute;
-    left: 5%;
-    top:250%;
+    width: 35%;
+    border-color: black;
+    
+}
+.hpInitInputFieldsLarge{
+
+    width:96%;
+    margin-top: 5%;
+    border-color: black;
+    
+}
+.boxTWide{
+
     background-color: black;
-    height:200px;
-    width:15%;
-    /* display:inline-block; */
+    color:white;
+    text-align: center;
+    font-size: .6vw;
+    padding-top: 10px;
+    font-weight: bold;
+    width:4vw;
+    height:30px;
+    margin-right:2px;
+    display:inline-block;
+    
+}
+.hpInitInputFieldsSmall{
+
+    width: 16%;
+    margin-top:10%;
+    border-color:black;
+
+}
+/* Find a way to make multiline input fields */
+#nonLethal{
+
+    padding-bottom: 20px;
+    
+}
+#hpCurrent{
+
+    padding-bottom: 50px;
+    
+}
+.speed{
+
+    background-color: red;
+    height:100px;
+    width:35%;
+    display:inline-block;
     
 }
