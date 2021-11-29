@@ -150,12 +150,20 @@
   <input type="text" id="initDexMod" class="hpInitInputFieldsSmall"> +
   <input type="text" id="initMiscMod" class="hpInitInputFieldsSmall">
 </form>
-<form class="speed">
-  <div class="boxT">Fart</div>
+<form class="speedSkills">
+  <div class="boxT">SPEED <br>Land</div>
+  <input type="text" id="baseSpeed" class="speedSkillsInputFields">
+  <input type="text" id="armorSpeed" class="speedSkillsInputFields">
+  <input type="text" id="tempSpeedMod" class="speedSkillsInputFieldsTall">
+  <input type="text" id="flySpeed" class="speedSkillsInputFields">
+  <input type="text" id="swimSpeed" class="speedSkillsInputFieldsSmall">
+  <input type="text" id="climbSpeed" class="speedSkillsInputFieldsSmall">
+  <input type="text" id="burrowSpeed" class="speedSkillsInputFieldsSmall">
+  <div class="boxTLong">SKILLS</div>
 </form>
 
   <script>
-    function getName() {
+    function getName() {3
 
       var name = {};
       name.name = document.getElementById("nameOfPC").value;

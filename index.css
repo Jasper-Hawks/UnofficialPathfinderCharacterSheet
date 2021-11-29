@@ -229,11 +229,47 @@ input{
     padding-bottom: 50px;
     
 }
-.speed{
+.speedSkills{
 
     background-color: red;
-    height:100px;
-    width:35%;
+    height:auto;
+    width:45%;
     display:inline-block;
     
+}
+.speedSkillsInputFields{
+
+    width: 25%;
+    border-color:black;
+    margin-bottom: 10px;
+
+}
+.speedSkillsInputFieldsTall{
+/* Make this box taller */
+    width:25%;
+    border-color:black;
+    height:40px;
+    display:inline;
+
+
+}
+.speedSkillsInputFieldsSmall{
+
+    width:11%;
+    border-color:black;
+
+}
+.boxTLong{
+
+    background-color: black;
+    color:white;
+    text-align: center;
+    font-size: 1vw;
+    padding-top: 20px;
+    font-weight: bold;
+    width:100%;
+    height:30px;
+    margin-right:2px;
+    display:inline-block;
+
 }
