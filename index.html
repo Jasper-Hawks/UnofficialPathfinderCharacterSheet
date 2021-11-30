@@ -152,14 +152,142 @@
 </form>
 <form class="speedSkills">
   <div class="boxT">SPEED <br>Land</div>
-  <input type="text" id="baseSpeed" class="speedSkillsInputFields">
-  <input type="text" id="armorSpeed" class="speedSkillsInputFields">
-  <input type="text" id="tempSpeedMod" class="speedSkillsInputFieldsTall">
-  <input type="text" id="flySpeed" class="speedSkillsInputFields">
-  <input type="text" id="swimSpeed" class="speedSkillsInputFieldsSmall">
-  <input type="text" id="climbSpeed" class="speedSkillsInputFieldsSmall">
-  <input type="text" id="burrowSpeed" class="speedSkillsInputFieldsSmall">
+  <input type="text" id="baseSpeed" class="speedInputFields">
+  <input type="text" id="armorSpeed" class="speedInputFields">
+  <input type="text" id="tempSpeedMod" class="speedInputFieldsTall">
+  <input type="text" id="flySpeed" class="speedInputFields">
+  <input type="text" id="swimSpeed" class="speedInputFieldsSmall">
+  <input type="text" id="climbSpeed" class="speedInputFieldsSmall">
+  <input type="text" id="burrowSpeed" class="speedInputFieldsSmall">
+
   <div class="boxTLong">SKILLS</div>
+  <h5 class="skillsTLong">Skill Names</h5>
+  <h5 class="skillsTTot">Total <br> Bonus</h5>
+  <h5 class="skillsT">Ability <br> Mod</h5>
+  <h5 class="skillsT">Ranks</h5>
+  <h5 class="skillsT">Misc <br> Mod</h5>
+
+  <input type="checkbox" id="acroProf" class="skillsRadio">
+  <h5 class="skillsDetailedT">Acrobatics</h5>
+  <input type="text" id="acroBonus" class="skillsInputFields">
+  <h5 class="skillsEqualsT">= Dex</h5>
+  <input type="text" id="acroAbilMod" class="skillsInputFields">
+  <h5> + </h5>
+  <input type="text" id="acroRankMod" class="skillsInputFields">
+  <h5> + </h5>
+  <input type="text" id="acroMiscMod" class="skillsInputFieldsMisc">
+
+  <input type="checkbox" id="apprProf" class="skillsRadio">
+  <h5 class="skillsDetailedT">Appraise</h5>
+  <input type="text" id="apprBonus" class="skillsInputFields">
+  <h5 class="skillsEqualsT">= Int</h5>
+  <input type="text" id="apprAbilMod" class="skillsInputFields">
+  <h5> + </h5>
+  <input type="text" id="apprRankMod" class="skillsInputFields">
+  <h5> + </h5>
+  <input type="text" id="apprMiscMod" class="skillsInputFieldsMisc">
+
+  <input type="checkbox" id="bluProf" class="skillsRadio">
+  <h5 class="skillsDetailedT">Bluff</h5>
+  <input type="text" id="bluBonus" class="skillsInputFields">
+  <h5 class="skillsEqualsT">= Cha</h5>
+  <input type="text" id="bluAbilMod" class="skillsInputFields">
+  <h5> + </h5>
+  <input type="text" id="bluRankMod" class="skillsInputFields">
+  <h5> + </h5>
+  <input type="text" id="bluMiscMod" class="skillsInputFieldsMisc">
+
+  <input type="checkbox" id="cliProf" class="skillsRadio">
+  <h5 class="skillsDetailedT">Climb</h5>
+  <input type="text" id="cliBonus" class="skillsInputFields">
+  <h5 class="skillsEqualsT">= Str</h5>
+  <input type="text" id="cliAbilMod" class="skillsInputFields">
+  <h5> + </h5>
+  <input type="text" id="cliRankMod" class="skillsInputFields">
+  <h5> + </h5>
+  <input type="text" id="cliMiscMod" class="skillsInputFieldsMisc">
+
+  <input type="checkbox" id="cra1Prof" class="skillsRadio">
+  <h5 class="skillsDetailedT">Craft</h5>
+  <input type="text" id="cra1Bonus" class="skillsInputFields">
+  <h5 class="skillsEqualsT">= Int</h5>
+  <input type="text" id="cra1AbilMod" class="skillsInputFields">
+  <h5> + </h5>
+  <input type="text" id="cra1RankMod" class="skillsInputFields">
+  <h5> + </h5>
+  <input type="text" id="cra1MiscMod" class="skillsInputFieldsMisc">
+
+  <input type="checkbox" id="cra2Prof" class="skillsRadio">
+  <h5 class="skillsDetailedT">Craft</h5>
+  <input type="text" id="cra2Bonus" class="skillsInputFields">
+  <h5 class="skillsEqualsT">= Int</h5>
+  <input type="text" id="cra2AbilMod" class="skillsInputFields">
+  <h5> + </h5>
+  <input type="text" id="cra2RankMod" class="skillsInputFields">
+  <h5> + </h5>
+  <input type="text" id="cra2MiscMod" class="skillsInputFieldsMisc">
+
+  <input type="checkbox" id="cra3Prof" class="skillsRadio">
+  <h5 class="skillsDetailedT">Craft</h5>
+  <input type="text" id="cra3Bonus" class="skillsInputFields">
+  <h5 class="skillsEqualsT">= Int</h5>
+  <input type="text" id="cra3AbilMod" class="skillsInputFields">
+  <h5> + </h5>
+  <input type="text" id="cra3RankMod" class="skillsInputFields">
+  <h5> + </h5>
+  <input type="text" id="cra3MiscMod" class="skillsInputFieldsMisc">
+
+  <input type="checkbox" id="dipProf" class="skillsRadio">
+  <h5 class="skillsDetailedT">Diplomacy</h5>
+  <input type="text" id="dipBonus" class="skillsInputFields">
+  <h5 class="skillsEqualsT">= Cha</h5>
+  <input type="text" id="dipAbilMod" class="skillsInputFields">
+  <h5> + </h5>
+  <input type="text" id="dipRankMod" class="skillsInputFields">
+  <h5> + </h5>
+  <input type="text" id="dipMiscMod" class="skillsInputFieldsMisc">
+
+  <input type="checkbox" id="disProf" class="skillsRadio">
+  <h5 class="skillsDetailedT">Disable Device</h5>
+  <input type="text" id="disBonus" class="skillsInputFields">
+  <h5 class="skillsEqualsT">= Dex</h5>
+  <input type="text" id="disAbilMod" class="skillsInputFields">
+  <h5> + </h5>
+  <input type="text" id="disRankMod" class="skillsInputFields">
+  <h5> + </h5>
+  <input type="text" id="disMiscMod" class="skillsInputFieldsMisc">
+
+  <input type="checkbox" id="disgProf" class="skillsRadio">
+  <h5 class="skillsDetailedT">Disguise</h5>
+  <input type="text" id="disgBonus" class="skillsInputFields">
+  <h5 class="skillsEqualsT">= Cha</h5>
+  <input type="text" id="disgAbilMod" class="skillsInputFields">
+  <h5> + </h5>
+  <input type="text" id="disgRankMod" class="skillsInputFields">
+  <h5> + </h5>
+  <input type="text" id="disgMiscMod" class="skillsInputFieldsMisc">
+
+  <input type="checkbox" id="escProf" class="skillsRadio">
+  <h5 class="skillsDetailedT">Escape Artist</h5>
+  <input type="text" id="escBonus" class="skillsInputFields">
+  <h5 class="skillsEqualsT">= Dex</h5>
+  <input type="text" id="escAbilMod" class="skillsInputFields">
+  <h5> + </h5>
+  <input type="text" id="escRankMod" class="skillsInputFields">
+  <h5> + </h5>
+  <input type="text" id="escMiscMod" class="skillsInputFieldsMisc">
+
+  <input type="checkbox" id="flyProf" class="skillsRadio">
+  <h5 class="skillsDetailedT">Fly</h5>
+  <input type="text" id="flyBonus" class="skillsInputFields">
+  <h5 class="skillsEqualsT">= Dex</h5>
+  <input type="text" id="flyAbilMod" class="skillsInputFields">
+  <h5> + </h5>
+  <input type="text" id="flyRankMod" class="skillsInputFields">
+  <h5> + </h5>
+  <input type="text" id="flyMiscMod" class="skillsInputFieldsMisc">
+
+  <input>
 </form>
 
   <script>

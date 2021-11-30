@@ -231,29 +231,29 @@ input{
 }
 .speedSkills{
 
-    background-color: red;
-    height:auto;
     width:45%;
+    vertical-align: top;
     display:inline-block;
-    
 }
-.speedSkillsInputFields{
+.speedInputFields{
 
     width: 25%;
     border-color:black;
     margin-bottom: 10px;
-
+    vertical-align:top;
+    display:inline-block;
 }
-.speedSkillsInputFieldsTall{
+.speedInputFieldsTall{
 /* Make this box taller */
+    vertical-align: top;
     width:25%;
     border-color:black;
-    height:40px;
-    display:inline;
+    height:80px;
+    display:inline-block;
 
 
 }
-.speedSkillsInputFieldsSmall{
+.speedInputFieldsSmall{
 
     width:11%;
     border-color:black;
@@ -271,5 +271,56 @@ input{
     height:30px;
     margin-right:2px;
     display:inline-block;
+
+}
+.skillsT{
+
+    margin-left: 4%;
+
+}
+.skillsTTot{
+
+    margin-right:10%;
+    margin-left: 3%;
+
+}
+.skillsTLong{
+
+    margin-right: 30%;
+    padding-bottom: 10px;
+
+}
+.skillsRadio{
+
+    display:inline-block;
+    width:auto;
+    height:auto;
+
+}
+.skillsDetailedT{
+
+    display:inline-block;
+    width:41.5%;
+    text-align:left;
+
+}
+.skillsInputFields{
+
+    width: 7%;
+    border-color:black;
+    display:inline;
+
+}
+.skillsInputFieldsMisc{
+
+    width: 6%;
+    border-color:black;
+
+}
+.skillsEqualsT{
+
+    width: 12.5%;
+    text-align:left;
+    font-size:.8vw;
 
 }
