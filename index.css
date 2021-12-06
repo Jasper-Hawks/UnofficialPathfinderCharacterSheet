@@ -131,14 +131,18 @@ input{
     width: 6vw;
 
 }
+.leftColumn{
 
+    width: 50%;
+
+}
 /* ATTRIBUTES CONTAINER*/
 .attributes{
 
     /* position:relative; */
     /* top:85%; */
     /* left:22.5%; */
-    width: 25%;
+    width:  50%;
     display:inline-block;
 
 }
@@ -177,16 +181,18 @@ input{
 /*hpInit */
 .hpInit{
   
-    width:25%;
+    width:49%;
     display:inline-block;
     height: 280px;
-    position:relative;
-    top:-90%;
+    vertical-align: top;
+    /* position:relative;
+    top:-90%; */
     
 }
 .hpInitInputFields{
 
-    width: 35%;
+    width: 33%;
+    height: 12%;
     border-color: black;
     
 }
@@ -328,5 +334,23 @@ input{
 
     vertical-align:bottom;
     width: 25%;
+
+}
+.armorClass{
+
+    padding-top: 10px;
+    width: 100%;
+
+}
+.armorClassInputFields{
+
+    width: 6.2%;
+    border-color: black;
+
+}
+.armorClassInputFieldsLong{
+
+    width: 50%;
+    border-color: black;
 
 }
