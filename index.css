@@ -354,3 +354,30 @@ input{
     border-color: black;
 
 }
+.savesTLong{
+
+    width: 40%;
+
+}
+.savesBoxTWide{
+
+    width: 41%;
+    background-color: black;
+    text-align: center;
+    color:white;
+
+    padding-top: 10px;
+    font-weight: bold;
+    height:30px;
+    margin-right:3px;
+    display:inline-block;
+
+    
+}
+.savesInputFields{
+
+    width: 5.3%;
+    display:inline-block;
+    border-color:black;
+    
+}
