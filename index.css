@@ -209,6 +209,7 @@ input{
     color:white;
     text-align: center;
     font-size: .6vw;
+    margin-top: 5px;
     padding-top: 10px;
     font-weight: bold;
     width:4vw;
@@ -365,7 +366,6 @@ input{
     background-color: black;
     text-align: center;
     color:white;
-
     padding-top: 10px;
     font-weight: bold;
     height:30px;
@@ -380,4 +380,41 @@ input{
     display:inline-block;
     border-color:black;
     
+}
+.combatBaseBox{
+
+
+    width: 50%;
+    margin-top: 10px;
+    background-color: black;
+    text-align: center;
+    color:white;
+    padding-top: 10px;
+    font-weight: bold;
+    height:30px;
+    margin-right:3px;
+    display:inline-block;
+
+}
+.combatInputFieldsWide{
+
+    width: 14%;
+    display:inline-block;
+    border-color:black;
+
+}
+.combatInputFields{
+
+    width: 8%;
+    display:inline-block;
+    margin-top:10px;
+    border-color:black;
+
+}
+.combatInputFieldsLong{
+
+    width: 34%;
+    display:inline-block;
+    border-color:black;
+
 }
