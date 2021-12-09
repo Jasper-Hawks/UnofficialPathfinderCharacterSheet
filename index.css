@@ -282,51 +282,54 @@ input{
 }
 .skillsT{
 
-    margin-left: 4%;
+    margin-left: 1vw;
 
 }
 .skillsTTot{
 
-    margin-right:10%;
-    margin-left: 3%;
+    margin-right:3vw;
+    /* margin-left: 3%; */
 
 }
 .skillsTLong{
 
-    margin-right: 30%;
+    width: 12vw;
+    text-align: left;
     padding-bottom: 10px;
 
 }
 .skillsRadio{
 
     display:inline-block;
-    width:auto;
-    height:auto;
+    width:.7vw;
+    height:.7vw;
 
 }
 .skillsDetailedT{
 
     display:inline-block;
-    width:41.5%;
+    width:11vw;
     text-align:left;
 
 }
 .skillsInputFields{
 
-    width: 7%;
+    width: 2vw;
+    height:auto;
     border-color:black;
     display:inline;
+    /* margin-left:.4vw; */
 
 }
 .skillsInputFieldsMisc{
 
-    width: 6%;
+    width: 1.4vw;
     border-color:black;
 
 }
 .skillsEqualsT{
 
-    width: 12.5%;
+    width: 2.3vw;
     text-align:left;
     font-size:.8vw;
 
