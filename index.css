@@ -242,9 +242,14 @@ input{
     vertical-align: top;
     display:inline-block;
 }
+.speedCont{
+
+    width: 70%;
+
+}
 .speedInputFields{
 
-    width: 25%;
+    width: 35%;
     border-color:black;
     margin-bottom: 10px;
     vertical-align:top;
@@ -262,7 +267,7 @@ input{
 }
 .speedInputFieldsSmall{
 
-    width:11%;
+    width:15.2%;
     border-color:black;
 
 }
@@ -282,12 +287,21 @@ input{
 }
 .skillsT{
 
-    margin-left: 1vw;
+    /* margin: 0px; */
+    font-size:.7vw;
+    margin-top:3px;
+    margin-left: 5px;
+    display:inline-block;
+    text-align: center;
+    /* margin-left: 1vw; */
+    width: 2vw;
+    display:inline-block;
+    /* font-size: .7vw; */
 
 }
 .skillsTTot{
 
-    margin-right:3vw;
+    margin-right:2.8vw;
     /* margin-left: 3%; */
 
 }
@@ -323,7 +337,7 @@ input{
 }
 .skillsInputFieldsMisc{
 
-    width: 1.4vw;
+    width: 1.7vw;
     border-color:black;
 
 }
