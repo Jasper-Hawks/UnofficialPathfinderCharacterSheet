@@ -39,7 +39,8 @@ h6{
     display:inline-block;
     text-align:center;
     margin-top:5px;
-    width:50px;
+    margin-left:.34vw;
+    width:auto;
     /* margin-right: .2vw; */
     margin-bottom: 10px;
     /* margin-left: 10px; */ 
@@ -142,13 +143,13 @@ input{
     /* position:relative; */
     /* top:85%; */
     /* left:22.5%; */
-    width:  50%;
+    width:  49%;
     display:inline-block;
 
 }
 .attributeTC{
 
-    width:15vw;
+    width:100%;
     
     
 }
@@ -174,7 +175,7 @@ input{
 .attributeInputFields{
 
     width:12%;
-    margin-left: 8px;
+    margin-left: .3vw;
     border-color: black;
 
 }
@@ -435,4 +436,56 @@ input{
     display:inline-block;
     border-color:black;
 
+}
+
+@media screen and (max-width: 1375px){
+
+    .speedSkills{
+
+        width:45%;
+        vertical-align: top;
+        display:inline-block;
+    }
+    .leftColumn{
+
+        width: 45%;
+    
+    }
+    body{
+
+        background-color: white;
+        width:100%;
+        position: absolute;
+        left:0%;
+    
+    }
+    .personalInfo{ /* Make this container scale down when on mobile devices*/
+
+        position: relative;
+        padding-top:1%;
+        width: 40%;
+        display:inline-block;
+        /* height:auto; */
+    
+    }
+    .logo{
+
+        position: relative;
+        /* left:20%; */
+        padding-top: 1%;
+        width:50%;
+        height: auto;
+         
+    }
+    h6{
+
+        font-size: .6vw;
+        display:inline-block;
+        text-align:center;
+        margin-top:5px;
+        margin-left:1vw;
+        width:auto;
+        margin-bottom: 10px;
+        
+    }
 }
