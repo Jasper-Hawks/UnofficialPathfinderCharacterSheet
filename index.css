@@ -376,7 +376,7 @@ input{
 }
 .savesTLong{
 
-    width: 40%;
+    width: 41%;
 
 }
 .savesBoxTWide{
@@ -395,7 +395,7 @@ input{
 }
 .savesInputFields{
 
-    width: 5.3%;
+    width: 5%;
     display:inline-block;
     border-color:black;
     
@@ -487,5 +487,20 @@ input{
         width:auto;
         margin-bottom: 10px;
         
+    }
+    .boxTLong{
+
+        width:38vw;
+
+    }
+    .skillsTLong{
+
+        width: 22vw;
+
+    }
+    .skillsDetailedT{
+
+        width:20.5vw;
+
     }
 }
