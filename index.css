@@ -40,6 +40,8 @@ h6{
     text-align:center;
     margin-top:5px;
     margin-left:.34vw;
+    color:black;
+
     width:auto;
     /* margin-right: .2vw; */
     margin-bottom: 10px;
@@ -72,7 +74,7 @@ input{
     margin:0px;
     background-color: transparent;
     border-color: transparent;
-
+    /* TODO: Work on input fields so that they scale better */
 }
 /* 29 is the magic number DO A CODE REVIEW AFTER THIS SECTION*/
 
@@ -143,20 +145,41 @@ input{
     /* position:relative; */
     /* top:85%; */
     /* left:22.5%; */
-    width:  49%;
+    width:  14vw;
     display:inline-block;
 
 }
 .attributeTC{
 
-    width:100%;
+    width:15vw;
     
     
+}
+.attributeHead{
+
+    width: 2vw;
+    font-size: .6vw;
+    background-color: red;
+    margin-left: .39vw;
+    /*TODO research display: table*/
 }
 .atttributeC{
 
     width:15vw;
     
+}
+.boxAttributeT{
+
+    color:black;
+    text-align: center;
+    font-size: .6vw;
+    padding-top: 10px;
+    font-weight: bold;
+    width:3vw;
+    height:1.5vw;
+    margin-right:2px;
+    display:inline-block;
+
 }
 .boxT{
 
@@ -174,7 +197,7 @@ input{
 } /* TODO eventually maek all of the input fields align with the titles*/
 .attributeInputFields{
 
-    width:12%;
+    width:1.8vw;
     margin-left: .3vw;
     border-color: black;
 
@@ -184,10 +207,8 @@ input{
   
     width:49%;
     display:inline-block;
-    height: 280px;
+    height: 60%;
     vertical-align: top;
-    /* position:relative;
-    top:-90%; */
     
 }
 .hpInitInputFields{
@@ -503,4 +524,5 @@ input{
         width:20.5vw;
 
     }
+    /* Add scaling for the attribute text */
 }
