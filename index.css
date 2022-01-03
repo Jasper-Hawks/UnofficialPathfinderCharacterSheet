@@ -1,4 +1,5 @@
 /* TODO Even out the black box labels. Some are lopsided */
+/* TODO use vw or vh for containers and % for any elements within containers */
 body{
 
     background-color: white;
@@ -57,7 +58,6 @@ hr{
 div{
 
     display:inline-block;
-    margin-right:10px;
 
 }
 .personalInfo{ /* Make this container scale down when on mobile devices*/
@@ -148,6 +148,8 @@ input{
     /* top:85%; */
     /* left:22.5%; */
     width:  14vw;
+    min-width: 13vw;
+    max-width: 15vw;
     display:inline-block;
 
 }
@@ -439,14 +441,12 @@ input{
 
 
     width: 50%;
-    margin-top: 10px;
     background-color: black;
-    text-align: center;
     color:white;
-    padding-top: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     font-weight: bold;
-    height:30px;
-    margin-right:3px;
+    text-align: center;
     display:inline-block;
 
 }
@@ -472,7 +472,82 @@ input{
     border-color:black;
 
 }
+.weapons{
 
+    width: 100%;
+    padding-top: 20px;
+
+}
+.weaponsTitle{
+
+    width: 50%;
+
+}
+.weaponsAtkBon{
+
+    width: 29%;
+
+}
+.weaponsCrit{
+
+    width: 20%;
+
+}
+.weaponsBox{
+
+    width: 100%;
+    height: 20%;
+    background-color: black;
+    color: white;
+    text-align:center;
+    display:inline-block;
+    vertical-align: top;
+
+    margin:0;
+
+}
+.weaponsAtkBonBox{
+
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align:center;
+    display:inline-block;
+    margin:0;
+    vertical-align: top;
+
+
+}
+.weaponsCritBox{
+
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align:center;
+    display:inline-block;
+    vertical-align: top;
+    margin:0;
+    border-radius: -50px;
+
+}
+.weaponsTitleInputFields{
+
+    width: 97.6%;
+    font-size: 1em;
+
+}
+.weaponsAtkBonusInputFields{
+
+    width: 95%;
+    font-size: 1em;
+    
+}
+.weaponsCritInputFields{
+
+    width: 93%;
+    font-size: 1em;
+
+}
 @media screen and (max-width: 1375px){
 
     .attributes{
@@ -507,7 +582,7 @@ input{
 
         position: relative;
         padding-top:1%;
-        width: 40%;
+        width: 40vw;
         display:inline-block;
         /* height:auto; */
     
@@ -517,7 +592,7 @@ input{
         position: relative;
         /* left:20%; */
         padding-top: 1%;
-        width:50%;
+        /* width:26vw; */
         height: auto;
          
     }
