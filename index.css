@@ -1,5 +1,6 @@
 /* TODO Even out the black box labels. Some are lopsided */
 /* TODO use vw or vh for containers and % for any elements within containers */
+/* TODO Realign BAB Box */
 body{
 
     background-color: white;
@@ -493,6 +494,16 @@ input{
     width: 20%;
 
 }
+.weaponsType{
+
+    width: 10%;
+
+}
+.weaponsRange{
+
+    width: 15%;
+
+}
 .weaponsBox{
 
     width: 100%;
@@ -530,22 +541,68 @@ input{
     border-radius: -50px;
 
 }
+.weaponsTypeBox{
+
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    display:inline-block;
+    vertical-align: top;
+    margin: 0;
+    border-radius: -50px;
+
+}
+.weaponsRangeBox{
+
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    display:inline-block;
+    vertical-align: top;
+    margin: 0;
+
+}
 .weaponsTitleInputFields{
 
     width: 97.6%;
     font-size: 1em;
+    outline:none;
+    border-color: black;
 
 }
 .weaponsAtkBonusInputFields{
 
     width: 95%;
+    text-align:center;
+    outline: none;
     font-size: 1em;
+    border-color: black;
     
 }
 .weaponsCritInputFields{
 
     width: 93%;
     font-size: 1em;
+    border-color: black;
+
+}
+.weaponsTypeInputFields{
+
+    width: 100%;
+    font-size: 1em;
+    outline: none;
+    border-color: black;
+
+}
+.weaponsRangeInputFields{
+
+    width: 100%;
+    font-size: 1em;
+    text-align: center;
+    outline:none;
+    border-color: black;
 
 }
 @media screen and (max-width: 1375px){
