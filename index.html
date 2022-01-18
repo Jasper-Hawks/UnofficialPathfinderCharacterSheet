@@ -253,23 +253,31 @@
     + 10
   </form>
   <form class="weapons">
+    <div class="wepaonsBtnCont">
+      <input type="button" class="weaponsBtn" value="+" onclick="spawnWeap()"><input type="button" class="weaponsBtn" value="-" onclick="delWeap()">
+  </div>
+  <br>
     <div class="weaponsTitle">
       <div class="weaponsBox">Weapon</div>
-      <input type="text" id="weaponsTitle" class="weaponsTitleInputFields">
+      <input type="text" id="weaponsTitle" class="weaponsInputFields">
     </div><div class="weaponsAtkBon">
-      <div class="weaponsAtkBonBox">Attack Bonus</div>
-      <input type="text" id="weaponsAtkBonus" class="weaponsAtkBonusInputFields">
+      <div class="weaponsBox">Attack Bonus</div>
+      <input type="text" id="weaponsAtkBonus" class="weaponsInputFields">
     </div><div class="weaponsCrit">
-      <div class="weaponsCritBox">Critical</div>
-      <input type="text" id="weaponsCrit" class="weaponsCritInputFields">
-    </div>
-    <div class="weaponsType">
-      <div class="weaponsTypeBox">Type</div>
-      <input type="text" id="weaponsType" class="weaponsTypeInputFields">
-    </div>
-    <div class="weaponsRange">
-      <div class="weaponsRangeBox">Range</div>
-      <input type="text" id="weaponsRange" class="weaponsRangeInputFields">
+      <div class="weaponsBox">Critical</div>
+      <input type="text" id="weaponsCrit" class="weaponsInputFields">
+    </div><div class="weaponsType">
+      <div class="weaponsBox">Type</div>
+      <input type="text" id="weaponsType" class="weaponsInputFields">
+    </div><div class="weaponsRange">
+      <div class="weaponsBox">Range</div>
+      <input type="text" id="weaponsRange" class="weaponsInputFields">
+    </div><div class="weaponsAmmo">
+      <div class="weaponsBox">Ammunition</div>
+      <input type="text" id="weaponsAmmo" class="weaponsInputFields">
+    </div><div class="weaponsDamage">
+      <div class="weaponsBox">Damage</div>
+      <input type="text" id="weaponsDamage" class="weaponsInputFields">
     </div>
   </form>
 </div>
@@ -686,11 +694,32 @@
 </form>
 
   <script>
+    let i = 1;
     function getName() {3
 
       var name = {};
       name.name = document.getElementById("nameOfPC").value;
       console.log(JSON.stringify(name));
+
+    }
+    function spawnWeap(){
+
+      console.log("created");
+      // Create a clone of an element with class weapons
+      // set it's class attribute
+      // then append it to the (left column temporarily) the bottom of the weapons section 
+      let entry = document.querySelector(".weapons").cloneNode(true);
+      entry.setAttribute('class',"weapons" + i);
+      document.querySelector(".leftColumn").appendChild(entry);
+      i++;
+
+    }
+    function delWeap(){
+
+      console.log("deleted");
+      let entry = document.querySelector(
+        
+      )
 
     }
   </script>

@@ -1,6 +1,13 @@
 /* TODO Even out the black box labels. Some are lopsided */
 /* TODO use vw or vh for containers and % for any elements within containers */
 /* TODO Realign BAB Box */
+/* TODO Make div header elements the same width as input elements */
+/* TODO Choose a font */
+/* TODO Fix Profession Section */
+/* Inputs in the weapons section are not displaying properly */
+
+/* The containers used with the weapons section are really great at scaling */
+/* We might have to recreate the entire site with these containers in mind */
 body{
 
     background-color: white;
@@ -8,7 +15,8 @@ body{
     position: absolute;
     left:20%;
     color:black;
-
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
 }
 .sheet{
 
@@ -22,7 +30,6 @@ body{
 .logo{
 
     position: relative;
-    /* left:20%; */
     padding-top: 1%;
     width:26vw;
     height: auto;
@@ -477,6 +484,8 @@ input{
 
     width: 100%;
     padding-top: 20px;
+    height: 20%;
+    display: inline-block;
 
 }
 .weaponsTitle{
@@ -488,10 +497,11 @@ input{
 
     width: 29%;
 
+
 }
 .weaponsCrit{
 
-    width: 20%;
+    width: 17%;
 
 }
 .weaponsType{
@@ -502,6 +512,16 @@ input{
 .weaponsRange{
 
     width: 15%;
+
+}
+.weaponsAmmo{
+
+    width: 40%;
+
+}
+.weaponsDamage{
+
+    width: 31%;
 
 }
 .weaponsBox{
@@ -517,94 +537,32 @@ input{
     margin:0;
 
 }
-.weaponsAtkBonBox{
+.weaponsInputFields{
 
-    width: 100%;
-    background-color: black;
-    color: white;
-    text-align:center;
-    display:inline-block;
-    margin:0;
-    vertical-align: top;
-
-
-}
-.weaponsCritBox{
-
-    width: 100%;
-    background-color: black;
-    color: white;
-    text-align:center;
-    display:inline-block;
-    vertical-align: top;
-    margin:0;
-    border-radius: -50px;
-
-}
-.weaponsTypeBox{
-
-    width: 100%;
-    background-color: black;
-    color: white;
-    text-align: center;
-    display:inline-block;
-    vertical-align: top;
-    margin: 0;
-    border-radius: -50px;
-
-}
-.weaponsRangeBox{
-
-    width: 100%;
-    background-color: black;
-    color: white;
-    text-align: center;
-    display:inline-block;
-    vertical-align: top;
-    margin: 0;
-
-}
-.weaponsTitleInputFields{
-
-    width: 97.6%;
+    width: 98%;
     font-size: 1em;
-    outline:none;
-    border-color: black;
-
-}
-.weaponsAtkBonusInputFields{
-
-    width: 95%;
-    text-align:center;
-    outline: none;
-    font-size: 1em;
-    border-color: black;
+    /* display: inline-block; */
+    border-color:black;
+    /* border-left: none;
+    border-right:none;
+    outline-color: transparent; */
     
-}
-.weaponsCritInputFields{
-
-    width: 93%;
-    font-size: 1em;
-    border-color: black;
 
 }
-.weaponsTypeInputFields{
+.weaponsBtnCont{
 
-    width: 100%;
-    font-size: 1em;
-    outline: none;
-    border-color: black;
+    width: 15%;
 
 }
-.weaponsRangeInputFields{
+.weaponsBtn{
 
-    width: 100%;
-    font-size: 1em;
-    text-align: center;
-    outline:none;
-    border-color: black;
+    display:inline-block;
+    width: 50%;
+    background-color: lightgrey;
+    padding:0;
 
 }
+
 @media screen and (max-width: 1375px){
 
     .attributes{
