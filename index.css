@@ -5,6 +5,7 @@
 /* TODO Choose a font */
 /* TODO Fix Profession Section */
 /* Inputs in the weapons section are not displaying properly */
+/* Use floats in order to place labels within input fields */
 
 /* The containers used with the weapons section are really great at scaling */
 /* We might have to recreate the entire site with these containers in mind */
@@ -280,13 +281,82 @@ input{
     width: 70%;
 
 }
+.speedBoxT{
+
+    width: 20%;
+    background-color: black;
+    color:white;
+    text-align: center;
+    font-size: .6vw;
+    padding-top: 10px;
+    height: auto;
+    font-weight: bold;
+    margin-right:2px;
+    display:inline-block;
+
+}
+.baseSpeedCont{
+
+    display: inline-block;
+    margin-top: 1vw;
+    width: 35%
+
+}
+.armorSpeedCont{
+
+    display:inline-block;
+    width: 35%;
+    margin-left: 15px;
+
+
+}
+.flySpeedCont{
+
+    display:inline-block;
+    width: 35%;
+    margin-top: 1vw;
+    margin-left: 15px;
+
+
+}
+.swimSpeedCont{
+
+    display:inline-block;
+    width: 15%;
+
+    margin-left: 15px;
+
+
+}
+.climbSpeedCont{
+
+    display: inline-block;
+    width: 15%;
+
+    margin-left: 15px;
+
+
+}
+.burrowSpeedCont{
+
+    display:inline-block;
+    width: 15%;
+    margin-left: 15px;
+
+}
 .speedInputFields{
 
-    width: 35%;
+    width: 100%;
     border-color:black;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
     vertical-align:top;
     display:inline-block;
+}
+.speedHeading{
+
+    text-align: center;
+    margin:0;
+
 }
 .speedInputFieldsTall{
 /* Make this box taller */
@@ -295,12 +365,6 @@ input{
     border-color:black;
     height:4vw;
     display:inline-block;
-
-}
-.speedInputFieldsSmall{
-
-    width:15.2%;
-    border-color:black;
 
 }
 .boxTLong{
@@ -484,13 +548,20 @@ input{
 
     width: 100%;
     padding-top: 20px;
-    height: 20%;
+    height: auto;
     display: inline-block;
+
+}
+.weaponsScroll{
+
+    height: 60vh;
+    overflow-y: auto;
 
 }
 .weaponsTitle{
 
     width: 50%;
+    border-color: black;
 
 }
 .weaponsAtkBon{
@@ -541,8 +612,10 @@ input{
 
     width: 98%;
     font-size: 1em;
-    /* display: inline-block; */
-    border-color:black;
+    display: block;
+    border-color: black;
+    /* outline-color: transparent;
+    border-color: transparent; */
     /* border-left: none;
     border-right:none;
     outline-color: transparent; */

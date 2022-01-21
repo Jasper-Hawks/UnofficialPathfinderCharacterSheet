@@ -252,46 +252,67 @@
     <input type="text" id="cmdSize" class="combatInputFields">
     + 10
   </form>
-  <form class="weapons">
-    <div class="wepaonsBtnCont">
-      <input type="button" class="weaponsBtn" value="+" onclick="spawnWeap()"><input type="button" class="weaponsBtn" value="-" onclick="delWeap()">
-  </div>
-  <br>
-    <div class="weaponsTitle">
-      <div class="weaponsBox">Weapon</div>
-      <input type="text" id="weaponsTitle" class="weaponsInputFields">
-    </div><div class="weaponsAtkBon">
-      <div class="weaponsBox">Attack Bonus</div>
-      <input type="text" id="weaponsAtkBonus" class="weaponsInputFields">
-    </div><div class="weaponsCrit">
-      <div class="weaponsBox">Critical</div>
-      <input type="text" id="weaponsCrit" class="weaponsInputFields">
-    </div><div class="weaponsType">
-      <div class="weaponsBox">Type</div>
-      <input type="text" id="weaponsType" class="weaponsInputFields">
-    </div><div class="weaponsRange">
-      <div class="weaponsBox">Range</div>
-      <input type="text" id="weaponsRange" class="weaponsInputFields">
-    </div><div class="weaponsAmmo">
-      <div class="weaponsBox">Ammunition</div>
-      <input type="text" id="weaponsAmmo" class="weaponsInputFields">
-    </div><div class="weaponsDamage">
-      <div class="weaponsBox">Damage</div>
-      <input type="text" id="weaponsDamage" class="weaponsInputFields">
+  <!-- Eventually move the add and remove buttons outside of the weapons container -->
+  <div class="weaponsScroll"> 
+    <form class="weapons" id="w0">
+      <div class="wepaonsBtnCont" id="c">
+        <input type="button" class="weaponsBtn" value="+" onclick="spawnWeap()"><input type="button" class="weaponsBtn" value="-" onclick="delWeap(this);">
     </div>
-  </form>
+    <br>
+      <div class="weaponsTitle">
+        <div class="weaponsBox">Weapon</div>
+        <input type="text" id="weaponsTitle" class="weaponsInputFields">
+      </div><div class="weaponsAtkBon">
+        <div class="weaponsBox">Attack Bonus</div>
+        <input type="text" id="weaponsAtkBonus" class="weaponsInputFields">
+      </div><div class="weaponsCrit">
+        <div class="weaponsBox">Critical</div>
+        <input type="text" id="weaponsCrit" class="weaponsInputFields">
+      </div><div class="weaponsType">
+        <div class="weaponsBox">Type</div>
+        <input type="text" id="weaponsType" class="weaponsInputFields">
+      </div><div class="weaponsRange">
+        <div class="weaponsBox">Range</div>
+        <input type="text" id="weaponsRange" class="weaponsInputFields">
+      </div><div class="weaponsAmmo">
+        <div class="weaponsBox">Ammunition</div>
+        <input type="text" id="weaponsAmmo" class="weaponsInputFields">
+      </div><div class="weaponsDamage">
+        <div class="weaponsBox">Damage</div>
+        <input type="text" id="weaponsDamage" class="weaponsInputFields">
+      </div>
+    </form>
+  </div>
 </div>
 <form class="speedSkills">
   <div class="speedCont">
-    <div class="boxT">SPEED <br>Land</div>
-    <input type="text" id="baseSpeed" class="speedInputFields">
-    <input type="text" id="armorSpeed" class="speedInputFields">
-    <input type="text" id="flySpeed" class="speedInputFields">
-    <input type="text" id="swimSpeed" class="speedInputFieldsSmall">
-    <input type="text" id="climbSpeed" class="speedInputFieldsSmall">
-    <input type="text" id="burrowSpeed" class="speedInputFieldsSmall">
+    <div class="speedBoxT">SPEED <br>Land</div>
+      <div class="baseSpeedCont">
+        <input type="text" id="baseSpeed" class="speedInputFields"><br>
+        <h6 class="speedHeading">Base Speed</h6>
+      </div> 
+    <div class="armorSpeedCont">
+      <input type="text" id="armorSpeed" class="speedInputFields"><br>
+      <h6 class="speedHeading">With Armor</h6>
+    </div>
+    <div class="flySpeedCont">
+      <input type="text" id="flySpeed" class="speedInputFields"><br>
+      <h6 class="speedHeading">Flight</h6>
+    </div>
+    <div class="swimSpeedCont">
+      <input type="text" id="swimSpeed" class="speedInputFields"><br>
+      <h6 class="speedHeading">Swim</h6>
+    </div>
+    <div class="climbSpeedCont">
+      <input type="text" id="climbSpeed" class="speedInputFields"><br>
+      <h6 class="speedHeading">Climb</h6>
+    </div>
+    <div class="burrowSpeedCont">
+      <input type="text" id="burrowSpeed" class="speedInputFields"><br>
+      <h6 class="speedHeading">Burrow</h6>
+    </div>
   </div>
-  <input type="t21ext" id="tempSpeedMod" class="speedInputFieldsTall">
+  <input type="text" id="tempSpeedMod" class="speedInputFieldsTall">
 
   <div class="boxTLong">SKILLS</div>
   <h5 class="skillsTLong">Skill Names</h5>
@@ -695,7 +716,7 @@
 
   <script>
     let i = 1;
-    function getName() {3
+    function getName() {
 
       var name = {};
       name.name = document.getElementById("nameOfPC").value;
@@ -709,17 +730,29 @@
       // set it's class attribute
       // then append it to the (left column temporarily) the bottom of the weapons section 
       let entry = document.querySelector(".weapons").cloneNode(true);
-      entry.setAttribute('class',"weapons" + i);
-      document.querySelector(".leftColumn").appendChild(entry);
+      console.log(entry)
+      entry.setAttribute('id',"w" + i);
+      document.querySelector(".weaponsScroll").appendChild(entry);
       i++;
 
     }
-    function delWeap(){
+    function delWeap(ele){
 
-      console.log("deleted");
-      let entry = document.querySelector(
+      // make sure that w0 can never be deleted
+      let entry = ele.parentElement.parentElement;
+      console.log("The name of this id is " + entry);
+
+      if (entry.id != "w0"){
+
+        entry.remove();
+
+      }else{
+
+        // Display some text 
+
+      }
         
-      )
+      
 
     }
   </script>
