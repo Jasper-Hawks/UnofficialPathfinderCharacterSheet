@@ -142,10 +142,20 @@
   </form>
   <form class="hpInit">
     <div class="boxT">HP<br>Hit Points</div>
-    <input type="text" id="hpTotal" class="hpInitInputFields">
-    <input type="text" id="drTotal" class="hpInitInputFields">
-    <input type="text" id="hpCurrent" class="hpInitInputFieldsLarge">
-    <input type="text" id="nonLethal" class="hpInitInputFieldsLarge">
+    <div class="hpInitCont">
+      <input type="text" id="hpTotal" class="hpInitInputFields">
+      <h6>Total</h6>
+    </div>
+    <div class="hpInitCont">
+      <input type="text" id="drTotal" class="hpInitInputFields">
+      <h6>DR</h6>
+    </div>
+    <div class="hpInitContWide">
+      <h6>Wouds / Current HP</h6>
+      <input type="text" id="hpCurrent" class="hpInitInputFieldsLarge">
+      <h6>Nonlethal Damage</h6>
+      <input type="text" id="nonLethal" class="hpInitInputFieldsLarge">
+    </div>
     <div class="boxTWide" id="initModT">INITIATIVE<br>Modifier</div>
     <input type="text" id="initTotal" class="hpInitInputFieldsSmall"> =
     <input type="text" id="initDexMod" class="hpInitInputFieldsSmall"> +

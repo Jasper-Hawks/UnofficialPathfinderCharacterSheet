@@ -148,6 +148,7 @@ input{
 .leftColumn{
 
     width: 50%;
+    margin-top: 1vw;
 
 }
 /* ATTRIBUTES CONTAINER*/
@@ -223,17 +224,31 @@ input{
     vertical-align: top;
     
 }
+.hpInitCont{
+
+    width: 30%;
+    display: inline-block;
+    margin-left: 4%;
+
+
+}
+.hpInitContWide{
+
+    width: 100%;
+    display:inline-block;
+    margin:0;
+
+}
 .hpInitInputFields{
 
-    width: 33%;
+    width: 100%;
     height: 12%;
     border-color: black;
     
 }
 .hpInitInputFieldsLarge{
 
-    width:96%;
-    margin-top: 5%;
+    width:100%;
     border-color: black;
     
 }
@@ -275,6 +290,8 @@ input{
     width:45%;
     vertical-align: top;
     display:inline-block;
+    margin-top: 1vw;
+
 }
 .speedCont{
 
@@ -298,7 +315,6 @@ input{
 .baseSpeedCont{
 
     display: inline-block;
-    margin-top: 1vw;
     width: 35%
 
 }
