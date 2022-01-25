@@ -226,7 +226,7 @@ input{
 }
 .hpInitCont{
 
-    width: 30%;
+    width: 34%;
     display: inline-block;
     margin-left: 4%;
 
@@ -237,6 +237,12 @@ input{
     width: 100%;
     display:inline-block;
     margin:0;
+
+}
+.hpInitContSmall{
+
+    width: 19%;
+    margin-top:5%;
 
 }
 .hpInitInputFields{
@@ -269,8 +275,7 @@ input{
 }
 .hpInitInputFieldsSmall{
 
-    width: 16%;
-    margin-top:10%;
+    width: 100%;
     border-color:black;
 
 }
