@@ -156,44 +156,78 @@
       <h6>Nonlethal Damage</h6>
       <input type="text" id="nonLethal" class="hpInitInputFieldsLarge">
     </div>
-    <div class="boxTWide" id="initModT">INITIATIVE<br>Modifier</div>
-    <div class="hpInitContSmall">
-      <input type="text" id="initTotal" class="hpInitInputFieldsSmall"> 
-      <h6>Total</h6>
-    </div>
-    <div class="hpInitContSmall">
-      <input type="text" id="initDexMod" class="hpInitInputFieldsSmall"> 
-      <h6>Dex Mod</h6>
-    </div>
-    <div class="hpInitContSmall">
-      <input type="text" id="initMiscMod" class="hpInitInputFieldsSmall">
-      <h6>Misc Mod</h6>
+    <div class="hpInitInitCont">
+      <div class="initBoxT" id="initModT">INITIATIVE<br><h7>Modifier</h7></div>
+      <div class="hpInitContSmall">
+        <input type="text" id="initTotal" class="hpInitInputFieldsSmall">
+        <h6>Total</h6>
+      </div>
+      <div class="operands">=</div>
+      <div class="hpInitContSmall">
+        <input type="text" id="initDexMod" class="hpInitInputFieldsSmall"> 
+        <h6>Dex Mod</h6>
+      </div>
+      <div class="operands">+</div>
+      <div class="hpInitContSmall">
+        <input type="text" id="initMiscMod" class="hpInitInputFieldsSmall">
+        <h6>Misc Mod</h6>
+      </div>
     </div>
   </form>
   <form class="armorClass">
-    <div class="armorClassBoxT">AC Armor Class</div>
-    <input type="text" id="acTotal" class="armorClassInputFields">
-    = 10 +
-    <input type="text" id="acArmorBon" class="armorClassInputFields">
-    +
-    <input type="text" id="acShieldBon" class="armorClassInputFields">
-    +
-    <input type="text" id="acDexMod" class="armorClassInputFields">
-    +
-    <input type="text" id="acSizeMod" class="armorClassInputFields">
-    +
-    <input type="text" id="acNatArm" class="armorClassInputFields">
-    +
-    <input type="text" id="acDefMod" class="armorClassInputFields">
-    +
-    <input type="text" id="acMiscMod" class="armorClassInputFields">
+    <div class="armorClassRowCont">
+      <div class="armorClassBoxT">AC Armor Class</div>
+    <div class="armorClassCont">
+        <input type="text" id="acTotal" class="armorClassInputFields">
+        <h4>Total</h4>
+    </div>
+    <div class="operands">= 10 +</div>
+    <div class="armorClassCont">
+      <input type="text" id="acArmorBon" class="armorClassInputFields">
+      <h4>Armor Bonus</h4>
+    </div>
+    <div class="operands">+</div>
+    <div class="armorClassCont">
+      <input type="text" id="acShieldBon" class="armorClassInputFields">
+      <h4>Shield Bonus</h4>
+    </div>
+    <div class="operands">+</div>
+    <div class="armorClassCont">
+      <input type="text" id="acDexMod" class="armorClassInputFields">
+      <h4>Dex Bonus</h4>
+    </div>
+    <div class="operands">+</div>
+    <div class="armorClassCont">
+      <input type="text" id="acSizeMod" class="armorClassInputFields">
+      <h4>Size Mod</h4>
+    </div>
+    <div class="operands">+</div>
+    <div class="armorClassCont">
+      <input type="text" id="acNatArm" class="armorClassInputFields">
+      <h4>Natural Armor</h4>
+    </div>
+    <div class="operands">+</div>
+    <div class="armorClassCont">
+      <input type="text" id="acDefMod" class="armorClassInputFields">
+      <h4>Deflect Mod</h4>
+    </div>
+    <div class="operands">+</div>
+    <div class="armorClassCont">
+      <input type="text" id="acMiscMod" class="armorClassInputFields">
+      <h4>Misc Mod</h4>
+    </div>
+  </div>
     <div class="armorClassBoxT">Touch AC</div>
+  <div class="armorClassCont">
     <input type="text" id="acTouch" class="armorClassInputFields">
+  </div>
     <div class="boxTWide">Flat-Footed Armor Class</div>
-    <input type="text" id="acTouch" class="armorClassInputFields">
-    <input type="text" id="acTouch" class="armorClassInputFieldsLong">
-
-
+  <div class="armorClassCont">
+    <input type="text" id="FFAC" class="armorClassInputFields">
+  </div>
+  <div class="armorClassContLong">
+    <input type="text" id="acMod" class="armorClassInputFieldsLong">
+  </div>
 
   </form>
   <form class="saves">

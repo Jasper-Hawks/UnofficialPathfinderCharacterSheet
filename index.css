@@ -6,6 +6,8 @@
 /* TODO Fix Profession Section */
 /* Inputs in the weapons section are not displaying properly */
 /* Use floats in order to place labels within input fields */
+/* TODO fix operands so that they are aligned properly */
+/* TODO Think about using flex box for dynamic resizing of containers */
 
 /* The containers used with the weapons section are really great at scaling */
 /* We might have to recreate the entire site with these containers in mind */
@@ -36,6 +38,12 @@ body{
     height: auto;
      
 }
+h4{
+
+    font-size: .6vw;
+    text-align: center;
+
+}
 h5{
 
     margin: 0px;
@@ -60,6 +68,12 @@ h6{
     /* margin-left: 10px; */ 
     
 }
+h7{
+
+    font-size:.5vw;
+    text-align: center;
+
+}
 hr{
 
     margin:0px;
@@ -80,6 +94,7 @@ div{
 }
 input{
 
+    box-sizing:border-box;
     font-size: 1vw;
     width:100%;
     margin:0px;
@@ -204,6 +219,7 @@ input{
     font-weight: bold;
     width:3vw;
     height:1.5vw;
+    vertical-align: top;
     margin-right:2px;
     display:inline-block;
 
@@ -232,6 +248,12 @@ input{
 
 
 }
+.hpInitInitCont{
+
+    width: 100%;
+    margin:0;
+
+}
 .hpInitContWide{
 
     width: 100%;
@@ -241,8 +263,15 @@ input{
 }
 .hpInitContSmall{
 
-    width: 19%;
+    width: 21%;
     margin-top:5%;
+
+}
+.operands{
+
+    vertical-align:top;
+    margin-top: 7%;
+    margin-left: 2%;
 
 }
 .hpInitInputFields{
@@ -251,6 +280,14 @@ input{
     height: 12%;
     border-color: black;
     
+}
+.initBoxT{
+
+    background-color: black;
+    color: white;
+    margin-top: 5%;
+    vertical-align: top;
+
 }
 .hpInitInputFieldsLarge{
 
@@ -313,6 +350,7 @@ input{
     padding-top: 10px;
     height: auto;
     font-weight: bold;
+    vertical-align: top;
     margin-right:2px;
     display:inline-block;
 
@@ -478,6 +516,19 @@ input{
     width: 100%;
 
 }
+.armorClassCont{
+
+    width: 6%;
+    display: inline-block;
+    vertical-align: top;
+
+}
+.armorClassContLong{
+
+    width: 55%;
+    vertical-align: top;
+
+}
 .armorClassBoxT{
 
     background-color: black;
@@ -486,6 +537,7 @@ input{
     font-size: .6vw;
     padding-top: 10px;
     font-weight: bold;
+    vertical-align: top;
     width:3vw;
     height:1.5vw;
     margin-right:2px;
@@ -494,13 +546,14 @@ input{
 }
 .armorClassInputFields{
 
-    width: 2vw;
+    width: 100%;
     border-color: black;
 
 }
 .armorClassInputFieldsLong{
 
-    width: 50%;
+    /* width: 100%; */
+    flex-grow: 1;
     border-color: black;
 
 }
