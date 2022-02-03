@@ -42,6 +42,7 @@ h4{
 
     font-size: .6vw;
     text-align: center;
+    margin:0;
 
 }
 h5{
@@ -559,12 +560,24 @@ input{
 }
 .savesTLong{
 
+    width: 100%;
+
+}
+.savesContLong{
+
     width: 41%;
+    vertical-align: top;
+
+}
+.savesCont{
+
+    width: 7%;
+    vertical-align: top;
 
 }
 .savesBoxTWide{
 
-    width: 41%;
+    width: 100%;
     background-color: black;
     text-align: center;
     color:white;
@@ -578,7 +591,7 @@ input{
 }
 .savesInputFields{
 
-    width: 5%;
+    width: 100%;
     display:inline-block;
     border-color:black;
     
@@ -596,16 +609,22 @@ input{
     display:inline-block;
 
 }
+.combatCont{
+
+    width: 8%;
+    vertical-align: top;
+
+}
 .combatInputFieldsWide{
 
     width: 14%;
     display:inline-block;
-    border-color:black;
+    border-color:black; 
 
 }
 .combatInputFields{
 
-    width: 8%;
+    width: 100%;
     display:inline-block;
     margin-top:10px;
     border-color:black;
