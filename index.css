@@ -218,7 +218,7 @@ input{
     font-size: .6vw;
     padding-top: 10px;
     font-weight: bold;
-    width:3vw;
+    width:100%;
     height:1.5vw;
     vertical-align: top;
     margin-right:2px;
@@ -227,9 +227,17 @@ input{
 } /* TODO eventually maek all of the input fields align with the titles*/
 .attributeInputFields{
 
-    width:1.8vw;
-    margin-left: .3vw;
+    width: 100%;
+    height:1.9vw;
     border-color: black;
+
+
+}
+.attributeCont{
+
+    width: 17%;
+    height:100%;
+    vertical-align: top;
 
 }
 /*hpInit */
@@ -247,6 +255,10 @@ input{
     display: inline-block;
     margin-left: 4%;
 
+}
+.hpInitContHP{
+
+    vertical-align: top;
 
 }
 .hpInitInitCont{
@@ -266,13 +278,20 @@ input{
 
     width: 21%;
     margin-top:5%;
+    vertical-align: top;
+    display: inline-block;
 
 }
 .operands{
 
-    vertical-align:top;
-    margin-top: 7%;
-    margin-left: 2%;
+    padding: 1% 1%;
+    vertical-align: baseline;
+    
+}
+.savesOperands{
+
+    padding: 10% 0;
+    vertical-align: baseline;
 
 }
 .hpInitInputFields{
@@ -634,6 +653,7 @@ input{
 
     width: 34%;
     display:inline-block;
+    margin-top: 10px;
     border-color:black;
 
 }

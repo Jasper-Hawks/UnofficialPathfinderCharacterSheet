@@ -88,60 +88,71 @@
 </form>
 <div class="leftColumn">
   <form class="attributes">
-    <div class="attributeTC">
-
+    <div class="attributeCont">
       <div class="boxAttributeT">Attributes</div>
+      <div class="boxT">STR Strength</div>
+      <div class="boxT">DEX Dexterity</div>
+      <div class="boxT">CON Constitution</div>
+      <div class="boxT">INT Intelligence</div>
+      <div class="boxT">WIS Wisdom</div>
+      <div class="boxT">CHA Charisma</div>
+    </div>
+    <div class="attributeCont">
       <h6 class="attributeHead">Ability<br>Score</h6>
+      <input type="text" id="strScore" class="attributeInputFields">
+      <input type="text" id="dexScore" class="attributeInputFields">
+      <input type="text" id="conScore" class="attributeInputFields">
+      <input type="text" id="intScore" class="attributeInputFields">
+      <input type="text" id="wisScore" class="attributeInputFields">
+      <input type="text" id="chaScore" class="attributeInputFields">
+    </div>
+    <div class="attributeCont">
       <h6 class="attributeHead">Ability<br>Modifier</h6>
+      <input type="text" id="strMod" class="attributeInputFields">
+      <input type="text" id="dexMod" class="attributeInputFields">
+      <input type="text" id="conMod" class="attributeInputFields">
+      <input type="text" id="intMod" class="attributeInputFields">
+      <input type="text" id="wisMod" class="attributeInputFields">
+      <input type="text" id="chaMod" class="attributeInputFields">
+    </div>
+    <div class="attributeCont">
       <h6 class="attributeHead">Temp<br>Adjust</h6>
+      <input type="text" id="strTempAdjust" class="attributeInputFields">
+      <input type="text" id="dexTempAdjust" class="attributeInputFields">
+      <input type="text" id="conTempAdjust" class="attributeInputFields">
+      <input type="text" id="intTempAdjust" class="attributeInputFields">
+      <input type="text" id="wisTempAdjust" class="attributeInputFields">
+      <input type="text" id="chaTempAdjust" class="attributeInputFields">
+    </div>
+    <div class="attributeCont">
       <h6 class="attributeHead">Temp<br>Mod</h6>
+      <input type="text" id="strTempMod" class="attributeInputFields">
+      <input type="text" id="dexTempMod" class="attributeInputFields">
+      <input type="text" id="conTempMod" class="attributeInputFields">
+      <input type="text" id="intTempMod" class="attributeInputFields">
+      <input type="text" id="wisTempMod" class="attributeInputFields">
+      <input type="text" id="chaTempMod" class="attributeInputFields">
 
     </div>
-    <div class="attributeC">
-      <div class="boxT">STR Strength</div>
-      <input type="text" id="strScore" class="attributeInputFields">
-      <input type="text" id="strMod" class="attributeInputFields">
-      <input type="text" id="strTempAdjust" class="attributeInputFields">
-      <input type="text" id="strTempMod" class="attributeInputFields">
+    <div class="attributeTC">
     </div>
     <div class="attributeC">
-      <div class="boxT">DEX Dexterity</div>
-      <input type="text" id="dexScore" class="attributeInputFields">
-      <input type="text" id="dexMod" class="attributeInputFields">
-      <input type="text" id="dexTempAdjust" class="attributeInputFields">
-      <input type="text" id="dexTempMod" class="attributeInputFields">
     </div>
     <div class="attributeC">
-      <div class="boxT">CON Constitution</div>
-      <input type="text" id="conScore" class="attributeInputFields">
-      <input type="text" id="conMod" class="attributeInputFields">
-      <input type="text" id="conTempAdjust" class="attributeInputFields">
-      <input type="text" id="conTempMod" class="attributeInputFields">
     </div>
     <div class="attributeC">
-      <div class="boxT">INT Intelligence</div>
-      <input type="text" id="intScore" class="attributeInputFields">
-      <input type="text" id="intMod" class="attributeInputFields">
-      <input type="text" id="intTempAdjust" class="attributeInputFields">
-      <input type="text" id="intTempMod" class="attributeInputFields">
     </div>
     <div class="attributeC">
-      <div class="boxT">WIS Wisdom</div>
-      <input type="text" id="wisScore" class="attributeInputFields">
-      <input type="text" id="wisMod" class="attributeInputFields">
-      <input type="text" id="wisTempAdjust" class="attributeInputFields">
-      <input type="text" id="wisTempMod" class="attributeInputFields">
     </div>
     <div class="attributeC">
-      <div class="boxT">CHA Charisma</div>
-      <input type="text" id="chaScore" class="attributeInputFields">
-      <input type="text" id="chaMod" class="attributeInputFields">
-      <input type="text" id="chaTempAdjust" class="attributeInputFields">
-      <input type="text" id="chaTempMod" class="attributeInputFields">
+    </div>
+    <div class="attributeC">
     </div>
   </form>
   <form class="hpInit">
-    <div class="boxT">HP<br>Hit Points</div>
+    <div class="hpInitContHP">
+      <div class="boxT">HP<br>Hit Points</div>
+  </div>
     <div class="hpInitCont">
       <input type="text" id="hpTotal" class="hpInitInputFields">
       <h6>Total</h6>
@@ -243,35 +254,35 @@
       <input type="text" id="refTotal" class="savesInputFields">
       <input type="text" id="willTotal" class="savesInputFields">
     </div>
-    =
+    <div class="savesOperands">=</div>
     <div class="savesCont">
       <h6>Base</h6> 
       <input type="text" id="fortBase" class="savesInputFields">
       <input type="text" id="refBase" class="savesInputFields">
       <input type="text" id="willBase" class="savesInputFields">
     </div>
-    +
+    <div class="savesOperands">+</div>
     <div class="savesCont">
       <h6>Ability</h6> 
       <input type="text" id="fortAblMod" class="savesInputFields">
       <input type="text" id="refAblMod" class="savesInputFields">
       <input type="text" id="willAblMod" class="savesInputFields">
     </div>
-    +
+    <div class="savesOperands">+</div>
     <div class="savesCont">
       <h6>Magic</h6>
       <input type="text" id="fortMagMod" class="savesInputFields">
       <input type="text" id="refMagMod" class="savesInputFields">
       <input type="text" id="willMagMod" class="savesInputFields">
     </div>
-    +
+    <div class="savesOperands">+</div>
     <div class="savesCont">
       <h6>Misc</h6> 
       <input type="text" id="fortMiscMod" class="savesInputFields">
       <input type="text" id="refMiscMod" class="savesInputFields">
       <input type="text" id="willMiscMod" class="savesInputFields">
     </div>
-    +
+    <div class="savesOperands">+</div>
     <div class="savesCont">
       <h6>Temp</h6> 
       <input type="text" id="fortTempMod" class="savesInputFields">
@@ -290,49 +301,48 @@
       <input type="text" id="cmbTotal" class="combatInputFields">
       <h4>Total</h4>
     </div>
-    =
+    <div class="operands">=</div>
     <div class="combatCont">
       <input type="text" id="cmbBase" class="combatInputFields">
       <h4>BAB</h4>
     </div>
-    +
+    <div class="operands">+</div>
     <div class="combatCont">
       <input type="text" id="cmbStr" class="combatInputFields">
       <h4>Strength Mod</h4>
     </div>
-    +
+    <div class="operands">+</div>
     <div class="combatCont">
       <input type="text" id="cmbSize" class="combatInputFields">
       <h4>Size Mod</h4>
     </div>
     <input type="text" id="cmbMods" class="combatInputFieldsLong">
-
     <div class="boxTWide">CMD</div>
     <div class="combatCont">
       <input type="text" id="cmdTotal" class="combatInputFields">
       <h4>Total</h4>
     </div>
-    =
+    <div class="operands">=</div>
     <div class="combatCont">
       <input type="text" id="cmdBase" class="combatInputFields">
       <h4>BAB</h4>
     </div>
-    +
+    <div class="operands">+</div>
     <div class="combatCont">
       <input type="text" id="cmdStr" class="combatInputFields">
       <h4>Strength Mod</h4>
     </div>
-    +
+    <div class="operands">+</div>
     <div class="combatCont">
       <input type="text" id="cmdDex" class="combatInputFields">
       <h4>Dex Mod</h4>
    </div>
-    + 
+    <div class="operands">+</div>
     <div class="combatCont">
       <input type="text" id="cmdSize" class="combatInputFields">
       <h4>Size Mod</h4>
   </div>
-    + 10
+    <div class="operands">+ 10</div>
   </form>
   <!-- Eventually move the add and remove buttons outside of the weapons container -->
   <div class="weaponsScroll"> 
