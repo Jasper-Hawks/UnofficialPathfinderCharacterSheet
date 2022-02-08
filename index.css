@@ -477,8 +477,8 @@ input{
 }
 .skillsTTot{
 
-    margin-right:2.8vw;
-    /* margin-left: 3%; */
+    width: 10%;
+    display: inline-block;
 
 }
 .skillsTLong{
