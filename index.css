@@ -8,6 +8,7 @@
 /* Use floats in order to place labels within input fields */
 /* TODO fix operands so that they are aligned properly */
 /* TODO Think about using flex box for dynamic resizing of containers */
+/* TODO Possibly revert skills section */
 
 /* The containers used with the weapons section are really great at scaling */
 /* We might have to recreate the entire site with these containers in mind */
@@ -357,7 +358,7 @@ input{
 }
 .speedCont{
 
-    width: 70%;
+    width: 100%;
 
 }
 .speedBoxT{
@@ -385,7 +386,7 @@ input{
 
     display:inline-block;
     width: 35%;
-    margin-left: 15px;
+    margin-left: 1%;
 
 
 }
@@ -393,8 +394,8 @@ input{
 
     display:inline-block;
     width: 35%;
-    margin-top: 1vw;
-    margin-left: 15px;
+    margin-top: 3%;
+    margin-left: 1%;
 
 
 }
@@ -402,8 +403,7 @@ input{
 
     display:inline-block;
     width: 15%;
-
-    margin-left: 15px;
+    margin-left: 3%;
 
 
 }
@@ -411,8 +411,7 @@ input{
 
     display: inline-block;
     width: 15%;
-
-    margin-left: 15px;
+    margin-left: 3%;
 
 
 }
@@ -420,7 +419,7 @@ input{
 
     display:inline-block;
     width: 15%;
-    margin-left: 15px;
+    margin-left: 3%;
 
 }
 .speedInputFields{
@@ -469,10 +468,15 @@ input{
     display:inline-block;
     text-align: center;
     /* margin-left: 1vw; */
-    width: 2vw;
+    width: 9%;
     /* height: 2vw; */
     display:inline-block;
     /* font-size: .7vw; */
+
+}
+.skillsTRad{
+
+    width: 3%;
 
 }
 .skillsTTot{
@@ -483,28 +487,28 @@ input{
 }
 .skillsTLong{
 
-    width: 12vw;
+    width: 40%;
     text-align: left;
     padding-bottom: 10px;
 
 }
 .skillsRadio{
 
-    display:inline-block;
-    width:.7vw;
-    height:.7vw;
+    height: auto;
+    display: inline-block;
+    margin-top: .87vw;
 
 }
 .skillsDetailedT{
 
-    display:inline-block;
-    width:11vw;
+    width:100%;
+    margin-top: 6.2%;
     text-align:left;
 
 }
 .skillsInputFields{
 
-    width: 2vw;
+    width: 100%;
     height:auto;
     border-color:black;
     display:inline;
@@ -513,15 +517,17 @@ input{
 }
 .skillsInputFieldsMisc{
 
-    width: 1.7vw;
+    width: 100%;
     border-color:black;
 
 }
 .skillsEqualsT{
 
-    width: 2.3vw;
+    width: 100%;
     text-align:left;
     font-size:.8vw;
+    vertical-align: top;
+    margin-top: 20%;
 
 }
 .armorClass{
@@ -749,13 +755,11 @@ input{
 
 }
 
+/*
 @media screen and (max-width: 1375px){
 
     .attributes{
 
-        /* position:relative; */
-        /* top:85%; */
-        /* left:22.5%; */
         width:  18vw;
         display:inline-block;
     
@@ -779,21 +783,18 @@ input{
         left:0%;
     
     }
-    .personalInfo{ /* Make this container scale down when on mobile devices*/
+    .personalInfo{ 
 
         position: relative;
         padding-top:1%;
         width: 40vw;
         display:inline-block;
-        /* height:auto; */
     
     }
     .logo{
 
         position: relative;
-        /* left:20%; */
         padding-top: 1%;
-        /* width:26vw; */
         height: auto;
          
     }
@@ -837,5 +838,4 @@ input{
         display:inline-block;
     
     }
-    /* Add scaling for the attribute text */
 }
