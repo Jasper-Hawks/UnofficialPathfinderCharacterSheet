@@ -9,6 +9,7 @@
 /* TODO fix operands so that they are aligned properly */
 /* TODO Think about using flex box for dynamic resizing of containers */
 /* TODO Possibly revert skills section */
+/* TODO Use table display where applicable */
 
 /* The containers used with the weapons section are really great at scaling */
 /* We might have to recreate the entire site with these containers in mind */
@@ -39,9 +40,15 @@ body{
     height: auto;
      
 }
+.manInput{
+
+    background-color: grey;
+    width: 10%;
+
+}
 h4{
 
-    font-size: .6vw;
+    font-size: .5vw;
     text-align: center;
     margin:0;
 
@@ -168,16 +175,30 @@ input{
     margin-top: 1vw;
 
 }
+.attributesHpInit{
+
+    width:100%
+
+}
 /* ATTRIBUTES CONTAINER*/
 .attributes{
 
     /* position:relative; */
     /* top:85%; */
     /* left:22.5%; */
-    width:  14vw;
-    min-width: 13vw;
-    max-width: 15vw;
+    width:  45%;
     display:inline-block;
+
+}
+.attributeBoxT{
+
+    background-color: black;
+    color: white;
+    font-size: .6vw;
+    text-align: center;
+    font-weight: bold;
+    width: 100%;
+    margin-top: 23%;
 
 }
 .attributeTC{
@@ -190,7 +211,6 @@ input{
 
     width: 2vw;
     font-size: .6vw;
-    margin-left: .39vw;
     /*TODO research display: table*/
 }
 .atttributeC{
@@ -225,11 +245,12 @@ input{
     margin-right:2px;
     display:inline-block;
 
-} /* TODO eventually maek all of the input fields align with the titles*/
+} /* TODO eventually make all of the input fields align with the titles*/
 .attributeInputFields{
 
     width: 100%;
-    height:1.9vw;
+    height:100%;
+    margin-top: 20%;
     border-color: black;
 
 
@@ -244,7 +265,7 @@ input{
 /*hpInit */
 .hpInit{
   
-    width:49%;
+    width:50%;
     display:inline-block;
     height: 60%;
     vertical-align: top;
@@ -252,7 +273,7 @@ input{
 }
 .hpInitCont{
 
-    width: 34%;
+    width: 30%;
     display: inline-block;
     margin-left: 4%;
 
@@ -277,7 +298,7 @@ input{
 }
 .hpInitContSmall{
 
-    width: 21%;
+    width: 17%;
     margin-top:5%;
     vertical-align: top;
     display: inline-block;
@@ -286,6 +307,7 @@ input{
 .operands{
 
     padding: 1% 1%;
+    font-size: .8vw;
     vertical-align: baseline;
     
 }
@@ -307,6 +329,8 @@ input{
     background-color: black;
     color: white;
     margin-top: 5%;
+    width: 20%;
+    height: 10%;
     vertical-align: top;
 
 }
@@ -345,7 +369,7 @@ input{
 }
 #hpCurrent{
 
-    padding-bottom: 50px;
+    padding-bottom: 10%;
     
 }
 .speedSkills{
@@ -544,7 +568,7 @@ input{
 }
 .armorClassCont{
 
-    width: 6%;
+    width: 5%;
     display: inline-block;
     vertical-align: top;
 
@@ -564,7 +588,7 @@ input{
     padding-top: 10px;
     font-weight: bold;
     vertical-align: top;
-    width:3vw;
+    width:10%;
     height:1.5vw;
     margin-right:2px;
     display:inline-block;
@@ -583,32 +607,35 @@ input{
     border-color: black;
 
 }
+.savesHead{
+
+    text-align: center;
+    display: inline-block;
+    width:6%;
+    font-size: .6vw;
+
+}
 .savesTLong{
 
     width: 100%;
 
 }
-.savesContLong{
+.savesInputFieldsHead{
 
-    width: 41%;
-    vertical-align: top;
-
-}
-.savesCont{
-
-    width: 7%;
-    vertical-align: top;
+    width:100%;
+    display:inline-block;
+    border-color:black;
 
 }
 .savesBoxTWide{
 
-    width: 100%;
+    width: 30%;
     background-color: black;
     text-align: center;
     color:white;
     padding-top: 10px;
     font-weight: bold;
-    height:30px;
+    height:20%;
     margin-right:3px;
     display:inline-block;
 
@@ -616,7 +643,7 @@ input{
 }
 .savesInputFields{
 
-    width: 100%;
+    width: 6%;
     display:inline-block;
     border-color:black;
     

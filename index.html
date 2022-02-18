@@ -19,7 +19,6 @@
 <img class="logo" src="Images/pathfinder_cropped.jpg">
 <body>
 <form class="personalInfo">
-
   <div class="nameOfPCC">
     <input type="text" id="nameOfPC">
     <hr>
@@ -87,15 +86,16 @@
   </div>
 </form>
 <div class="leftColumn">
+  <div class="attributesHpInit">
   <form class="attributes">
     <div class="attributeCont">
       <div class="boxAttributeT">Attributes</div>
-      <div class="boxT">STR Strength</div>
-      <div class="boxT">DEX Dexterity</div>
-      <div class="boxT">CON Constitution</div>
-      <div class="boxT">INT Intelligence</div>
-      <div class="boxT">WIS Wisdom</div>
-      <div class="boxT">CHA Charisma</div>
+      <div class="attributeBoxT">STR Strength</div>
+      <div class="attributeBoxT">DEX Dexterity</div>
+      <div class="attributeBoxT">CON Constitution</div>
+      <div class="attributeBoxT">INT Intelligence</div>
+      <div class="attributeBoxT">WIS Wisdom</div>
+      <div class="attributeBoxT">CHA Charisma</div>
     </div>
     <div class="attributeCont">
       <h6 class="attributeHead">Ability<br>Score</h6>
@@ -185,6 +185,7 @@
       </div>
     </div>
   </form>
+</div>
   <form class="armorClass">
     <div class="armorClassRowCont">
       <div class="armorClassBoxT">AC Armor Class</div>
@@ -242,54 +243,89 @@
 
   </form>
   <form class="saves">
-    <div class="savesContLong">
-      <h6 class="savesTLong">Saving Throws</h6>
-      <div class="savesBoxTWide">Fortitude</div>
-      <div class="savesBoxTWide">Reflex</div>
-      <div class="savesBoxTWide">Will</div>
+    <h6 class="savesTLong">Saving Throws</h6>
+    <div class="savesBoxTWide">Fortitude</div>
+    <div class="savesHead">
+    Totals
+    <input type="text" id="fortTotal" class="savesInputFieldsHead">
     </div>
-    <div class="savesCont">
-      <h6>Total</h6> 
-      <input type="text" id="fortTotal" class="savesInputFields">
-      <input type="text" id="refTotal" class="savesInputFields">
-      <input type="text" id="willTotal" class="savesInputFields">
+    <div class="operands">=</div>
+    <div class="savesHead">
+      Base Save
+    <input type="text" id="fortBase" class="savesInputFieldsHead">
     </div>
-    <div class="savesOperands">=</div>
-    <div class="savesCont">
-      <h6>Base</h6> 
-      <input type="text" id="fortBase" class="savesInputFields">
-      <input type="text" id="refBase" class="savesInputFields">
-      <input type="text" id="willBase" class="savesInputFields">
+    <div class="operands">+</div>
+    <div class="savesHead">
+      Ability Mod
+    <input type="text" id="fortAblMod" class="savesInputFieldsHead">
     </div>
-    <div class="savesOperands">+</div>
-    <div class="savesCont">
-      <h6>Ability</h6> 
-      <input type="text" id="fortAblMod" class="savesInputFields">
-      <input type="text" id="refAblMod" class="savesInputFields">
-      <input type="text" id="willAblMod" class="savesInputFields">
+    <div class="operands">+</div>
+    <div class="savesHead">
+      Magic Mod
+    <input type="text" id="fortMagMod" class="savesInputFieldsHead">
     </div>
-    <div class="savesOperands">+</div>
-    <div class="savesCont">
-      <h6>Magic</h6>
-      <input type="text" id="fortMagMod" class="savesInputFields">
-      <input type="text" id="refMagMod" class="savesInputFields">
-      <input type="text" id="willMagMod" class="savesInputFields">
+    <div class="operands">+</div>
+    <div class="savesHead">
+      Misc Mod
+    <input type="text" id="fortMiscMod" class="savesInputFieldsHead">
     </div>
-    <div class="savesOperands">+</div>
-    <div class="savesCont">
-      <h6>Misc</h6> 
-      <input type="text" id="fortMiscMod" class="savesInputFields">
-      <input type="text" id="refMiscMod" class="savesInputFields">
-      <input type="text" id="willMiscMod" class="savesInputFields">
-    </div>
-    <div class="savesOperands">+</div>
-    <div class="savesCont">
-      <h6>Temp</h6> 
-      <input type="text" id="fortTempMod" class="savesInputFields">
-      <input type="text" id="refTempMod" class="savesInputFields">
-      <input type="text" id="willTempMod" class="savesInputFields">
-    </div>
-    
+    <div class="operands">+</div>
+    <div class="savesHead">
+      Temp Mod
+    <input type="text" id="fortTempMod" class="savesInputFieldsHead">
+      </div>
+    <div class="savesBoxTWide">Reflex</div>
+    <input type="text" id="refTotal" class="savesInputFields">
+    <div class="operands">=</div>
+    <input type="text" id="refBase" class="savesInputFields">
+    <div class="operands">+</div>
+    <input type="text" id="refAblMod" class="savesInputFields">
+    <div class="operands">+</div>
+    <input type="text" id="refMagMod" class="savesInputFields">
+    <div class="operands">+</div>
+    <input type="text" id="refMiscMod" class="savesInputFields">
+    <div class="operands">+</div>
+    <input type="text" id="refTempMod" class="savesInputFields">
+
+    <div class="savesBoxTWide">Will</div>
+    <input type="text" id="willTotal" class="savesInputFields">
+    <div class="operands">=</div>
+    <input type="text" id="willBase" class="savesInputFields">
+    <div class="operands">+</div>
+    <input type="text" id="willAblMod" class="savesInputFields">
+    <div class="operands">+</div>
+    <input type="text" id="willMagMod" class="savesInputFields">
+    <div class="operands">+</div>
+    <input type="text" id="willMiscMod" class="savesInputFields">
+    <div class="operands">+</div>
+    <input type="text" id="willTempMod" class="savesInputFields">
+  </form>
+  <form class="combat">
+    <div class="combatBaseBox">Base Attack Bonus</div>
+    <input type="text" id="baseAttack" class="combatInputFieldsWide">
+    <div class="boxTWide">Spell Resistance</div>
+    <input type="text" id="spellResist" class="combatInputFieldsWide">
+    <div class="boxTWide">CMB</div>
+    <input type="text" id="cmbTotal" class="combatInputFields">
+    =
+    <input type="text" id="cmbBase" class="combatInputFields">
+    +
+    <input type="text" id="cmbStr" class="combatInputFields">
+    +
+    <input type="text" id="cmbSize" class="combatInputFields">
+    <input type="text" id="cmbMods" class="combatInputFieldsLong">
+
+    <div class="boxTWide">CMD</div>
+    <input type="text" id="cmdTotal" class="combatInputFields">
+    =
+    <input type="text" id="cmdBase" class="combatInputFields">
+    +
+    <input type="text" id="cmdStr" class="combatInputFields">
+    +
+    <input type="text" id="cmdDex" class="combatInputFields">
+    + 
+    <input type="text" id="cmdSize" class="combatInputFields">
+    + 10
   </form>
   <form class="combat">
     <div class="combatBaseBox">Base Attack Bonus</div>
@@ -705,126 +741,10 @@
     <input type="text" id="useMMiscMod" class="skillsInputFieldsMisc">
 
   </div>
-  <br>
-  <h5> + </h5>
-  <h5> + </h5>
-  <br>
-  <h5> + </h5>
-  <h5> + </h5>
-  <br>
-  <h5> + </h5>
-  <h5> + </h5>
-  <br>
-  <h5> + </h5>
-  <h5> + </h5>
-  <br>
-  <h5> + </h5>
-  <h5> + </h5>
-  <br>
-  <h5> + </h5>
-  <h5> + </h5>
-<br>
-  <h5> + </h5>
-  <h5> + </h5>
-<br>
-  <h5> + </h5>
-  <h5> + </h5>
-<br>
-  <h5> + </h5>
-  <h5> + </h5>
-<br>
-  <h5> + </h5>
-  <h5> + </h5>
-<br>
-  <h5> + </h5>
-  <h5> + </h5>
-<br>
-  <h5> + </h5>
-  <h5> + </h5>
-<br>
-  <h5> + </h5>
-  <h5> + </h5>
-<br>
-  <h5> + </h5>
-  <h5> + </h5>
-<br>
-  <h5> + </h5>
-  <h5> + </h5>
-<br>
-  <h5> + </h5>
-  <h5> + </h5>
-<br>
-  <h5> + </h5>
-  <h5> + </h5>
-<br>
-  <h5> + </h5>
-  <h5> + </h5>
-<br>
-  <h5> + </h5>
-  <h5> + </h5>
-<br>
-  <h5> + </h5>
-  <h5> + </h5>
-<br>
-  <h5> + </h5>
-  <h5> + </h5>
-<br>
-  <h5> + </h5>
-  <h5> + </h5>
-<br>
-  <h5> + </h5>
-  <h5> + </h5>
-<br>
-  <h5> + </h5>
-  <h5> + </h5>
-<br>
-  <h5> + </h5>
-  <h5> + </h5>
-<br>
-  <h5> + </h5>
-  <h5> + </h5>
-<br>
-  <h5> + </h5>
-  <h5> + </h5>
-<br>
-  <h5> + </h5>
-  <h5> + </h5>
-<br>
-  <h5> + </h5>
-  <h5> + </h5>
-<br>
-  <h5> + </h5>
-  <h5> + </h5>
-<br>
-  <h5> + </h5>
-  <h5> + </h5>
-<br>
-  <h5> + </h5>
-  <h5> + </h5>
-<br>
-  <h5> + </h5>
-  <h5> + </h5>
-<br>
-  <h5> + </h5>
-  <h5> + </h5>
-<br>
-  <h5> + </h5>
-  <h5> + </h5>
-<br>
-  <h5> + </h5>
-  <h5> + </h5>
-<br>
-  <h5> + </h5>
-  <h5> + </h5>
-<br>
-  <h5> + </h5>
-  <h5> + </h5>
-<br>
-  <h5> + </h5>
-  <h5> + </h5>
 </div>
   <input>
 </form>
+<input type="button" class="manInput" value="Export" onclick="getName()">
 
   <script>
     let i = 1;
