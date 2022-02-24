@@ -307,7 +307,7 @@ input{
 .operands{
 
     padding: 1% 1%;
-    font-size: .8vw;
+    font-size: .7vw;
     vertical-align: baseline;
     
 }
@@ -347,9 +347,12 @@ input{
     text-align: center;
     font-size: .6vw;
     margin-top: 5px;
-    padding-top: 10px;
+    padding-top: 1%;
+    font-size: .6vw;
+    vertical-align: baseline;
+    padding-bottom: 1%;
     font-weight: bold;
-    width:4vw;
+    width:10%;
     height:30px;
     margin-right:2px;
     display:inline-block;
@@ -633,7 +636,8 @@ input{
     background-color: black;
     text-align: center;
     color:white;
-    padding-top: 10px;
+    padding-top: 1%;
+    padding-bottom:1%;
     font-weight: bold;
     height:20%;
     margin-right:3px;
@@ -655,6 +659,7 @@ input{
     background-color: black;
     color:white;
     padding-top: 15px;
+    font-size: .7vw;
     padding-bottom: 15px;
     font-weight: bold;
     text-align: center;
