@@ -175,30 +175,15 @@ input{
     margin-top: 1vw;
 
 }
-.attributesHpInit{
-
-    width:100%
-
-}
-/* ATTRIBUTES CONTAINER*/
 .attributes{
 
     /* position:relative; */
     /* top:85%; */
     /* left:22.5%; */
-    width:  45%;
+    width:  14vw;
+    min-width: 13vw;
+    max-width: 15vw;
     display:inline-block;
-
-}
-.attributeBoxT{
-
-    background-color: black;
-    color: white;
-    font-size: .6vw;
-    text-align: center;
-    font-weight: bold;
-    width: 100%;
-    margin-top: 23%;
 
 }
 .attributeTC{
@@ -209,13 +194,14 @@ input{
 }
 .attributeHead{
 
-    width: 2vw;
+    width: 15%;
     font-size: .6vw;
+    margin-left: .4%;
     /*TODO research display: table*/
 }
-.atttributeC{
+.attributeC{
 
-    width:15vw;
+    width:100%;
     
 }
 .boxAttributeT{
@@ -239,20 +225,33 @@ input{
     font-size: .6vw;
     padding-top: 10px;
     font-weight: bold;
+    width:3vw;
+    height:1.5vw;
+    vertical-align: top;
+    margin-right:2px;
+    display:inline-block;
+
+}
+/* .boxT{
+
+    background-color: black;
+    color:white;
+    text-align: center;
+    font-size: .6vw;
+    padding-top: 10px;
+    font-weight: bold;
     width:100%;
     height:1.5vw;
     vertical-align: top;
     margin-right:2px;
     display:inline-block;
 
-} /* TODO eventually make all of the input fields align with the titles*/
+} TODO eventually make all of the input fields align with the titles */
 .attributeInputFields{
 
-    width: 100%;
-    height:100%;
-    margin-top: 20%;
+    width:1.8vw;
+    margin-left: 3%;
     border-color: black;
-
 
 }
 .attributeCont{
@@ -306,7 +305,7 @@ input{
 }
 .operands{
 
-    padding: 1% 1%;
+    margin: 1% 1%;
     font-size: .7vw;
     vertical-align: baseline;
     
@@ -495,47 +494,42 @@ input{
     display:inline-block;
     text-align: center;
     /* margin-left: 1vw; */
-    width: 9%;
+    width: 2vw;
     /* height: 2vw; */
     display:inline-block;
     /* font-size: .7vw; */
 
 }
-.skillsTRad{
-
-    width: 3%;
-
-}
 .skillsTTot{
 
-    width: 10%;
-    display: inline-block;
+    margin-right:2.8vw;
+    /* margin-left: 3%; */
 
 }
 .skillsTLong{
 
-    width: 40%;
+    width: 12vw;
     text-align: left;
     padding-bottom: 10px;
 
 }
 .skillsRadio{
 
-    height: auto;
-    display: inline-block;
-    margin-top: .87vw;
+    display:inline-block;
+    width:.7vw;
+    height:.7vw;
 
 }
 .skillsDetailedT{
 
-    width:100%;
-    margin-top: 6.2%;
+    display:inline-block;
+    width:11vw;
     text-align:left;
 
 }
 .skillsInputFields{
 
-    width: 100%;
+    width: 2vw;
     height:auto;
     border-color:black;
     display:inline;
@@ -544,17 +538,15 @@ input{
 }
 .skillsInputFieldsMisc{
 
-    width: 100%;
+    width: 1.7vw;
     border-color:black;
 
 }
 .skillsEqualsT{
 
-    width: 100%;
+    width: 2.3vw;
     text-align:left;
     font-size:.8vw;
-    vertical-align: top;
-    margin-top: 20%;
 
 }
 .armorClass{
@@ -695,6 +687,11 @@ input{
     border-color:black;
 
 }
+.manuevers{
+
+    width: 100%;
+
+}
 .weapons{
 
     width: 100%;
@@ -706,6 +703,7 @@ input{
 .weaponsScroll{
 
     height: 60vh;
+    width:100%;
     overflow-y: auto;
 
 }
@@ -753,6 +751,7 @@ input{
     background-color: black;
     color: white;
     text-align:center;
+    font-size: .8vw;
     display:inline-block;
     vertical-align: top;
 
@@ -763,6 +762,7 @@ input{
 
     width: 98%;
     font-size: 1em;
+    height: 3vh;
     display: block;
     border-color: black;
     /* outline-color: transparent;
