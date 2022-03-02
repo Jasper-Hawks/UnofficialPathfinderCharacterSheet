@@ -485,68 +485,122 @@ input{
     display:inline-block;
 
 }
+.skillsHead{
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
 .skillsT{
 
-    /* margin: 0px; */
+    /* margin: 0px;
     font-size:.7vw;
     margin-top:3px;
     margin-left: 5px;
     display:inline-block;
     text-align: center;
     /* margin-left: 1vw; */
-    width: 2vw;
+    /* width: 9%; */
     /* height: 2vw; */
-    display:inline-block;
+    /* display:inline-block; */ 
     /* font-size: .7vw; */
+    display:flex;
+
+}
+.skillsRadText{
+
+    width: 3%;
+
+}
+.skillsTTextTotal{
+
+    width: 10%;
+
+}
+.spacer{
+
+    width:10%;
+
+}
+.skillsTLongText{
+
+    text-align: left;
+    width: 41%;
+
+}
+.skillsTText{
+
+    width:10%;
+    text-align: center;
+
+}
+.skillsTRad{
+
+    width: 3%;
+    display: inline-flex;
+    flex-direction: column;
+    column-gap:200px;
 
 }
 .skillsTTot{
 
-    margin-right:2.8vw;
-    /* margin-left: 3%; */
+    width: 10%;
+    display:inline-flex;
+    flex-direction: column;
+
 
 }
 .skillsTLong{
 
-    width: 12vw;
+    width: 40%;
     text-align: left;
+    display: inline-flex;
+    flex-direction: column;
     padding-bottom: 10px;
 
 }
 .skillsRadio{
 
-    display:inline-block;
-    width:.7vw;
-    height:.7vw;
+    height: auto;
 
 }
 .skillsDetailedT{
 
-    display:inline-block;
-    width:11vw;
+    width:100%;
+    margin-top: 6.2%;
     text-align:left;
 
 }
 .skillsInputFields{
 
-    width: 2vw;
+    width: 100%;
     height:auto;
     border-color:black;
     display:inline;
     /* margin-left:.4vw; */
 
 }
+.skillsT{
+
+    display:inline-flex;
+    flex-direction: column;
+    width: 10%;
+
+}
 .skillsInputFieldsMisc{
 
-    width: 1.7vw;
+    width: 100%;
     border-color:black;
 
 }
 .skillsEqualsT{
 
-    width: 2.3vw;
+    width: 100%;
     text-align:left;
     font-size:.8vw;
+    vertical-align: top;
+    margin-top: 20%;
 
 }
 .armorClass{
