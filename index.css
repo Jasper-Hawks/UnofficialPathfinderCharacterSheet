@@ -535,14 +535,14 @@ input{
     text-align: center;
 
 }
-.skillsTRad{
+/* .skillsTRad{
 
     width: 3%;
     display: inline-flex;
     flex-direction: column;
-    column-gap:200px;
+    gap:1rem;
 
-}
+} */
 .skillsTTot{
 
     width: 10%;
@@ -563,11 +563,12 @@ input{
 .skillsRadio{
 
     height: auto;
+    width:5%
 
 }
 .skillsDetailedT{
 
-    width:100%;
+    width:80%;
     margin-top: 6.2%;
     text-align:left;
 
