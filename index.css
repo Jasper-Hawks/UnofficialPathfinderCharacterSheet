@@ -1,15 +1,6 @@
 /* TODO Even out the black box labels. Some are lopsided */
-/* TODO use vw or vh for containers and % for any elements within containers */
-/* TODO Realign BAB Box */
-/* TODO Make div header elements the same width as input elements */
 /* TODO Choose a font */
 /* TODO Fix Profession Section */
-/* Inputs in the weapons section are not displaying properly */
-/* Use floats in order to place labels within input fields */
-/* TODO fix operands so that they are aligned properly */
-/* TODO Think about using flex box for dynamic resizing of containers */
-/* TODO Possibly revert skills section */
-/* TODO Use table display where applicable */
 
 /* The containers used with the weapons section are really great at scaling */
 /* We might have to recreate the entire site with these containers in mind */
@@ -232,21 +223,6 @@ input{
     display:inline-block;
 
 }
-/* .boxT{
-
-    background-color: black;
-    color:white;
-    text-align: center;
-    font-size: .6vw;
-    padding-top: 10px;
-    font-weight: bold;
-    width:100%;
-    height:1.5vw;
-    vertical-align: top;
-    margin-right:2px;
-    display:inline-block;
-
-} TODO eventually make all of the input fields align with the titles */
 .attributeInputFields{
 
     width:1.8vw;
@@ -272,7 +248,7 @@ input{
 }
 .hpInitCont{
 
-    width: 30%;
+    width: 32%;
     display: inline-block;
     margin-left: 4%;
 
@@ -307,13 +283,22 @@ input{
 
     margin: 1% 1%;
     font-size: .7vw;
-    vertical-align: baseline;
+    display: inline-block;
+    vertical-align:middle;
     
+}
+.initOperands{
+
+    margin: 7% 1%;
+    font-size: .7vw;
+    display: inline-block;
+    vertical-align: baseline;
+
 }
 .savesOperands{
 
     padding: 10% 0;
-    vertical-align: baseline;
+    vertical-align: middle;
 
 }
 .hpInitInputFields{
@@ -328,6 +313,7 @@ input{
     background-color: black;
     color: white;
     margin-top: 5%;
+    font-size: .6vw;
     width: 20%;
     height: 10%;
     vertical-align: top;
@@ -490,7 +476,7 @@ input{
     /* margin: 0px; */
     font-size:.7vw;
     margin-top:3px;
-    margin-left: 5px;
+    margin-left: .3vw;
     display:inline-block;
     text-align: center;
     /* margin-left: 1vw; */
@@ -502,7 +488,7 @@ input{
 }
 .skillsTTot{
 
-    margin-right:2.8vw;
+    margin-right:2vw;
     /* margin-left: 3%; */
 
 }

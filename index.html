@@ -8,8 +8,7 @@
 
   <meta charset="UTF-8" />
 
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,maximum-scale=1.0,minimum-scale=1.0" />
   <meta name="description" content="" />
 
   <link rel="stylesheet" href="index.css"/>
@@ -164,12 +163,12 @@
         <input type="text" id="initTotal" class="hpInitInputFieldsSmall">
         <h6>Total</h6>
       </div>
-      <div class="operands">=</div>
+      <div class="initOperands">=</div>
       <div class="hpInitContSmall">
         <input type="text" id="initDexMod" class="hpInitInputFieldsSmall"> 
         <h6>Dex Mod</h6>
       </div>
-      <div class="operands">+</div>
+      <div class="initOperands">+</div>
       <div class="hpInitContSmall">
         <input type="text" id="initMiscMod" class="hpInitInputFieldsSmall">
         <h6>Misc Mod</h6>
@@ -299,27 +298,30 @@
     <input type="text" id="spellResist" class="combatInputFieldsWide">
   </form>
   <form class="manuevers">
-    <div class="boxTWide">CMB</div>
-    <div class="combatCont">
-      <input type="text" id="cmbTotal" class="combatInputFields">
-      <h4>Total</h4>
-    </div>
-    <div class="operands">=</div>
-    <div class="combatCont">
-      <input type="text" id="cmbBase" class="combatInputFields">
-      <h4>BAB</h4>
-    </div>
-    <div class="operands">+</div>
-    <div class="combatCont">
-      <input type="text" id="cmbStr" class="combatInputFields">
-      <h4>Strength Mod</h4>
-    </div>
-    <div class="operands">+</div>
-    <div class="combatCont">
-      <input type="text" id="cmbSize" class="combatInputFields">
-      <h4>Size Mod</h4>
-    </div>
-    <input type="text" id="cmbMods" class="combatInputFieldsLong">
+    <div class="cmb">
+      <div class="boxTWide">CMB</div>
+      <div class="combatCont">
+        <input type="text" id="cmbTotal" class="combatInputFields">
+        <h4>Total</h4>
+      </div>
+      <div class="operands">=</div>
+      <div class="combatCont">
+        <input type="text" id="cmbBase" class="combatInputFields">
+        <h4>BAB</h4>
+      </div>
+      <div class="operands">+</div>
+      <div class="combatCont">
+        <input type="text" id="cmbStr" class="combatInputFields">
+        <h4>Strength Mod</h4>
+      </div>
+      <div class="operands">+</div>
+      <div class="combatCont">
+        <input type="text" id="cmbSize" class="combatInputFields">
+        <h4>Size Mod</h4>
+      </div>
+      <input type="text" id="cmbMods" class="combatInputFieldsLong">
+  </div>
+  <div class="cmd">
     <div class="boxTWide">CMD</div>
     <div class="combatCont">
       <input type="text" id="cmdTotal" class="combatInputFields">
@@ -346,6 +348,7 @@
       <h4>Size Mod</h4>
   </div>
     <div class="operands">+ 10</div>
+  </div>
   </form>
   <!-- Eventually move the add and remove buttons outside of the weapons container -->
   <div class="weaponsScroll"> 
