@@ -1,9 +1,7 @@
 /* TODO Even out the black box labels. Some are lopsided */
 /* TODO Choose a font */
 /* TODO Fix Profession Section */
-
-/* The containers used with the weapons section are really great at scaling */
-/* We might have to recreate the entire site with these containers in mind */
+/* TODO Focus on mobile responsiveness */
 body{
 
     background-color: white;
@@ -25,9 +23,8 @@ body{
 }
 .logo{
 
-    position: relative;
     padding-top: 1%;
-    width:26vw;
+    width:40%;
     height: auto;
      
 }
@@ -87,7 +84,7 @@ div{
 
     position: relative;
     padding-top:1%;
-    width: 32vw;
+    width: 50%;
     display:inline-block;
     /* height:auto; */
 
@@ -95,7 +92,7 @@ div{
 input{
 
     box-sizing:border-box;
-    font-size: 1vw;
+    font-size: .8vw;
     width:100%;
     margin:0px;
     background-color: transparent;
@@ -171,23 +168,21 @@ input{
     /* position:relative; */
     /* top:85%; */
     /* left:22.5%; */
-    width:  14vw;
-    min-width: 13vw;
-    max-width: 15vw;
+    width:  45%;
     display:inline-block;
 
 }
 .attributeTC{
 
-    width:15vw;
+    width:100%;
     
     
 }
 .attributeHead{
 
-    width: 15%;
+    width: 13%;
     font-size: .6vw;
-    margin-left: .4%;
+    margin-left: 3%;
     /*TODO research display: table*/
 }
 .attributeC{
@@ -225,7 +220,7 @@ input{
 }
 .attributeInputFields{
 
-    width:1.8vw;
+    width:13%;
     margin-left: 3%;
     border-color: black;
 
@@ -240,7 +235,7 @@ input{
 /*hpInit */
 .hpInit{
   
-    width:50%;
+    width:45%;
     display:inline-block;
     height: 60%;
     vertical-align: top;
@@ -471,30 +466,31 @@ input{
     display:inline-block;
 
 }
+.skills{
+
+    width: 93%;
+
+}
 .skillsT{
 
-    /* margin: 0px; */
     font-size:.7vw;
     margin-top:3px;
-    margin-left: .3vw;
+    margin-left: 2%;
     display:inline-block;
     text-align: center;
-    /* margin-left: 1vw; */
-    width: 2vw;
-    /* height: 2vw; */
+    width: 9%;
     display:inline-block;
-    /* font-size: .7vw; */
 
 }
 .skillsTTot{
 
-    margin-right:2vw;
+    margin-right:7%;
     /* margin-left: 3%; */
 
 }
 .skillsTLong{
 
-    width: 12vw;
+    width: 44%;
     text-align: left;
     padding-bottom: 10px;
 
@@ -509,13 +505,13 @@ input{
 .skillsDetailedT{
 
     display:inline-block;
-    width:11vw;
+    width:40%;
     text-align:left;
 
 }
 .skillsInputFields{
 
-    width: 2vw;
+    width: 9%;
     height:auto;
     border-color:black;
     display:inline;
@@ -524,7 +520,7 @@ input{
 }
 .skillsInputFieldsMisc{
 
-    width: 1.7vw;
+    width: 9%;
     border-color:black;
 
 }
@@ -774,6 +770,7 @@ input{
 }
 
 /*
+
 @media screen and (max-width: 1375px){
 
     .attributes{
@@ -856,4 +853,16 @@ input{
         display:inline-block;
     
     }
+}
+*/
+@media screen and (max-width: 1375px){
+    body{
+
+        background-color: white;
+        width:100%;
+        position: absolute;
+        left:0%;
+    
+    }
+
 }
