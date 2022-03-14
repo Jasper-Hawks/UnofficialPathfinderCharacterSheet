@@ -2,6 +2,7 @@
 /* TODO Choose a font */
 /* TODO Fix Profession Section */
 /* TODO Focus on mobile responsiveness */
+/* TODO Remove meta tag with max and min scale so that mobile can zoom in and out */
 body{
 
     background-color: white;
