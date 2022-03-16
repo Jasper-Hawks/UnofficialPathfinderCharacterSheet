@@ -12,7 +12,7 @@
   <meta name="description" content="" />
 
   <link rel="stylesheet" href="index.css"/>
-  <script defer src="scripts/hello.js"></script>
+  <script defer src="index.js"></script>
 
 </head>
 <!-- <img class="sheet" src="Images/CharacterSheet.webp"> -->
@@ -814,6 +814,7 @@
 <input type="button" class="manInput" value="Export" onclick="getName()">
 
   <script>
+    //Move this to a js file
     let i = 0
     const download = function (data){
 
@@ -828,7 +829,7 @@
       document.body.removeChild(a);
       
     }
-
+    //TODO Rename this
     function getName() {
 
       var ids = document.querySelectorAll('*[id]');
@@ -864,7 +865,6 @@
 
     }
     function delWeap(ele){
-
       // make sure that w0 can never be deleted
       let entry = ele.parentElement.parentElement;
       console.log("The name of this id is " + entry);
@@ -880,6 +880,7 @@
       }
         
     }
+   
   </script>
 </body>
 
