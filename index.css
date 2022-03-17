@@ -31,9 +31,11 @@ body{
 }
 .manInput{
 
-    background-color: grey;
-    width: 10%;
-    font-size: .4vw;
+    background-color: black;
+    color:white;
+
+    width: 15%;
+    font-size: .5vw;
 
 }
 h4{

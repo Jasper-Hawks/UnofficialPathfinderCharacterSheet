@@ -16,6 +16,9 @@
 
 </head>
 <!-- <img class="sheet" src="Images/CharacterSheet.webp"> -->
+<input type="file" class="manInput" value="Import" onclick="">
+<input type="button" class="manInput" value="Export" onclick="getData()">
+<br>
 <img class="logo" src="Images/pathfinder_cropped.jpg">
 <body>
 <form class="personalInfo">
@@ -679,7 +682,7 @@
     <h5> + </h5>
     <input type="text" id="lingMiscMod" class="skillsInputFieldsMisc">
   <br>
-    <input type="checkbox" id="percProf" class="skillsRadio">
+    <input type="checkbox" id="percProf" class="skillsRadio" value="true">
     <h5 class="skillsDetailedT">Perception</h5>
     <input type="text" id="percBonus" class="skillsInputFields">
     <h5 class="skillsEqualsT">= Wis</h5>
@@ -810,8 +813,6 @@
     <input type="text" id="useMMiscMod" class="skillsInputFieldsMisc">
   </div>
 </form>
-<input type="file" class="manInput" value="Import" onclick="">
-<input type="button" class="manInput" value="Export" onclick="getName()">
 
   <script>
     //Move this to a js file
@@ -830,7 +831,7 @@
       
     }
     //TODO Rename this
-    function getName() {
+    function getData() {
 
       var ids = document.querySelectorAll('*[id]');
       var l = ids.length;
@@ -843,7 +844,7 @@
       }
       
       for (var k = 0; k < values.length; ++k){
-
+          
         trueValues.push(values[k].value);
 
       }
