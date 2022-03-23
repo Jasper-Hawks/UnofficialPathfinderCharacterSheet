@@ -3,6 +3,7 @@
 /* TODO Fix Profession Section */
 /* TODO Focus on mobile responsiveness */
 /* TODO Remove meta tag with max and min scale so that mobile can zoom in and out */
+/* TODO Improve visibility of weapons section */
 body{
 
     background-color: white;
@@ -681,15 +682,17 @@ input{
 .weapons{
 
     width: 100%;
-    padding-top: 20px;
     height: auto;
+
+    padding-top: 2%;
     display: inline-block;
 
 }
 .weaponsScroll{
 
-    height: 60vh;
+    height: 50vh;
     width:100%;
+    padding-top: 2%;
     overflow-y: auto;
 
 }
@@ -761,14 +764,22 @@ input{
 }
 .weaponsBtnCont{
 
-    width: 15%;
+    width: 5%;
 
 }
 .weaponsBtn{
 
     display:inline-block;
-    width: 50%;
+    width: 100%;
     background-color: lightgrey;
+    padding:0;
+
+}
+.weaponsDelBtn{
+
+    display:inline-block;
+    width: 100%;
+    background-color: red;
     padding:0;
 
 }

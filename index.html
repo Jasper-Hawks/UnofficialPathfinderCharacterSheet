@@ -156,7 +156,7 @@
       <h6>DR</h6>
     </div>
     <div class="hpInitContWide">
-      <h6>Wouds / Current HP</h6>
+      <h6>Wounds / Current HP</h6>
       <input type="text" id="hpCurrent" class="hpInitInputFieldsLarge">
       <h6>Nonlethal Damage</h6>
       <input type="text" id="nonLethal" class="hpInitInputFieldsLarge">
@@ -355,12 +355,15 @@
   </div>
   </form>
   <!-- Eventually move the add and remove buttons outside of the weapons container -->
+  <div class="weaponsBtnCont">
+    <input type="button" class="weaponsBtn" value="+" onclick="spawnWeap()" id="AddBtn">
+</div>
   <div class="weaponsScroll"> 
     <form class="weapons" id="w0">
-      <div class="wepaonsBtnCont">
-        <input type="button" class="weaponsBtn" value="+" onclick="spawnWeap()"><input type="button" class="weaponsBtn" value="-" onclick="delWeap(this);">
-    </div>
-    <br>
+    <div class="weaponsBtnCont">
+    <input type="button" class="weaponsDelBtn" value="-" onclick="delWeap(this);">
+  </div>
+  <br>
       <div class="weaponsTitle">
         <div class="weaponsBox">Weapon</div>
         <input type="text" id="weaponsTitle" class="weaponsInputFields">
@@ -603,7 +606,7 @@
     <input type="text" id="knoweMiscMod" class="skillsInputFieldsMisc">
   <br>
     <input type="checkbox" id="knowgProf" class="skillsRadio">
-    <h5 class="skillsDetailedT">Knowledge(Engineering)</h5>
+    <h5 class="skillsDetailedT">Knowledge(Geography)</h5>
     <input type="text" id="knowgBonus" class="skillsInputFields">
     <h5 class="skillsEqualsT">= Int</h5>
     <input type="text" id="knowgAbilMod" class="skillsInputFields">
@@ -816,7 +819,7 @@
 
   <script>
     //Move this to a js file
-    let i = 0
+    var i = 0
     const download = function (data){
 
       const blob = new Blob([data], {type: 'text/csv'});
@@ -831,25 +834,46 @@
       
     }
     //TODO Rename this
+    //This function now only get the text data fields
     function getData() {
+      // We need to also find out how many entries were created for weapons/spells/equipment
+      // so that we can populate the site with those fields before we write to a csv. That
+      // way importing isnt a disaster.
 
-      var ids = document.querySelectorAll('*[id]');
-      var l = ids.length;
-      var values = [];
-      var trueValues = []
-      console.log(ids);
+      //TEXT FIELD VALUES
+      var nodes = document.querySelectorAll('input[type=text],[id^=w],input[type=checkbox]');
+      var nodeValues = [];
+      var id;
+      var w = 0;
+      console.log(nodes);
 
-      for (var j = 0; j < l; ++j){
-        values.push(ids[j]);
-      }
-      
-      for (var k = 0; k < values.length; ++k){
+      //Then push all of the values of those nodes to the 
+      for (var k = 0; k < nodes.length; ++k){
+        if (nodes[k].id.match(/w[0-9]/g)){
+
+          w += 1;
+
+        }else if (nodes[k].type == "checkbox"){
           
-        trueValues.push(values[k].value);
+          nodeValues.push(nodes[k].checked);
+
+        }else{
+
+          nodeValues.push(nodes[k].value);
+
+        }
 
       }
-      console.log(trueValues);
-      download(trueValues);
+      // Let's try to see if we can push the amount of weapon
+      // entries to the csv
+      nodeValues.push(w)
+
+      console.log(nodeValues);
+      console.log(w);
+
+      // Come back to this
+    
+      download(nodeValues);
 
     }
     function spawnWeap(){
@@ -857,16 +881,15 @@
       console.log("created");
       // Create a clone of an element with class weapons
       // set it's class attribute
-      // then append it to the (left column temporarily) the bottom of the weapons section 
+      // then append it to the bottom of the weapons section 
       let entry = document.querySelector(".weapons").cloneNode(true);
       console.log(entry)
+      i++;
       entry.setAttribute('id',"w" + i);
       document.querySelector(".weaponsScroll").appendChild(entry);
-      i++;
 
     }
     function delWeap(ele){
-      // make sure that w0 can never be deleted
       let entry = ele.parentElement.parentElement;
       console.log("The name of this id is " + entry);
 
@@ -876,7 +899,7 @@
 
       }else{
 
-        // Display some text 
+        // TODO Display some text 
 
       }
         
