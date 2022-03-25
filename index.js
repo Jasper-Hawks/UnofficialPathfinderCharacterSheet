@@ -26,11 +26,13 @@ const input = document.querySelector('input[type="file"]')
               for (let i = 0; i < inputFields.length; ++i){
                 if (inputFields[i].type != "checkbox"){
                   
-                  inputFields[i].value = a[i]
+                  inputFields[i].value = a[i];
         
                 }else{
                   
-                  inputFields[i].checked = a[i];
+                  let bool = a[i] == "true" ? true : false;
+                  inputFields[i].checked = bool;
+                  console.log(!!a[i]);
         
                 }
   
