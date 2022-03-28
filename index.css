@@ -23,6 +23,12 @@ body{
     z-index: -1;
     
 }
+#pg2{
+
+    width:100%;
+    display: none;
+
+}
 .logo{
 
     padding-top: 1%;
@@ -37,6 +43,15 @@ body{
 
     width: 15%;
     font-size: .5vw;
+
+}
+.pgInput{
+
+    width: 5%;
+    background-color: grey;
+    display: inline-block;
+    margin-right: 0;
+    margin-left:auto;
 
 }
 h4{
@@ -782,6 +797,153 @@ input{
     background-color: red;
     padding:0;
 
+}
+.leftColumnPg2{
+
+    width: 50%;
+    margin-top: 1vw;
+
+}
+.acItemsBtn{
+
+    background-color: lightgrey;
+    width: 2%;
+    height: 2%;
+    padding:0;
+
+    /* display: inline-block; */
+
+}
+.acItemsScroll{
+
+    height:50vh;
+    width:100%;
+    overflow-y: auto;
+
+}
+.acItems{
+
+    font-size: 0;
+    display: flex;
+
+}
+.acItemsInput{
+
+    border-color: black;
+    border-width: 3px;
+
+}
+.acItemsTitleCont{
+
+    width: 40%;
+    flex-direction: column;
+
+}
+.acItemsTitle{
+
+    margin:0;
+    background-color: black;
+    color: white;
+    display: inline-block;
+    width: 100%;
+    font-size: .6vw;
+    text-align: center;
+}
+.acItemsBonusCont{
+
+    width: 20%;
+    flex-direction: column;
+
+}
+.acItemsBonus{
+
+    margin:0;
+    background-color: black;
+    color: white;
+    display: inline-block;
+    font-size: .6vw;
+    width:100%;
+    text-align: center;
+}
+.acItemsTypeCont{
+
+    width: 20%;
+    flex-direction: column;
+
+}
+.acItemsType{
+
+    margin:0;
+    background-color: black;
+    color: white;
+    display: inline-block;
+    font-size: .6vw;
+    width: 100%;
+    text-align: center;
+}
+.acItemsCheckPenCont{
+
+    width: 20%;
+    flex-direction: column;
+
+}
+.acItemsCheckPen{
+
+    margin:0;
+    background-color: black;
+    color: white;
+    display: inline-block;
+    font-size: .6vw;
+    width:100%;
+    text-align: center;
+}
+.acItemsSpellFailCont{
+
+    width: 20%;
+    flex-direction: column;
+
+}
+.acItemsSpellFail{
+
+    margin:0;
+    background-color: black;
+    color: white;
+    display: inline-block;
+    font-size: .6vw;
+    width: 100%;
+    text-align: center;
+}
+.acItemsWeightCont{
+
+    width: 20%;
+    flex-direction: column;
+
+}
+.acItemsWeight{
+
+    margin:0;
+    background-color: black;
+    color: white;
+    display: inline-block;
+    font-size: .6vw;
+    width: 100%;
+    text-align: center;
+}
+.acItemsPropCont{
+
+    width: 20%;
+    flex-direction: column;
+
+}
+.acItemsProp{
+
+    margin:0;
+    background-color: black;
+    color: white;
+    display: inline-block;
+    font-size: .6vw;
+    width: 100%;
+    text-align: center;
 }
 
 /*

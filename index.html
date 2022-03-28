@@ -12,13 +12,19 @@
   <meta name="description" content="" />
 
   <link rel="stylesheet" href="index.css"/>
-  <script defer src="index.js"></script>
+  <script defer src="scripts/import.js"></script>
+  <script defer src="scripts/export.js"></script>
+  <script defer src="scripts/page.js"></script>
+
+
 
 </head>
 <!-- <img class="sheet" src="Images/CharacterSheet.webp"> -->
 <input type="file" class="manInput" value="Import" onclick="">
 <input type="button" class="manInput" value="Export" onclick="getData()">
+<input type="button" class="pgInput" value="/" onclick="goToEquip()">
 <br>
+<div id="pg1">
 <img class="logo" src="Images/pathfinder_cropped.jpg">
 <body>
 <form class="personalInfo">
@@ -816,70 +822,52 @@
     <input type="text" id="useMMiscMod" class="skillsInputFieldsMisc">
   </div>
 </form>
-
-  <script>
-    //TODO Rename a variable
-    //Move this to a js file
-    var i = 0
-    const download = function (data){
-
-      const blob = new Blob([data], {type: 'text/csv'});
-      const url = window.URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.setAttribute('hidden','');
-      a.setAttribute('href',url);
-      a.setAttribute('download','download.csv');
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-      
-    }
-    //TODO Rename this
-    //This function now only get the text data fields
-    function getData() {
-      // We need to also find out how many entries were created for weapons/spells/equipment
-      // so that we can populate the site with those fields before we write to a csv. That
-      // way importing isnt a disaster.
-
-      //TEXT FIELD VALUES
-      var nodes = document.querySelectorAll('input[type=text],[id^=w],input[type=checkbox]');
-      var nodeValues = [];
-      var id;
-      var w = 0;
-      console.log(nodes);
-
-      //Then push all of the values of those nodes to the 
-      for (var k = 0; k < nodes.length; ++k){
-        if (nodes[k].id.match(/w[0-9]/g)){
-
-          w += 1;
-
-        }else if (nodes[k].type == "checkbox"){
-          
-          nodeValues.push(nodes[k].checked);
-
-        }else{
-
-          nodeValues.push(nodes[k].value);
-
-        }
-
-      }
-      // Let's try to see if we can push the amount of weapon
-      // entries to the csv
-      nodeValues.push(w)
-
-      console.log(nodeValues);
-      console.log(w);
-
-      // Come back to this
-    
-      download(nodeValues);
-
-    }
+</div>
+<div id="pg2">
+  <div class="leftColumnPg2">
+  <input type="button" class="acItemsBtn" onclick="spawnACItem()" value="+"><br>
+  <div class="acItemsScroll">
+    <form class="acItems" id="AC0">
+      <div class="acItemsTitleCont">
+        <div class="acItemsTitle">AC Items</div>
+        <input type="text" class="acItemsInput" id="acItemsTitle">
+      </div>
+      <div class="acItemsBonusCont">
+        <div class="acItemsBonus">Bonus</div>
+        <input type="text" class="acItemsInput" id="acItemsBonus">
+      </div>
+      <div class="acItemsTypeCont">
+        <div class="acItemsType">Type</div>
+        <input type="text" class="acItemsInput" id="acItemsType">
+      </div>
+      <div class="acItemsCheckPenCont">
+        <div class="acItemsCheckPen">Check Pen</div>
+        <input type="text" class="acItemsInput" id="acItemsCheckPen">
+      </div>
+      <div class="acItemsSpellFailCont">
+        <div class="acItemsSpellFail">Spell Failure</div>
+        <input type="text" class="acItemsInput" id="acItemsSpellFail">
+      </div>
+      <div class="acItemsWeightCont">
+        <div class="acItemsWeight">Weight</div>
+        <input type="text" class="acItemsInput" id="acItemsWeight">
+      </div>
+      <div class="acItemsPropCont">
+        <div class="acItemsProp">Property</div>
+        <input type="text" class="acItemsInput" id="acItemsProp">
+      </div>
+    </form>
+  </div>
+  </div>
+  </div>
+</div>
+<script>
+    // Use i variable for weapons
+    let i = 0;
+    // Use j variable for AC items\
+    let j = 0;
     function spawnWeap(){
 
-      console.log("created");
       // Create a clone of an element with class weapons
       // set it's class attribute
       // then append it to the bottom of the weapons section 
@@ -888,6 +876,15 @@
       i++;
       entry.setAttribute('id',"w" + i);
       document.querySelector(".weaponsScroll").appendChild(entry);
+
+    }
+    function spawnACItem(){
+
+      let acItem = document.querySelector(".acItems").cloneNode(true);
+      j++;
+      acItem.setAttribute('id','ac' + j)
+      document.querySelector(".acItemsScroll").appendChild(acItem);
+
 
     }
     function delWeap(ele){
