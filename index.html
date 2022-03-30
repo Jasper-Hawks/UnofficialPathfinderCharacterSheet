@@ -825,39 +825,61 @@
 </div>
 <div id="pg2">
   <div class="leftColumnPg2">
+  <div class="acItems">
   <input type="button" class="acItemsBtn" onclick="spawnACItem()" value="+"><br>
   <div class="acItemsScroll">
-    <form class="acItems" id="AC0">
+    <form class="acItemsForm" id="AC0">
       <div class="acItemsTitleCont">
+        <div class="acItemsTotalTitle" id="acItemsTotalTitle">AC Items Totals</div>
         <div class="acItemsTitle">AC Items</div>
         <input type="text" class="acItemsInput" id="acItemsTitle">
       </div>
       <div class="acItemsBonusCont">
+        <input type="text" class="acItemsInput" id="acItemsTotalBonus">
         <div class="acItemsBonus">Bonus</div>
         <input type="text" class="acItemsInput" id="acItemsBonus">
       </div>
       <div class="acItemsTypeCont">
+        <input type="text" class="acItemsInput" id="acItemsTotalType">
         <div class="acItemsType">Type</div>
         <input type="text" class="acItemsInput" id="acItemsType">
       </div>
       <div class="acItemsCheckPenCont">
+        <input type="text" class="acItemsInput" id="acItemsTotalCheckPen">
         <div class="acItemsCheckPen">Check Pen</div>
         <input type="text" class="acItemsInput" id="acItemsCheckPen">
       </div>
       <div class="acItemsSpellFailCont">
+        <input type="text" class="acItemsInput" id="acItemsTotalSpellFail">
         <div class="acItemsSpellFail">Spell Failure</div>
         <input type="text" class="acItemsInput" id="acItemsSpellFail">
       </div>
       <div class="acItemsWeightCont">
+        <input type="text" class="acItemsInput" id="acItemsTotalWeight">
         <div class="acItemsWeight">Weight</div>
         <input type="text" class="acItemsInput" id="acItemsWeight">
       </div>
       <div class="acItemsPropCont">
+        <input type="text" class="acItemsInput" id="acItemsTotalProp">
         <div class="acItemsProp">Property</div>
         <input type="text" class="acItemsInput" id="acItemsProp">
       </div>
     </form>
   </div>
+    
+  </div>
+  <div class="gear">
+    <div class="gearTitle">Gear</div>
+    <form class="gearContent">
+      <div class="gearEntry">
+        <div class="gearEntryTitle">Item</div>
+        <input type="text" class="gearInputFields" id="ge0">
+      </div>
+      <div class="gearWeight">
+        <div class="gearWeightTitle">WT</div>
+        <input type="text" class="gearInputFields" id="gw0">
+      </div>
+    </form>
   </div>
   </div>
 </div>
@@ -880,9 +902,21 @@
     }
     function spawnACItem(){
 
-      let acItem = document.querySelector(".acItems").cloneNode(true);
+      //Select the form for ACs
+      let acItem = document.querySelector(".acItemsForm").cloneNode(true);
+
+      //Remove all of the total elements
+      acItem.querySelector("#acItemsTotalTitle").remove()
+      acItem.querySelector("#acItemsTotalBonus").remove()
+      acItem.querySelector("#acItemsTotalType").remove()
+      acItem.querySelector("#acItemsTotalCheckPen").remove()
+      acItem.querySelector("#acItemsTotalSpellFail").remove()
+      acItem.querySelector("#acItemsTotalWeight").remove()
+      acItem.querySelector("#acItemsTotalProp").remove()
+
       j++;
-      acItem.setAttribute('id','ac' + j)
+      acItem.setAttribute('id','AC' + j);
+      
       document.querySelector(".acItemsScroll").appendChild(acItem);
 
 

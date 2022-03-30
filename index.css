@@ -709,6 +709,7 @@ input{
     width:100%;
     padding-top: 2%;
     overflow-y: auto;
+    border: 2px solid black;
 
 }
 .weaponsTitle{
@@ -811,17 +812,26 @@ input{
     height: 2%;
     padding:0;
 
-    /* display: inline-block; */
+}
+.acItemsBtnDelete{
+
+    background-color: lightgrey;
+    width: 3%;
+    height: 2%;
+    align-content: left;
+    padding:0;
 
 }
 .acItemsScroll{
 
-    height:50vh;
+    margin:0;
+    height:30vh;
     width:100%;
     overflow-y: auto;
+    border: 2px solid black;
 
 }
-.acItems{
+.acItemsForm{
 
     font-size: 0;
     display: flex;
@@ -847,7 +857,7 @@ input{
     display: inline-block;
     width: 100%;
     font-size: .6vw;
-    text-align: center;
+    text-align: left;
 }
 .acItemsBonusCont{
 
@@ -944,6 +954,56 @@ input{
     font-size: .6vw;
     width: 100%;
     text-align: center;
+}
+.acItemsTotalTitle{
+
+    margin:0;
+    background-color: black;
+    color: white;
+    display: inline-block;
+    width: 100%;
+    font-size: .8vw;
+    height:40%;
+    text-align: left;
+
+}
+.gear{
+
+    width: 30%;
+
+}
+.gearTitle{
+
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: .8vw;
+    width: 100%;
+
+}
+.gearContent{
+
+    width:100%;
+    border-color: black;
+    border-width: 3px;
+    display: flex;
+
+}
+.gearEntry{
+
+    width:80%;
+
+}
+.gearInputFields{
+
+    border-color: black;
+    border-width: 3px;
+
+}
+.gearWeight{
+
+    width:20%;
+
 }
 
 /*
