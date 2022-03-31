@@ -709,7 +709,6 @@ input{
     width:100%;
     padding-top: 2%;
     overflow-y: auto;
-    border: 2px solid black;
 
 }
 .weaponsTitle{
@@ -801,7 +800,7 @@ input{
 }
 .leftColumnPg2{
 
-    width: 50%;
+    width: 70%;
     margin-top: 1vw;
 
 }
@@ -815,11 +814,17 @@ input{
 }
 .acItemsBtnDelete{
 
-    background-color: lightgrey;
+    background-color: red;
     width: 3%;
     height: 2%;
     align-content: left;
     padding:0;
+
+}
+.acItemsCheck{
+
+    display: inline-block;
+    width: 10%;
 
 }
 .acItemsScroll{
@@ -970,6 +975,10 @@ input{
 .gear{
 
     width: 30%;
+    height: 50vh;
+    border: 2px solid black;
+    overflow-y: auto;
+
 
 }
 .gearTitle{
@@ -981,6 +990,21 @@ input{
     width: 100%;
 
 }
+.gearBtn{
+
+    background-color: grey;
+    width: 50%;
+    display: inline-block;
+
+
+}
+.gearBtnDelete{
+
+    background-color: red;
+    width: 50%;
+    display: inline-block;
+
+}
 .gearContent{
 
     width:100%;
@@ -989,9 +1013,21 @@ input{
     display: flex;
 
 }
+.gearSelection{
+
+    width: 10%;
+    display: flex;
+
+}
+.gearCheckbox{
+
+    align-self: center;
+    width: 100%;
+
+}
 .gearEntry{
 
-    width:80%;
+    width:70%;
 
 }
 .gearInputFields{

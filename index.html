@@ -15,6 +15,7 @@
   <script defer src="scripts/import.js"></script>
   <script defer src="scripts/export.js"></script>
   <script defer src="scripts/page.js"></script>
+  <script defer src="scripts/spawn.js"></script>
 
 
 
@@ -826,12 +827,12 @@
 <div id="pg2">
   <div class="leftColumnPg2">
   <div class="acItems">
-  <input type="button" class="acItemsBtn" onclick="spawnACItem()" value="+"><br>
+  <input type="button" class="acItemsBtn" onclick="spawnACItem()" value="+"> <input type="button" class="acItemsBtnDelete" onclick="delACItem()" value="-"><br>
   <div class="acItemsScroll">
     <form class="acItemsForm" id="AC0">
       <div class="acItemsTitleCont">
         <div class="acItemsTotalTitle" id="acItemsTotalTitle">AC Items Totals</div>
-        <div class="acItemsTitle">AC Items</div>
+        <div class="acItemsTitle"><input type="checkbox" class="acItemsCheck">AC Item</div>
         <input type="text" class="acItemsInput" id="acItemsTitle">
       </div>
       <div class="acItemsBonusCont">
@@ -866,11 +867,14 @@
       </div>
     </form>
   </div>
-    
   </div>
   <div class="gear">
     <div class="gearTitle">Gear</div>
-    <form class="gearContent">
+    <input type="button" class="gearBtn" value="+" onclick="spawnGear()"><input type="button" class="gearBtnDelete" value="-" onclick="delGear()">
+    <form class="gearContent" id="g0">
+      <div class="gearSelection">
+        <input type="checkbox" class="gearCheckbox">
+      </div>
       <div class="gearEntry">
         <div class="gearEntryTitle">Item</div>
         <input type="text" class="gearInputFields" id="ge0">
@@ -882,45 +886,52 @@
     </form>
   </div>
   </div>
+
 </div>
 <script>
-    // Use i variable for weapons
-    let i = 0;
-    // Use j variable for AC items\
-    let j = 0;
-    function spawnWeap(){
+    function delGear(){
 
-      // Create a clone of an element with class weapons
-      // set it's class attribute
-      // then append it to the bottom of the weapons section 
-      let entry = document.querySelector(".weapons").cloneNode(true);
-      console.log(entry)
-      i++;
-      entry.setAttribute('id',"w" + i);
-      document.querySelector(".weaponsScroll").appendChild(entry);
+      if(confirm("Would you like to delete this gear?")){
+        // Find all check boxes marked to be deleted
+        let checks = document.querySelectorAll(".gearCheckbox");
 
+        // Go through them all to see if they are checked. If they are
+        // delete them.
+
+        for (let i = 0; i < checks.length; i++){
+
+          if (checks[i].checked){
+
+            checks[i].parentElement.parentElement.remove();
+
+          }
+
+        }
+
+      }
     }
-    function spawnACItem(){
+    function delACItem(){
 
-      //Select the form for ACs
-      let acItem = document.querySelector(".acItemsForm").cloneNode(true);
+      if(confirm("Would you like to delete this gear?")){
+        // Find all check boxes marked to be deleted
+        let checks = document.querySelectorAll(".acItemsCheck");
 
-      //Remove all of the total elements
-      acItem.querySelector("#acItemsTotalTitle").remove()
-      acItem.querySelector("#acItemsTotalBonus").remove()
-      acItem.querySelector("#acItemsTotalType").remove()
-      acItem.querySelector("#acItemsTotalCheckPen").remove()
-      acItem.querySelector("#acItemsTotalSpellFail").remove()
-      acItem.querySelector("#acItemsTotalWeight").remove()
-      acItem.querySelector("#acItemsTotalProp").remove()
+        // Go through them all to see if they are checked. If they are
+        // delete them.
 
-      j++;
-      acItem.setAttribute('id','AC' + j);
-      
-      document.querySelector(".acItemsScroll").appendChild(acItem);
+        for (let i = 0; i < checks.length; i++){
 
+          if (checks[i].checked){
 
+            checks[i].parentElement.remove();
+
+          }
+
+        }
+
+      }
     }
+
     function delWeap(ele){
       let entry = ele.parentElement.parentElement;
       console.log("The name of this id is " + entry);
