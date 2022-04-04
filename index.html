@@ -240,6 +240,7 @@
   </div>
   <div class="armorClassContLong">
     <input type="text" id="acMod" class="armorClassInputFieldsLong">
+    <div class="armorClassMod">Modifiers</div>
   </div>
 
   </form>
@@ -872,21 +873,99 @@
     <div class="gearTitle">Gear</div>
     <input type="button" class="gearBtn" value="+" onclick="spawnGear()"><input type="button" class="gearBtnDelete" value="-" onclick="delGear()">
     <form class="gearContent" id="g0">
-      <div class="gearSelection">
-        <input type="checkbox" class="gearCheckbox">
+      <div class="gearTitles">
+        <div class="gearSubHeadItem">Item</div>
+        <div class="gearSubHeadWeight">WT</div>
       </div>
       <div class="gearEntry">
-        <div class="gearEntryTitle">Item</div>
+        <input type="checkbox" class="gearCheckbox">
         <input type="text" class="gearInputFields" id="ge0">
+        <input type="text" class="gearInputFieldsWeight" id="gw0">
       </div>
-      <div class="gearWeight">
-        <div class="gearWeightTitle">WT</div>
-        <input type="text" class="gearInputFields" id="gw0">
-      </div>
+    </form>
+    <div class="gearTotal">
+      <div class="gearTotalTitle">Total Weight</div>
+      <input type="text" class="gearInputFieldsWeightTotal" id="gwT">
+    </div>
+  </div>
+  <div class="feats">
+    <div class="featsTitle">Feats</div>
+    <form class="featsCont">
+      <input type="checkbox" class="featsCheckbox">
+      <input type="text" class="featsInputFields">
     </form>
   </div>
   </div>
-
+  <div class="rightColumn">
+    <div class="spellsTitle">SPELLS</div>
+    <div class="spells">
+      <div class="spellsColumnContainer">
+        <div class="spellsColumnTitle">Spells Known</div>
+        <input type="text" class="spellsInput">
+        <input type="text" class="spellsInput">
+        <input type="text" class="spellsInput">
+        <input type="text" class="spellsInput">
+        <input type="text" class="spellsInput">
+        <input type="text" class="spellsInput">
+        <input type="text" class="spellsInput">
+        <input type="text" class="spellsInput">
+        <input type="text" class="spellsInput">
+        <input type="text" class="spellsInput">
+      </div>
+      <div class="spellsColumnContainer">
+        <div class="spellsColumnTitle">Spell<br>Save</div>
+        <input type="text" class="spellsInput">
+        <input type="text" class="spellsInput">
+        <input type="text" class="spellsInput">
+        <input type="text" class="spellsInput">
+        <input type="text" class="spellsInput">
+        <input type="text" class="spellsInput">
+        <input type="text" class="spellsInput">
+        <input type="text" class="spellsInput">
+        <input type="text" class="spellsInput">
+        <input type="text" class="spellsInput">
+      </div>
+      <div class="spellsColumnContainer">
+        <div class="spellsColumnTitle">Level</div>
+        <div class="spellLevelTitle">0</div>
+        <div class="spellLevelTitle">1st</div>
+        <div class="spellLevelTitle">2nd</div>
+        <div class="spellLevelTitle">3rd</div>
+        <div class="spellLevelTitle">4th</div>
+        <div class="spellLevelTitle">5th</div>
+        <div class="spellLevelTitle">6th</div>
+        <div class="spellLevelTitle">7th</div>
+        <div class="spellLevelTitle">8th</div>
+        <div class="spellLevelTitle">9th</div>
+      </div>
+      <div class="spellsColumnContainer">
+        <div class="spellsColumnTitle">Per<br>Day</div>
+        <input type="text" class="spellsInput">
+        <input type="text" class="spellsInput">
+        <input type="text" class="spellsInput">
+        <input type="text" class="spellsInput">
+        <input type="text" class="spellsInput">
+        <input type="text" class="spellsInput">
+        <input type="text" class="spellsInput">
+        <input type="text" class="spellsInput">
+        <input type="text" class="spellsInput">
+        <input type="text" class="spellsInput">
+      </div>
+      <div class="spellsColumnContainer">
+        <div class="spellsColumnTitle">Bonus<br>Spells</div>
+        <input type="text" class="spellsInput">
+        <input type="text" class="spellsInput">
+        <input type="text" class="spellsInput">
+        <input type="text" class="spellsInput">
+        <input type="text" class="spellsInput">
+        <input type="text" class="spellsInput">
+        <input type="text" class="spellsInput">
+        <input type="text" class="spellsInput">
+        <input type="text" class="spellsInput">
+        <input type="text" class="spellsInput">
+      </div>
+    </div>
+  </div>
 </div>
 <script>
     function delGear(){
@@ -902,7 +981,7 @@
 
           if (checks[i].checked){
 
-            checks[i].parentElement.parentElement.remove();
+            checks[i].parentElement.remove();
 
           }
 

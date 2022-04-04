@@ -79,21 +79,14 @@ function spawnACItem(){
 }
 function spawnGear(){
 
-    let g = document.querySelector('.gear');
+    let g = document.querySelector('.gearContent');
     var attach = document.createElement('div');
-    attach.innerHTML = ` <form class="gearContent">
-    <div class="gearSelection">
-      <input type="checkbox" class="gearCheckbox">
-    </div>
+    attach.innerHTML = `
     <div class="gearEntry">
-      <div class="gearEntryTitle">Item</div>
-      <input type="text" class="gearInputFields">
-    </div>
-    <div class="gearWeight">
-      <div class="gearWeightTitle">WT</div>
-      <input type="text" class="gearInputFields">
-    </div>
-  </form>`;
+        <input type="checkbox" class="gearCheckbox">
+        <input type="text" class="gearInputFields" id="ge0">
+        <input type="text" class="gearInputFieldsWeight" id="gw0">
+      </div>`;
   g.appendChild(attach);
 
 }

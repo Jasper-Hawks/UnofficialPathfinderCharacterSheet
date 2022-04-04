@@ -666,6 +666,7 @@ input{
     vertical-align: top;
 
 }
+
 .combatInputFieldsWide{
 
     width: 14%;
@@ -801,6 +802,7 @@ input{
 .leftColumnPg2{
 
     width: 70%;
+    display: inline-block;
     margin-top: 1vw;
 
 }
@@ -989,6 +991,28 @@ input{
     font-size: .8vw;
     width: 100%;
 
+
+}
+.gearTitles{
+
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: .8vw;
+    width: 100%;
+
+}
+.gearSubHeadItem{
+
+    display: inline-block;
+    width: 80%;
+
+}
+.gearSubHeadWeight{
+
+    display: inline-block;
+    width: 10%;
+
 }
 .gearBtn{
 
@@ -1010,38 +1034,158 @@ input{
     width:100%;
     border-color: black;
     border-width: 3px;
-    display: flex;
-
-}
-.gearSelection{
-
-    width: 10%;
-    display: flex;
+    display: inline-block;
 
 }
 .gearCheckbox{
 
     align-self: center;
-    width: 100%;
+    width: 15%;
 
 }
 .gearEntry{
 
-    width:70%;
+    width:100%;
+    display: flex;
 
 }
 .gearInputFields{
 
     border-color: black;
+    width: 60%;
+    border-width: 3px;
+    flex-grow: 5;
+
+}
+.gearInputFieldsWeight{
+
+    border-color: black;
+    width: 20%;
     border-width: 3px;
 
 }
-.gearWeight{
+.gearInputFieldsWeightTotal{
 
-    width:20%;
+    border-color: black;
+    width: 24%;
+    border-width: 3px;
 
 }
+input.gearInputFieldsWeightTotal, textarea{
 
+    border-color: black;
+    border-width: 3px;
+    background-color: white;
+
+}
+.gearTotal{
+
+    display: flex;
+    position: sticky;
+    bottom: 0;
+
+}
+.gearTotalTitle{
+
+    width: 100%;
+    background-color: black;
+    color: white;
+    width: 100%;
+    font-size: 1vw;
+    text-align: center;
+
+}
+.rightColumn{
+
+    display: inline-block;
+    width:25%;
+    vertical-align: top;
+    margin-top: 2.2vw;
+    margin-left: .4vw;
+
+}
+.spells{
+
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+
+}
+.spellsTitle{
+
+    background-color: black;
+    color: white;
+    width: 100%;
+    font-size: 1vw;
+    text-align: center;
+
+}
+.spellsColumnContainer{
+
+    width:15%;
+    display: inline-block;
+
+
+}
+.spellsColumnTitle{
+
+    color: black;
+    text-align: center;
+    font-size: .7vw;
+    align-self: center;
+    margin-bottom: .2vw;
+
+}
+.spellsInput{
+
+    border-color: black;
+    border-width: 3px;
+    margin-bottom: .3vw;
+    height: 1.4vw;
+}
+.spellLevelTitle{
+
+    width: 100%;
+    text-align: center;
+    margin-top: .75vw;
+    height: 1vw;
+    font-size: .8vw;
+
+}
+.feats{
+
+    width: 60%;
+    height: 50vh;
+    display: inline-block;
+
+}
+.featsTitle{
+
+    background-color: black;
+    color: white;
+    width: 100%;
+    font-size: 1vw;
+    text-align: center;
+
+}
+.featsInputFields{
+
+    width: 90%;
+    flex-grow: 6;
+    border-color: black;
+
+
+}
+.featsCont{
+    display: flex;
+}
+.featsCheckbox{
+
+    width: 2%;
+    margin-right: .3vw;
+
+}
 /*
 
 @media screen and (max-width: 1375px){
