@@ -889,7 +889,10 @@
     </div>
   </div>
   <div class="feats">
+    <div class="featsHeader">
     <div class="featsTitle">Feats</div>
+    <input type="button" class="featsBtn" value="+" onclick="spawnFeat()"><input type="button" class="featsBtnDelete" value="-" onclick="delFeat()">
+    </div>
     <form class="featsCont">
       <input type="checkbox" class="featsCheckbox">
       <input type="text" class="featsInputFields">
@@ -968,6 +971,25 @@
   </div>
 </div>
 <script>
+      function delFeat(){
+
+      if (confirm("Would you like to delete these feats?")){
+
+        let checks = document.querySelectorAll(".featsCheckbox");
+
+        for (let i = 0; i < checks.length; i++){
+
+          if (checks[i].checked){
+
+            checks[i].parentElement.remove()
+
+          }
+
+        }
+
+      }
+
+  }
     function delGear(){
 
       if(confirm("Would you like to delete this gear?")){
@@ -1026,6 +1048,7 @@
       }
         
     }
+
    
   </script>
 </body>

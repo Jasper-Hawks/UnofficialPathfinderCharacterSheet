@@ -8,7 +8,7 @@ function goToEquip(){
 
         onFirst = false;
         pg1.style.display = "none";
-        pg2.style.display = "inline-block";
+        pg2.style.display = "flex";
 
 
     }else{

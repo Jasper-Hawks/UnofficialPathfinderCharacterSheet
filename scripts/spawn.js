@@ -90,3 +90,17 @@ function spawnGear(){
   g.appendChild(attach);
 
 }
+function spawnFeat(){
+
+  let f = document.querySelector('.feats');
+  let attach = document.createElement('div');  
+  f.appendChild(attach);
+  
+  // Use this method instead because we don't want the
+  // div to conflict with the .feats flex container
+  attach.outerHTML = attach.innerHTML = `<form class="featsCont">
+  <input type="checkbox" class="featsCheckbox">
+  <input type="text" class="featsInputFields">
+</form>`;
+
+}

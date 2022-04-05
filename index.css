@@ -1017,7 +1017,7 @@ input{
 .gearBtn{
 
     background-color: grey;
-    width: 50%;
+    width: 90%;
     display: inline-block;
 
 
@@ -1025,7 +1025,7 @@ input{
 .gearBtnDelete{
 
     background-color: red;
-    width: 50%;
+    width: 10%;
     display: inline-block;
 
 }
@@ -1155,9 +1155,17 @@ input.gearInputFieldsWeightTotal, textarea{
 }
 .feats{
 
-    width: 60%;
+    width: 69%;
     height: 50vh;
-    display: inline-block;
+    overflow-y: auto;
+    vertical-align: top;
+
+}
+.featsHeader{
+
+    width: 100%;
+    position:sticky;
+    top:0;
 
 }
 .featsTitle{
@@ -1178,12 +1186,28 @@ input.gearInputFieldsWeightTotal, textarea{
 
 }
 .featsCont{
+
     display: flex;
+    flex-wrap: wrap;
+
 }
 .featsCheckbox{
 
     width: 2%;
+    flex-grow: 1;
     margin-right: .3vw;
+
+}
+.featsBtn{
+
+    width: 90%;
+    background-color: grey;
+
+}
+.featsBtnDelete{
+
+    width: 10%;
+    background-color: red;
 
 }
 /*
