@@ -104,3 +104,15 @@ function spawnFeat(){
 </form>`;
 
 }
+function spawnAbil(){
+
+  let a = document.querySelector('.specialAbilContent');
+  let attach = document.createElement('div');  
+  a.appendChild(attach);
+
+  attach.outerHTML = attach.innerHTML = `<form class="specialAbilCont">
+  <input type="checkbox" class="specialAbilCheckbox">
+  <input type="text" class="specialAbilInputFields">
+</form>`
+
+}

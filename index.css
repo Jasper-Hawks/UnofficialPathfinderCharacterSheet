@@ -1210,92 +1210,96 @@ input.gearInputFieldsWeightTotal, textarea{
     background-color: red;
 
 }
-/*
+.load{
 
-@media screen and (max-width: 1375px){
+    width: 30%;
 
-    .attributes{
-
-        width:  18vw;
-        display:inline-block;
-    
-    }
-    .speedSkills{
-
-        width:45%;
-        vertical-align: top;
-        display:inline-block;
-    }
-    .leftColumn{
-
-        width: 45%;
-    
-    }
-    body{
-
-        background-color: white;
-        width:100%;
-        position: absolute;
-        left:0%;
-    
-    }
-    .personalInfo{ 
-
-        position: relative;
-        padding-top:1%;
-        width: 40vw;
-        display:inline-block;
-    
-    }
-    .logo{
-
-        position: relative;
-        padding-top: 1%;
-        height: auto;
-         
-    }
-    h6{
-
-        font-size: .6vw;
-        display:inline-block;
-        text-align:center;
-        margin-top:5px;
-        margin-left:1vw;
-        width:auto;
-        margin-bottom: 10px;
-        
-    }
-    .boxTLong{
-
-        width:38vw;
-
-    }
-    .skillsTLong{
-
-        width: 22vw;
-
-    }
-    .skillsDetailedT{
-
-        width:20.5vw;
-
-    }
-    .armorClassBoxT{
-
-        background-color: black;
-        color:white;
-        text-align: center;
-        font-size: .6vw;
-        padding-top: 10px;
-        font-weight: bold;
-        width:4vw;
-        height:1.5vw;
-        margin-right:2px;
-        display:inline-block;
-    
-    }
 }
-*/
+.loadCont{
+
+    display: flex;
+    flex-direction: row;
+
+}
+.loadTitleCont{
+
+    width: 25%;
+
+}
+.loadTitle{
+
+    text-align: center;
+    margin-top: 2%;
+
+}
+.loadInputCont{
+
+    width: 25%;
+
+}
+.specialAbil{
+
+    width: 69%;
+    height: 50vh;
+    vertical-align: top;
+
+}
+.specialAbilContent{
+
+    overflow-y: auto;
+    width: 100%;
+
+}
+.specialAbilHeader{
+
+    width: 100%;
+    position:sticky;
+    top:0;
+
+}
+.specialAbilTitle{
+
+    background-color: black;
+    color: white;
+    width: 100%;
+    font-size: 1vw;
+    text-align: center;
+
+}
+.specialAbilInputFields{
+
+    width: 90%;
+    flex-grow: 6;
+    border-color: black;
+
+
+}
+.specialAbilCont{
+
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.specialAbilCheckbox{
+
+    width: 2%;
+    flex-grow: 1;
+    margin-right: .3vw;
+
+}
+.specialAbilBtn{
+
+    width: 90%;
+    background-color: grey;
+
+}
+.specialAbilBtnDelete{
+
+    width: 10%;
+    background-color: red;
+
+}
+
 @media screen and (max-width: 1375px){
     body{
 

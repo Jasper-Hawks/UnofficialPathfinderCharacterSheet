@@ -898,6 +898,42 @@
       <input type="text" class="featsInputFields">
     </form>
   </div>
+  <div class="load">
+    <div class="loadCont">
+    <div class="loadTitleCont">
+      <div class="loadTitle">Light<br>Load</div>
+      <div class="loadTitle">Medium<br>Load</div>
+      <div class="loadTitle">Heavy<br>Load</div>
+    </div>
+    <div class="loadInputCont">
+      <input type="text" class="loadInput">
+      <input type="text" class="loadInput">
+      <input type="text" class="loadInput">
+    </div>
+    <div class="loadTitleCont">
+      <div class="loadTitle">Lift<br>Over</div>
+      <div class="loadTitle">Lift<br>Off</div>
+      <div class="loadTitle">Drag<br>Push</div>
+    </div>
+    <div class="loadInputCont">
+      <input type="text" class="loadInput">
+      <input type="text" class="loadInput">
+      <input type="text" class="loadInput">
+    </div>
+  </div>
+  </div>
+  <div class="specialAbil">
+    <div class="specialAbilContent">
+      <div class="specialAbilHeader">
+        <div class="specialAbilTitle">Special Abilities</div>
+        <input type="button" class="specialAbilBtn" value="+" onclick="spawnAbil()"><input type="button" class="specialAbilBtnDelete" value="-" onclick="delAbil()">
+      </div>
+      <form class="specialAbilCont">
+        <input type="checkbox" class="specialAbilCheckbox">
+        <input type="text" class="specialAbilInputFields">
+      </form>
+  </div>
+  </div>
   </div>
   <div class="rightColumn">
     <div class="spellsTitle">SPELLS</div>
@@ -1049,7 +1085,25 @@
         
     }
 
-   
+    function delAbil(){
+
+      if (confirm("Would you like to delete these abilities?")){
+
+      let checks = document.querySelectorAll(".specialAbilCheckbox");
+
+      for (let i = 0; i < checks.length; i++){
+
+        if (checks[i].checked){
+
+          checks[i].parentElement.remove()
+
+        }
+
+      }
+
+      }
+
+    }
   </script>
 </body>
 
