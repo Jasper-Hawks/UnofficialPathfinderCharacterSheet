@@ -826,7 +826,7 @@
 </form>
 </div>
 <div id="pg2">
-  <div class="leftColumnPg2">
+  <div class="mainPg2">
   <div class="acItems">
   <input type="button" class="acItemsBtn" onclick="spawnACItem()" value="+"> <input type="button" class="acItemsBtnDelete" onclick="delACItem()" value="-"><br>
   <div class="acItemsScroll">
@@ -869,70 +869,91 @@
     </form>
   </div>
   </div>
-  <div class="gear">
-    <div class="gearTitle">Gear</div>
-    <input type="button" class="gearBtn" value="+" onclick="spawnGear()"><input type="button" class="gearBtnDelete" value="-" onclick="delGear()">
-    <form class="gearContent" id="g0">
-      <div class="gearTitles">
-        <div class="gearSubHeadItem">Item</div>
-        <div class="gearSubHeadWeight">WT</div>
-      </div>
-      <div class="gearEntry">
-        <input type="checkbox" class="gearCheckbox">
-        <input type="text" class="gearInputFields" id="ge0">
-        <input type="text" class="gearInputFieldsWeight" id="gw0">
-      </div>
-    </form>
-    <div class="gearTotal">
-      <div class="gearTotalTitle">Total Weight</div>
-      <input type="text" class="gearInputFieldsWeightTotal" id="gwT">
-    </div>
-  </div>
-  <div class="feats">
-    <div class="featsHeader">
-    <div class="featsTitle">Feats</div>
-    <input type="button" class="featsBtn" value="+" onclick="spawnFeat()"><input type="button" class="featsBtnDelete" value="-" onclick="delFeat()">
-    </div>
-    <form class="featsCont">
-      <input type="checkbox" class="featsCheckbox">
-      <input type="text" class="featsInputFields">
-    </form>
-  </div>
-  <div class="load">
-    <div class="loadCont">
-    <div class="loadTitleCont">
-      <div class="loadTitle">Light<br>Load</div>
-      <div class="loadTitle">Medium<br>Load</div>
-      <div class="loadTitle">Heavy<br>Load</div>
-    </div>
-    <div class="loadInputCont">
-      <input type="text" class="loadInput">
-      <input type="text" class="loadInput">
-      <input type="text" class="loadInput">
-    </div>
-    <div class="loadTitleCont">
-      <div class="loadTitle">Lift<br>Over</div>
-      <div class="loadTitle">Lift<br>Off</div>
-      <div class="loadTitle">Drag<br>Push</div>
-    </div>
-    <div class="loadInputCont">
-      <input type="text" class="loadInput">
-      <input type="text" class="loadInput">
-      <input type="text" class="loadInput">
-    </div>
-  </div>
-  </div>
-  <div class="specialAbil">
-    <div class="specialAbilContent">
-      <div class="specialAbilHeader">
-        <div class="specialAbilTitle">Special Abilities</div>
-        <input type="button" class="specialAbilBtn" value="+" onclick="spawnAbil()"><input type="button" class="specialAbilBtnDelete" value="-" onclick="delAbil()">
-      </div>
-      <form class="specialAbilCont">
-        <input type="checkbox" class="specialAbilCheckbox">
-        <input type="text" class="specialAbilInputFields">
+  <div class="leftColumnPg2">
+    <div class="gear">
+      <div class="gearTitle">Gear</div>
+      <input type="button" class="gearBtn" value="+" onclick="spawnGear()"><input type="button" class="gearBtnDelete" value="-" onclick="delGear()">
+      <form class="gearContent" id="g0">
+        <div class="gearTitles">
+          <div class="gearSubHeadItem">Item</div>
+          <div class="gearSubHeadWeight">WT</div>
+        </div>
+        <div class="gearEntry">
+          <input type="checkbox" class="gearCheckbox">
+          <input type="text" class="gearInputFields" id="ge0">
+          <input type="text" class="gearInputFieldsWeight" id="gw0">
+        </div>
       </form>
+      <div class="gearTotal">
+        <div class="gearTotalTitle">Total Weight</div>
+        <input type="text" class="gearInputFieldsWeightTotal" id="gwT">
+      </div>
+    </div>
+    <div class="load">
+      <div class="loadCont">
+      <div class="loadTitleCont">
+        <div class="loadTitle">Light<br>Load</div><br>
+        <div class="loadTitle">Med<br>Load</div><br>
+        <div class="loadTitle">Heavy<br>Load</div><br>
+      </div>
+      <div class="loadInputCont">
+        <input type="text" class="loadInput">
+        <input type="text" class="loadInput">
+        <input type="text" class="loadInput">
+      </div>
+      <div class="loadTitleCont">
+        <div class="loadTitle">Lift<br>Over</div><br>
+        <div class="loadTitle">Lift<br>Off</div><br>
+        <div class="loadTitle">Drag<br>Push</div><br>
+      </div>
+      <div class="loadInputCont">
+        <input type="text" class="loadInput">
+        <input type="text" class="loadInput">
+        <input type="text" class="loadInput">
+      </div>
+    </div>
+    </div>
+    <div class="money">
+      <div class="moneyTitle">Money</div>
+      <div class="moneyCont">
+        <div class="moneyWrapper">
+        <div class="moneyDen">PP</div><input type="text" class="moneyInput">
+      </div>
+      <div class="moneyWrapper">
+        <div class="moneyDen">GP</div><input type="text" class="moneyInput">
+      </div>
+      <div class="moneyWrapper">
+        <div class="moneyDen">SP</div><input type="text" class="moneyInput">
+      </div>
+      <div class="moneyWrapper">
+        <div class="moneyDen">CP</div><input type="text" class="moneyInput">
+      </div>
+      </div>
+    </div>
   </div>
+  <div class="featsAbilCont">
+    <div class="feats">
+      <div class="featsHeader">
+      <div class="featsTitle">Feats</div>
+      <input type="button" class="featsBtn" value="+" onclick="spawnFeat()"><input type="button" class="featsBtnDelete" value="-" onclick="delFeat()">
+      </div>
+      <form class="featsCont">
+        <input type="checkbox" class="featsCheckbox">
+        <input type="text" class="featsInputFields">
+      </form>
+    </div>
+    <div class="specialAbil">
+      <div class="specialAbilContent">
+        <div class="specialAbilHeader">
+          <div class="specialAbilTitle">Special Abilities</div>
+          <input type="button" class="specialAbilBtn" value="+" onclick="spawnAbil()"><input type="button" class="specialAbilBtnDelete" value="-" onclick="delAbil()">
+        </div>
+        <form class="specialAbilCont">
+          <input type="checkbox" class="specialAbilCheckbox">
+          <input type="text" class="specialAbilInputFields">
+        </form>
+    </div>
+    </div>
   </div>
   </div>
   <div class="rightColumn">
@@ -1002,6 +1023,160 @@
         <input type="text" class="spellsInput">
         <input type="text" class="spellsInput">
         <input type="text" class="spellsInput">
+      </div>
+    </div>
+    <div class="domain">
+      <div class="domainsTitle">DOMAINS/SPECIALTY SCHOOL</div>
+      <input class="domainsInputDom" type="text">
+      <div class="thSpellCont">
+        <div class="domainLevTitle">0</div>
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainInputSpell">
+        <input class="domainInputSpell">
+        <input class="domainInputSpell">
+      </div>
+      <div class="thSpellCont">
+        <div class="domainLevTitle">1st</div>
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainInputSpell">
+        <input class="domainInputSpell">
+        <input class="domainInputSpell">
+      </div>
+      <div class="thSpellCont">
+        <div class="domainLevTitle">2nd</div>
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainInputSpell">
+        <input class="domainInputSpell">
+        <input class="domainInputSpell">
+      </div>
+      <div class="thSpellCont">
+        <div class="domainLevTitle">3rd</div>
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainInputSpell">
+        <input class="domainInputSpell">
+        <input class="domainInputSpell">
+      </div>
+      <div class="thSpellCont">
+        <div class="domainLevTitle">4th</div>
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainInputSpell">
+        <input class="domainInputSpell">
+        <input class="domainInputSpell">
+      </div>
+      <div class="thSpellCont">
+        <div class="domainLevTitle">5th</div>
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainInputSpell">
+        <input class="domainInputSpell">
+        <input class="domainInputSpell">
+      </div>
+      <div class="thSpellCont">
+        <div class="domainLevTitle">6th</div>
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainInputSpell">
+        <input class="domainInputSpell">
+        <input class="domainInputSpell">
+      </div>
+      <div class="thSpellCont">
+        <div class="domainLevTitle">7th</div>
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainInputSpell">
+        <input class="domainInputSpell">
+        <input class="domainInputSpell">
+      </div>
+      <div class="thSpellCont">
+        <div class="domainLevTitle">8th</div>
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainInputSpell">
+        <input class="domainInputSpell">
+        <input class="domainInputSpell">
+      </div>
+      <div class="thSpellCont">
+        <div class="domainLevTitle">9th</div>
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainInputSpell">
+        <input class="domainInputSpell">
+        <input class="domainInputSpell">
       </div>
     </div>
   </div>
@@ -1104,7 +1279,7 @@
       }
 
     }
-  </script>
+</script>
 </body>
 
 </html>
