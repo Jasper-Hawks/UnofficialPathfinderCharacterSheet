@@ -8,11 +8,10 @@ function spawnWeap(){
     var attach = document.createElement('div');
     attach.innerHTML = `<form class="weapons" id="w0">
     <div class="weaponsBtnCont">
-    <input type="button" class="weaponsDelBtn" value="-" onclick="delWeap(this);">
   </div>
   <br>
       <div class="weaponsTitle">
-        <div class="weaponsBox">Weapon</div>
+        <div class="weaponsBoxTitle"><input type="checkbox" class="weaponsCheckbox">Weapon</div>
         <input type="text" id="weaponsTitle" class="weaponsInputFields">
       </div><div class="weaponsAtkBon">
         <div class="weaponsBox">Attack Bonus</div>

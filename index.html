@@ -8,7 +8,7 @@
 
   <meta charset="UTF-8" />
 
-  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,maximum-scale=1.0,minimum-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="" />
 
   <link rel="stylesheet" href="index.css"/>
@@ -365,15 +365,15 @@
   <!-- Eventually move the add and remove buttons outside of the weapons container -->
   <div class="weaponsBtnCont">
     <input type="button" class="weaponsBtn" value="+" onclick="spawnWeap()" id="AddBtn">
+    <input type="button" class="weaponsDelBtn" value="-" onclick="delWeap(this);">
 </div>
   <div class="weaponsScroll"> 
     <form class="weapons" id="w0">
     <div class="weaponsBtnCont">
-    <input type="button" class="weaponsDelBtn" value="-" onclick="delWeap(this);">
   </div>
   <br>
       <div class="weaponsTitle">
-        <div class="weaponsBox">Weapon</div>
+        <div class="weaponsBoxTitle"><input type="checkbox" class="weaponsCheckbox">Weapon</div>
         <input type="text" id="weaponsTitle" class="weaponsInputFields">
       </div><div class="weaponsAtkBon">
         <div class="weaponsBox">Attack Bonus</div>
@@ -1182,6 +1182,29 @@
   </div>
 </div>
 <script>
+      function delGear(){
+
+    if(confirm("Would you like to delete this gear?")){
+      // Find all check boxes marked to be deleted
+      let checks = document.querySelectorAll(".gearCheckbox");
+
+      // Go through them all to see if they are checked. If they are
+      // delete them.
+
+      // Repeat this for every other script that needs to delete entries
+
+      for (let i = 0; i < checks.length; i++){
+
+        if (checks[i].checked){
+
+          checks[i].parentElement.remove();
+
+        }
+
+      }
+
+    }
+    }
       function delFeat(){
 
       if (confirm("Would you like to delete these feats?")){
@@ -1201,27 +1224,7 @@
       }
 
   }
-    function delGear(){
-
-      if(confirm("Would you like to delete this gear?")){
-        // Find all check boxes marked to be deleted
-        let checks = document.querySelectorAll(".gearCheckbox");
-
-        // Go through them all to see if they are checked. If they are
-        // delete them.
-
-        for (let i = 0; i < checks.length; i++){
-
-          if (checks[i].checked){
-
-            checks[i].parentElement.remove();
-
-          }
-
-        }
-
-      }
-    }
+    
     function delACItem(){
 
       if(confirm("Would you like to delete this gear?")){
@@ -1245,16 +1248,19 @@
     }
 
     function delWeap(ele){
-      let entry = ele.parentElement.parentElement;
-      console.log("The name of this id is " + entry);
+      if (confirm("Would you like to delete these abilities?")){
 
-      if (entry.id != "w0"){
+      let checks = document.querySelectorAll(".weaponsCheckbox");
 
-        entry.remove();
+      for (let i = 0; i < checks.length; i++){
 
-      }else{
+        if (checks[i].checked){
 
-        // TODO Display some text 
+          checks[i].parentElement.parentElement.parentElement.remove()
+
+        }
+
+      }
 
       }
         

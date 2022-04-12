@@ -718,6 +718,11 @@ input{
     border-color: black;
 
 }
+.weaponsCheckbox{
+
+    display: inline-block;
+    width: 4%;
+}
 .weaponsAtkBon{
 
     width: 29%;
@@ -760,7 +765,17 @@ input{
     display:inline-block;
     vertical-align: top;
 
-    margin:0;
+}
+.weaponsBoxTitle{
+
+    width: 100%;
+    height: 20%;
+    background-color: black;
+    color: white;
+    text-align:left;
+    font-size: .8vw;
+    display:inline-block;
+    vertical-align: top;
 
 }
 .weaponsInputFields{
@@ -994,7 +1009,7 @@ input{
     background-color: black;
     color: white;
     text-align: center;
-    font-size: .8vw;
+    font-size: 1vw;
     width: 100%;
 
 
@@ -1411,7 +1426,8 @@ input.gearInputFieldsWeightTotal, textarea{
         background-color: white;
         width:100%;
         position: absolute;
-        left:0%;
+        left:0;
+        overflow-x: auto;
     
     }
 
