@@ -41,7 +41,7 @@ function spawnACItem(){
     //Select the form for ACs
     let acItem = document.querySelector(".acItemsScroll");
     var attach = document.createElement('div');
-    attach.innerHTML = `<form class="acItemsForm" id="AC \+ \j ">
+    attach.innerHTML = `<form class="acItemsForm">
     <div class="acItemsTitleCont">
       <div class="acItemsTitle"><input type="checkbox" class="acItemsCheck">AC Item</div>
       <input type="text" class="acItemsInput" id="acItemsTitle">

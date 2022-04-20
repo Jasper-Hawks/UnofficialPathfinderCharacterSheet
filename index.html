@@ -169,7 +169,7 @@
       <input type="text" id="nonLethal" class="hpInitInputFieldsLarge">
     </div>
     <div class="hpInitInitCont">
-      <div class="initBoxT">INITIATIVE<br><h7>Modifier</h7></div>
+      <div class="boxT">INITIATIVE<br><h7>Modifier</h7></div>
       <div class="hpInitContSmall">
         <input type="text" id="initTotal" class="hpInitInputFieldsSmall">
         <h6>Total</h6>
@@ -234,7 +234,7 @@
   <div class="armorClassCont">
     <input type="text" id="acTouch" class="armorClassInputFields">
   </div>
-    <div class="boxT">Flat-Footed Armor Class</div>
+    <div class="boxT">FFAC</div>
   <div class="armorClassCont">
     <input type="text" id="FFAC" class="armorClassInputFields">
   </div>
@@ -362,7 +362,6 @@
     <div class="operands">+ 10</div>
   </div>
   </form>
-  <!-- Eventually move the add and remove buttons outside of the weapons container -->
   <div class="weaponsBtnCont">
     <input type="button" class="weaponsBtn" value="+" onclick="spawnWeap()" id="AddBtn">
     <input type="button" class="weaponsDelBtn" value="-" onclick="delWeap(this);">
@@ -959,68 +958,80 @@
   <div class="rightColumn">
     <div class="spellsTitle">SPELLS</div>
     <div class="spells">
-      <div class="spellsColumnContainer">
-        <div class="spellsColumnTitle">Spells Known</div>
-        <input type="text" class="spellsInput">
-        <input type="text" class="spellsInput">
-        <input type="text" class="spellsInput">
-        <input type="text" class="spellsInput">
-        <input type="text" class="spellsInput">
-        <input type="text" class="spellsInput">
-        <input type="text" class="spellsInput">
-        <input type="text" class="spellsInput">
-        <input type="text" class="spellsInput">
-        <input type="text" class="spellsInput">
-      </div>
-      <div class="spellsColumnContainer">
+      <div class="spellsRowContainer">
+        <div class="spellsColumnTitle">Spells<br>Known</div>
         <div class="spellsColumnTitle">Spell<br>Save</div>
-        <input type="text" class="spellsInput">
-        <input type="text" class="spellsInput">
-        <input type="text" class="spellsInput">
-        <input type="text" class="spellsInput">
-        <input type="text" class="spellsInput">
-        <input type="text" class="spellsInput">
-        <input type="text" class="spellsInput">
-        <input type="text" class="spellsInput">
-        <input type="text" class="spellsInput">
-        <input type="text" class="spellsInput">
-      </div>
-      <div class="spellsColumnContainer">
         <div class="spellsColumnTitle">Level</div>
-        <div class="spellLevelTitle">0</div>
-        <div class="spellLevelTitle">1st</div>
-        <div class="spellLevelTitle">2nd</div>
-        <div class="spellLevelTitle">3rd</div>
-        <div class="spellLevelTitle">4th</div>
-        <div class="spellLevelTitle">5th</div>
-        <div class="spellLevelTitle">6th</div>
-        <div class="spellLevelTitle">7th</div>
-        <div class="spellLevelTitle">8th</div>
-        <div class="spellLevelTitle">9th</div>
-      </div>
-      <div class="spellsColumnContainer">
         <div class="spellsColumnTitle">Per<br>Day</div>
+        <div class="spellsColumnTitle">Bonus<br>Spells</div>
+      </div>
+      <div class="spellsRowContainer">
         <input type="text" class="spellsInput">
         <input type="text" class="spellsInput">
-        <input type="text" class="spellsInput">
-        <input type="text" class="spellsInput">
-        <input type="text" class="spellsInput">
-        <input type="text" class="spellsInput">
-        <input type="text" class="spellsInput">
-        <input type="text" class="spellsInput">
+        <div class="spellLevelTitle">0</div>
         <input type="text" class="spellsInput">
         <input type="text" class="spellsInput">
       </div>
-      <div class="spellsColumnContainer">
-        <div class="spellsColumnTitle">Bonus<br>Spells</div>
+      <div class="spellsRowContainer">
         <input type="text" class="spellsInput">
         <input type="text" class="spellsInput">
+        <div class="spellLevelTitle">1st</div>
         <input type="text" class="spellsInput">
         <input type="text" class="spellsInput">
+      </div>
+      <div class="spellsRowContainer">
         <input type="text" class="spellsInput">
         <input type="text" class="spellsInput">
+        <div class="spellLevelTitle">2nd</div>
         <input type="text" class="spellsInput">
         <input type="text" class="spellsInput">
+      </div>
+      <div class="spellsRowContainer">
+        <input type="text" class="spellsInput">
+        <input type="text" class="spellsInput">
+        <div class="spellLevelTitle">3rd</div>
+        <input type="text" class="spellsInput">
+        <input type="text" class="spellsInput">
+      </div>
+      <div class="spellsRowContainer">
+        <input type="text" class="spellsInput">
+        <input type="text" class="spellsInput">
+        <div class="spellLevelTitle">4th</div>
+        <input type="text" class="spellsInput">
+        <input type="text" class="spellsInput">
+      </div>
+      <div class="spellsRowContainer">
+        <input type="text" class="spellsInput">
+        <input type="text" class="spellsInput">
+        <div class="spellLevelTitle">5th</div>
+        <input type="text" class="spellsInput">
+        <input type="text" class="spellsInput">
+      </div>
+      <div class="spellsRowContainer">
+        <input type="text" class="spellsInput">
+        <input type="text" class="spellsInput">
+        <div class="spellLevelTitle">6th</div>
+        <input type="text" class="spellsInput">
+        <input type="text" class="spellsInput">
+      </div>
+      <div class="spellsRowContainer">
+        <input type="text" class="spellsInput">
+        <input type="text" class="spellsInput">
+        <div class="spellLevelTitle">7th</div>
+        <input type="text" class="spellsInput">
+        <input type="text" class="spellsInput">
+      </div>
+      <div class="spellsRowContainer">
+        <input type="text" class="spellsInput">
+        <input type="text" class="spellsInput">
+        <div class="spellLevelTitle">8th</div>
+        <input type="text" class="spellsInput">
+        <input type="text" class="spellsInput">
+      </div>
+      <div class="spellsRowContainer">
+        <input type="text" class="spellsInput">
+        <input type="text" class="spellsInput">
+        <div class="spellLevelTitle">9th</div>
         <input type="text" class="spellsInput">
         <input type="text" class="spellsInput">
       </div>

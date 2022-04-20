@@ -4,6 +4,12 @@
 /* TODO Focus on mobile responsiveness */
 /* TODO Remove meta tag with max and min scale so that mobile can zoom in and out */
 /* TODO Improve visibility of weapons section */
+
+html{
+
+    font-size: 100%;
+
+}
 body{
 
     background-color: white;
@@ -42,7 +48,7 @@ body{
     color:white;
 
     width: 15%;
-    font-size: .5vw;
+    font-size: .8rem;
 
 }
 .pgInput{
@@ -112,11 +118,11 @@ div{
 input{
 
     box-sizing:border-box;
-    font-size: .8vw;
+    font-size: 1.05rem;
     width:100%;
     margin:0px;
-    background-color: transparent;
-    border-color: transparent;
+    border-color: black;
+    border-width: .2em;
     /* TODO: Work on input fields so that they scale better */
 }
 /* 29 is the magic number DO A CODE REVIEW AFTER THIS SECTION*/
@@ -242,7 +248,7 @@ input{
 
     width:13%;
     margin-left: 3%;
-    border-color: black;
+    
 
 }
 .attributeCont{
@@ -320,7 +326,7 @@ input{
 
     width: 100%;
     height: 12%;
-    border-color: black;
+    
     
 }
 .initBoxT{
@@ -337,7 +343,7 @@ input{
 .hpInitInputFieldsLarge{
 
     width:100%;
-    border-color: black;
+    
     
 }
 .boxTWide{
@@ -361,7 +367,6 @@ input{
 .hpInitInputFieldsSmall{
 
     width: 100%;
-    border-color:black;
 
 }
 /* Find a way to make multiline input fields */
@@ -452,7 +457,7 @@ input{
 .speedInputFields{
 
     width: 100%;
-    border-color:black;
+    
     margin-bottom: 0px;
     vertical-align:top;
     display:inline-block;
@@ -467,7 +472,7 @@ input{
 /* Make this box taller */
     vertical-align: top;
     width:4vw;
-    border-color:black;
+    
     height:4vw;
     display:inline-block;
 
@@ -533,7 +538,7 @@ input{
 
     width: 9%;
     height:auto;
-    border-color:black;
+    
     display:inline;
     /* margin-left:.4vw; */
 
@@ -541,7 +546,7 @@ input{
 .skillsInputFieldsMisc{
 
     width: 9%;
-    border-color:black;
+    
 
 }
 .skillsEqualsT{
@@ -594,14 +599,17 @@ input{
 .armorClassInputFields{
 
     width: 100%;
-    border-color: black;
+    display: inline-block;
+        vertical-align: bottom;
+
+    
 
 }
 .armorClassInputFieldsLong{
 
     /* width: 100%; */
     flex-grow: 1;
-    border-color: black;
+    
 
 }
 .savesHead{
@@ -621,7 +629,7 @@ input{
 
     width:100%;
     display:inline-block;
-    border-color:black;
+    
 
 }
 .savesBoxTWide{
@@ -632,6 +640,7 @@ input{
     color:white;
     padding-top: 1%;
     padding-bottom:1%;
+    font-size: .9vw;
     font-weight: bold;
     height:20%;
     margin-right:3px;
@@ -643,7 +652,7 @@ input{
 
     width: 6%;
     display:inline-block;
-    border-color:black;
+    
     
 }
 .combatBaseBox{
@@ -671,7 +680,7 @@ input{
 
     width: 14%;
     display:inline-block;
-    border-color:black; 
+    
 
 }
 .combatInputFields{
@@ -679,7 +688,7 @@ input{
     width: 100%;
     display:inline-block;
     margin-top:10px;
-    border-color:black;
+    
 
 }
 .combatInputFieldsLong{
@@ -687,7 +696,7 @@ input{
     width: 34%;
     display:inline-block;
     margin-top: 10px;
-    border-color:black;
+    
 
 }
 .manuevers{
@@ -784,9 +793,9 @@ input{
     font-size: 1vw;
     height: auto;
     display: block;
-    border-color: black;
+    
     /* outline-color: transparent;
-    border-color: transparent; */
+    
     /* border-left: none;
     border-right:none;
     outline-color: transparent; */
@@ -861,7 +870,7 @@ input{
 }
 .acItemsInput{
 
-    border-color: black;
+    
     border-width: 3px;
 
 }
@@ -878,7 +887,7 @@ input{
     color: white;
     display: inline-block;
     width: 100%;
-    font-size: .6vw;
+    font-size: 1rem;
     text-align: left;
 }
 .acItemsBonusCont{
@@ -893,7 +902,7 @@ input{
     background-color: black;
     color: white;
     display: inline-block;
-    font-size: .6vw;
+    font-size: .9rem;
     width:100%;
     text-align: center;
 }
@@ -909,7 +918,7 @@ input{
     background-color: black;
     color: white;
     display: inline-block;
-    font-size: .6vw;
+    font-size: .9rem;
     width: 100%;
     text-align: center;
 }
@@ -925,7 +934,7 @@ input{
     background-color: black;
     color: white;
     display: inline-block;
-    font-size: .6vw;
+    font-size: .9rem;
     width:100%;
     text-align: center;
 }
@@ -941,7 +950,7 @@ input{
     background-color: black;
     color: white;
     display: inline-block;
-    font-size: .6vw;
+    font-size: .9rem;
     width: 100%;
     text-align: center;
 }
@@ -957,7 +966,7 @@ input{
     background-color: black;
     color: white;
     display: inline-block;
-    font-size: .6vw;
+    font-size: .9rem;
     width: 100%;
     text-align: center;
 }
@@ -973,7 +982,7 @@ input{
     background-color: black;
     color: white;
     display: inline-block;
-    font-size: .6vw;
+    font-size: .9rem;
     width: 100%;
     text-align: center;
 }
@@ -984,7 +993,7 @@ input{
     color: white;
     display: inline-block;
     width: 100%;
-    font-size: .8vw;
+    font-size: 1rem;
     height:40%;
     text-align: left;
 
@@ -1009,7 +1018,7 @@ input{
     background-color: black;
     color: white;
     text-align: center;
-    font-size: 1vw;
+    font-size: 1.5rem;
     width: 100%;
 
 
@@ -1027,12 +1036,16 @@ input{
 
     display: inline-block;
     width: 80%;
+    font-size: 1.3rem;
+    height: 1em;
 
 }
 .gearSubHeadWeight{
 
     display: inline-block;
     width: 10%;
+    font-size: 1.3rem;
+    height: 1em;
 
 }
 .gearBtn{
@@ -1040,7 +1053,8 @@ input{
     background-color: grey;
     width: 90%;
     display: inline-block;
-
+    font-size: 1rem;
+    height: 1.5em;
 
 }
 .gearBtnDelete{
@@ -1048,6 +1062,8 @@ input{
     background-color: red;
     width: 10%;
     display: inline-block;
+    font-size: 1rem;
+    height: 1.5em;
 
 }
 .gearContent{
@@ -1072,7 +1088,7 @@ input{
 }
 .gearInputFields{
 
-    border-color: black;
+    
     width: 60%;
     border-width: 3px;
     flex-grow: 5;
@@ -1080,21 +1096,21 @@ input{
 }
 .gearInputFieldsWeight{
 
-    border-color: black;
+    
     width: 20%;
     border-width: 3px;
 
 }
 .gearInputFieldsWeightTotal{
 
-    border-color: black;
+    
     width: 24%;
     border-width: 3px;
 
 }
 input.gearInputFieldsWeightTotal, textarea{
 
-    border-color: black;
+    
     border-width: 3px;
     background-color: white;
 
@@ -1111,8 +1127,7 @@ input.gearInputFieldsWeightTotal, textarea{
     width: 100%;
     background-color: black;
     color: white;
-    width: 100%;
-    font-size: 1vw;
+    font-size: 1.5rem;
     text-align: center;
 
 }
@@ -1131,6 +1146,8 @@ input.gearInputFieldsWeightTotal, textarea{
     display: flex;
     justify-content: space-around;
     flex-direction: row;
+    flex-wrap: wrap;
+
 
 }
 .spellsTitle{
@@ -1138,40 +1155,40 @@ input.gearInputFieldsWeightTotal, textarea{
     background-color: black;
     color: white;
     width: 100%;
-    font-size: 1vw;
+    font-size: 1.5rem;
     text-align: center;
 
 }
-.spellsColumnContainer{
+.spellsRowContainer{
 
-    width:15%;
+    width:100%;
     display: inline-block;
 
-
 }
+
 .spellsColumnTitle{
 
     color: black;
+    width: 18%;
     text-align: center;
-    font-size: .7vw;
-    align-self: center;
-    margin-bottom: .2vw;
+    font-size: 1.05rem;
 
 }
 .spellsInput{
-
-    border-color: black;
-    border-width: 3px;
+  
+    font-size: 1.2rem;
     margin-bottom: .3vw;
-    height: 1.4vw;
+    width: 18%;
+    height: 2em;
+
 }
 .spellLevelTitle{
 
-    width: 100%;
+    width: 19%;
     text-align: center;
-    margin-top: .75vw;
-    height: 1vw;
-    font-size: .8vw;
+    height: 2em;
+    margin-top: .4em;
+    font-size: 1.2rem;
 
 }
 .featsAbilCont{
@@ -1200,7 +1217,7 @@ input.gearInputFieldsWeightTotal, textarea{
     background-color: black;
     color: white;
     width: 100%;
-    font-size: 1vw;
+    font-size: 1.5rem;
     text-align: center;
 
 }
@@ -1208,7 +1225,7 @@ input.gearInputFieldsWeightTotal, textarea{
 
     width: 90%;
     flex-grow: 6;
-    border-color: black;
+    
 
 
 }
@@ -1229,12 +1246,15 @@ input.gearInputFieldsWeightTotal, textarea{
 
     width: 90%;
     background-color: grey;
-
+    font-size: 1rem;
+    height: 1.5em;
 }
 .featsBtnDelete{
 
     width: 10%;
     background-color: red;
+    font-size: 1rem;
+    height: 1.5em;
 
 }
 .load{
@@ -1251,14 +1271,14 @@ input.gearInputFieldsWeightTotal, textarea{
 }
 .loadTitleCont{
 
-    width: 20%;
+    width: 3em;
     
 
 }
 .loadTitle{
 
     text-align: center;
-    font-size: .6vw;
+    font-size: .9rem;
     margin-top: 12%;
 
 }
@@ -1269,8 +1289,8 @@ input.gearInputFieldsWeightTotal, textarea{
 }
 .loadInput{
 
-    border-color: black;
-    margin-top: 15%;
+    font-size: 1rem;
+    margin-top: 1em;
 
 }
 .specialAbil{
@@ -1300,7 +1320,7 @@ input.gearInputFieldsWeightTotal, textarea{
     background-color: black;
     color: white;
     width: 100%;
-    font-size: 1vw;
+    font-size: 1.5em;
     text-align: center;
 
 }
@@ -1308,7 +1328,7 @@ input.gearInputFieldsWeightTotal, textarea{
 
     width: 90%;
     flex-grow: 6;
-    border-color: black;
+    
 
 
 }
@@ -1329,12 +1349,16 @@ input.gearInputFieldsWeightTotal, textarea{
 
     width: 90%;
     background-color: grey;
+    font-size: 1rem;
+    height: 1.5em;
 
 }
 .specialAbilBtnDelete{
 
     width: 10%;
     background-color: red;
+    font-size: 1rem;
+    height: 1.5em;
 
 }
 .money{
@@ -1356,21 +1380,22 @@ input.gearInputFieldsWeightTotal, textarea{
     background-color: black;
     color: white;
     width: 100%;
-    font-size: 1vw;
+    font-size: 1.5rem;
     text-align: center;
 }
 .moneyDen{
 
     width: 10%;
     flex-grow: 1;
-    font-size: .7vw;
+    font-size: 1.05rem;
 
 }
 .moneyInput{
 
     width: 90%;
+    height: 1.3rem;
     flex-grow: 9;
-    border-color: black;
+    
 
 }
 .domain{
@@ -1381,7 +1406,7 @@ input.gearInputFieldsWeightTotal, textarea{
 }
 .domainsTitle{
 
-    font-size: 1vw;
+    font-size: 1.5rem;
     text-align: center;
     display: block;
 
@@ -1389,7 +1414,9 @@ input.gearInputFieldsWeightTotal, textarea{
 .domainsInputDom{
 
     width: 100%;
-    border-color: black;
+    font-size: 1rem;
+    height: 2em;
+    
 
 }
 .thSpellCont{
@@ -1399,7 +1426,7 @@ input.gearInputFieldsWeightTotal, textarea{
 }
 .domainLevTitle{
 
-    font-size: .7vw;
+    font-size: 1.05rem;
 
 }
 .domainChecks{
@@ -1413,18 +1440,19 @@ input.gearInputFieldsWeightTotal, textarea{
     border-top: 0;
     border-right: 0;
     border-left: 0;
-    border-color: black;
-    font-size: .6vw;
+    
+    font-size: .9rem;
     outline: none;
-    height: 2vh;
+    height: 2em;
 
 }
 
-@media screen and (max-width: 1375px){
+@media screen and (max-width: 1610px){
     body{
 
         background-color: white;
-        width:100%;
+        width:1152px;
+        height: 1493px;
         position: absolute;
         left:0;
         overflow-x: auto;
@@ -1432,3 +1460,5 @@ input.gearInputFieldsWeightTotal, textarea{
     }
 
 }
+/* 1vw = 1.5 rem */
+/* .5 vw = .75rem */
