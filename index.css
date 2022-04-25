@@ -70,7 +70,7 @@ h4{
 h5{
 
     margin: 0px;
-    font-size:.7vw;
+    font-size:1rem;
     margin-top:3px;
     display:inline-block;
     text-align: center;
@@ -78,11 +78,11 @@ h5{
 }
 h6{
 
-    font-size: .6vw;
+    font-size: .9rem;
     display:inline-block;
     text-align:center;
     margin-top:5px;
-    margin-left:.34vw;
+    margin-left:.325em;
     color:black;
 
     width:auto;
@@ -93,7 +93,7 @@ h6{
 }
 h7{
 
-    font-size:.5vw;
+    font-size:.75rem;
     text-align: center;
 
 }
@@ -129,58 +129,58 @@ input{
 
 .nameOfPCC{
 
-    width:13vw;
+    width:40%;
 
 }
 .alignC{
 
-    width:3.5vw;
+    width:15%;
 
 }
 
 .playerC{
 
-    width:13vw;
+    width:40%;
     
 }
 .characterLevelC{
 
-    width:15vw;
+    width:50%;
     
 }
 .deityC{
 
-    width:5vw;
+    width:20%;
     
 }
 .homeC{
 
-    width:9vw;
+    width:25%;
     
 }
 .raceC{
 
-    width: 8vw;
+    width: 24%;
 
 }
 .genderC{
 
-    width:4vw;
+    width:15%;
 
 }
 .sizeC{
 
-    width:4vw;
+    width:15%;
 
 }
 .weightC{
 
-    width: 6vw;
+    width: 20%;
 
 }
 .heightC{
 
-    width: 6vw;
+    width: 20%;
 
 }
 .leftColumn{
@@ -234,11 +234,11 @@ input{
     background-color: black;
     color:white;
     text-align: center;
-    font-size: .6vw;
+    font-size: .8rem;
     padding-top: 10px;
     font-weight: bold;
-    width:3vw;
-    height:1.5vw;
+    width:4.5rem;
+    height:2rem;
     vertical-align: top;
     margin-right:2px;
     display:inline-block;
@@ -399,7 +399,7 @@ input{
     background-color: black;
     color:white;
     text-align: center;
-    font-size: .6vw;
+    font-size: .9rem;
     padding-top: 10px;
     height: auto;
     font-weight: bold;
@@ -482,25 +482,25 @@ input{
     background-color: black;
     color:white;
     text-align: center;
-    font-size: 1vw;
+    font-size: 1.5rem;
     padding-top: 20px;
     font-weight: bold;
     width:100%;
-    height:2vw;
+    height:3rem;
     margin-right:2px;
     display:inline-block;
 
 }
 .skills{
 
-    width: 93%;
+    width: 100%;
 
 }
 .skillsT{
 
-    font-size:.7vw;
+    font-size:1rem;
     margin-top:3px;
-    margin-left: 2%;
+    margin-left: .9em;
     display:inline-block;
     text-align: center;
     width: 9%;
@@ -551,9 +551,9 @@ input{
 }
 .skillsEqualsT{
 
-    width: 2.3vw;
+    width:11%;
     text-align:left;
-    font-size:.8vw;
+    font-size:1.2rem;
 
 }
 .armorClass{
