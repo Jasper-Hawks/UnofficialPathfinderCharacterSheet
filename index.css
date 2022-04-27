@@ -680,7 +680,12 @@ input{
     vertical-align: top;
 
 }
+.combatModifierCont{
 
+    width: 34%;
+    display: inline-block;
+
+}
 .combatInputFieldsWide{
 
     width: 14%;
@@ -698,7 +703,7 @@ input{
 }
 .combatInputFieldsLong{
 
-    width: 34%;
+    width: 100%;
     display:inline-block;
     margin-top: 10px;
     
