@@ -62,7 +62,7 @@ body{
 }
 h4{
 
-    font-size: .5vw;
+    font-size: .75rem;
     text-align: center;
     margin:0;
 
@@ -303,7 +303,7 @@ input{
 .operands{
 
     margin: 1% 1%;
-    font-size: .7vw;
+    font-size: 1rem;
     display: inline-block;
     vertical-align:middle;
     
@@ -351,15 +351,13 @@ input{
     background-color: black;
     color:white;
     text-align: center;
-    font-size: .6vw;
     margin-top: 5px;
-    padding-top: 1%;
-    font-size: .6vw;
-    vertical-align: baseline;
-    padding-bottom: 1%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: .8rem;
+    vertical-align: center;
     font-weight: bold;
     width:10%;
-    height:30px;
     margin-right:2px;
     display:inline-block;
     
@@ -496,26 +494,30 @@ input{
     width: 100%;
 
 }
+.skillsRow{
+
+    width: 100%;
+
+}
 .skillsT{
 
     font-size:1rem;
     margin-top:3px;
-    margin-left: .9em;
     display:inline-block;
     text-align: center;
-    width: 9%;
+    width: 11.5%;
     display:inline-block;
 
 }
 .skillsTTot{
 
-    margin-right:7%;
+    width: 30%;
     /* margin-left: 3%; */
 
 }
 .skillsTLong{
 
-    width: 44%;
+    width: 28%;
     text-align: left;
     padding-bottom: 10px;
 
@@ -523,14 +525,13 @@ input{
 .skillsRadio{
 
     display:inline-block;
-    width:.7vw;
-    height:.7vw;
+    width: 3%;
 
 }
 .skillsDetailedT{
 
     display:inline-block;
-    width:40%;
+    width:35%;
     text-align:left;
 
 }
@@ -575,6 +576,11 @@ input{
     vertical-align: top;
 
 }
+.armorClassMod{
+
+    font-size: 1rem;
+
+}
 .armorClassContLong{
 
     width: 55%;
@@ -586,12 +592,12 @@ input{
     background-color: black;
     color:white;
     text-align: center;
-    font-size: .6vw;
+    font-size: .85rem;
     padding-top: 10px;
+    padding-bottom: 10px;
     font-weight: bold;
     vertical-align: top;
     width:10%;
-    height:1.5vw;
     margin-right:2px;
     display:inline-block;
 
@@ -617,7 +623,7 @@ input{
     text-align: center;
     display: inline-block;
     width:6%;
-    font-size: .6vw;
+    font-size: .9rem;
 
 }
 .savesTLong{
@@ -640,9 +646,9 @@ input{
     color:white;
     padding-top: 1%;
     padding-bottom:1%;
-    font-size: .9vw;
+    font-size: 1.1rem;
     font-weight: bold;
-    height:20%;
+    height:2em;
     margin-right:3px;
     display:inline-block;
 
@@ -657,12 +663,11 @@ input{
 }
 .combatBaseBox{
 
-
     width: 50%;
     background-color: black;
     color:white;
     padding-top: 15px;
-    font-size: .7vw;
+    font-size: 1rem;
     padding-bottom: 15px;
     font-weight: bold;
     text-align: center;
@@ -1447,7 +1452,7 @@ input.gearInputFieldsWeightTotal, textarea{
 
 }
 
-@media screen and (max-width: 1610px){
+@media screen and (max-width: 1800px){
     body{
 
         background-color: white;
