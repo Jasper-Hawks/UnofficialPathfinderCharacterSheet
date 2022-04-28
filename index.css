@@ -207,7 +207,7 @@ input{
 .attributeHead{
 
     width: 13%;
-    font-size: .6vw;
+    font-size: .9rem;
     margin-left: 3%;
     /*TODO research display: table*/
 }
@@ -220,10 +220,10 @@ input{
 
     color:black;
     text-align: center;
-    font-size: .6vw;
+    font-size: .9rem;
     padding-top: 10px;
     font-weight: bold;
-    width:3vw;
+    width:4.5rem;
     height:1.5vw;
     margin-right:2px;
     display:inline-block;
@@ -269,7 +269,7 @@ input{
 }
 .hpInitCont{
 
-    width: 32%;
+    width: 30%;
     display: inline-block;
     margin-left: 4%;
 
@@ -311,7 +311,7 @@ input{
 .initOperands{
 
     margin: 7% 1%;
-    font-size: .7vw;
+    font-size: 1rem;
     display: inline-block;
     vertical-align: baseline;
 
@@ -505,7 +505,7 @@ input{
     margin-top:3px;
     display:inline-block;
     text-align: center;
-    width: 11.5%;
+    width: 11%;
     display:inline-block;
 
 }
@@ -780,7 +780,7 @@ input{
     background-color: black;
     color: white;
     text-align:center;
-    font-size: .8vw;
+    font-size: 1.2rem;
     display:inline-block;
     vertical-align: top;
 
@@ -792,7 +792,7 @@ input{
     background-color: black;
     color: white;
     text-align:left;
-    font-size: .8vw;
+    font-size: 1.2rem;
     display:inline-block;
     vertical-align: top;
 
@@ -800,7 +800,7 @@ input{
 .weaponsInputFields{
 
     width: 98%;
-    font-size: 1vw;
+    font-size: 1.5rem;
     height: auto;
     display: block;
     
