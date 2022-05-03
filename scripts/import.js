@@ -12,14 +12,39 @@ const input = document.querySelector('input[type="file"]')
               const a = reader.result.split(",")
               console.log(a)
               const weaponsBtn = document.querySelector('#AddBtn');
+              const acItemsBtn = document.querySelector('#acItemsAddBtn');
+              const gearBtn = document.querySelector('#gearAddBtn');
+              const featsBtn = document.querySelector('#featsAddBtn');
+              const specBtn = document.querySelector('#specialAbilAddBtn');
+
               // Create the same number of weapon entries that the user had when
               // they exported. So that data wont be placed in wrong positions
-              for (let j = 0; j < Number(a[a.length - 1]) - 1; ++j){
+              
+              for (let j = 0; j < Number(a[a.length - 5]) - 1; ++j){
 
                 weaponsBtn.click();
 
               }
-              //TODO Rename this variable
+              for (let i = 0; i < Number(a[a.length - 4]) - 1; ++i){
+
+                acItemsBtn.click();
+
+              }
+              for (let i = 0; i < Number(a[a.length - 3]) - 1; ++i){
+
+                gearBtn.click();
+
+              }
+              for (let i = 0; i < Number(a[a.length - 2]) - 1; ++i){
+
+                featsBtn.click();
+
+              }
+              for (let i = 0; i < Number(a[a.length - 1]) - 1; ++i){
+
+                specBtn.click();
+
+              }
               const inputFields = document.querySelectorAll('input[type=text],input[type=checkbox]')
               console.log(inputFields)
               // Populate text fields with values
@@ -32,7 +57,7 @@ const input = document.querySelector('input[type="file"]')
                   
                   let bool = a[i] == "true" ? true : false;
                   inputFields[i].checked = bool;
-                  console.log(!!a[i]);
+                  // console.log(!!a[i]);
         
                 }
   

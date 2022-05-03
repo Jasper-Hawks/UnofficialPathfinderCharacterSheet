@@ -78,7 +78,7 @@
   </div>
 
   <div class="genderC">
-    <input type="text" id="gender">
+    <input type="text">
     <hr>
     <h5>Gender</h5>
   </div>
@@ -370,7 +370,7 @@
     <input type="button" class="weaponsDelBtn" value="-" onclick="delWeap(this);">
 </div>
   <div class="weaponsScroll"> 
-    <form class="weapons" id="w0">
+    <form class="weapons" id="wform0">
     <div class="weaponsBtnCont">
   </div>
   <br>
@@ -872,9 +872,9 @@
 <div id="pg2">
   <div class="mainPg2">
   <div class="acItems">
-  <input type="button" class="acItemsBtn" onclick="spawnACItem()" value="+"> <input type="button" class="acItemsBtnDelete" onclick="delACItem()" value="-"><br>
+  <input type="button" class="acItemsBtn" onclick="spawnACItem()" value="+" id="acItemsAddBtn"> <input type="button" class="acItemsBtnDelete" onclick="delACItem()" value="-"><br>
   <div class="acItemsScroll">
-    <form class="acItemsForm" id="AC0">
+    <form class="acItemsForm" id="aform0">
       <div class="acItemsTitleCont">
         <div class="acItemsTotalTitle" id="acItemsTotalTitle">AC Items Totals</div>
         <div class="acItemsTitle"><input type="checkbox" class="acItemsCheck">AC Item</div>
@@ -916,21 +916,21 @@
   <div class="leftColumnPg2">
     <div class="gear">
       <div class="gearTitle">Gear</div>
-      <input type="button" class="gearBtn" value="+" onclick="spawnGear()"><input type="button" class="gearBtnDelete" value="-" onclick="delGear()">
+      <input type="button" class="gearBtn" value="+" onclick="spawnGear()" id="gearAddBtn"><input type="button" class="gearBtnDelete" value="-" onclick="delGear()">
       <form class="gearContent" id="g0">
         <div class="gearTitles">
           <div class="gearSubHeadItem">Item</div>
           <div class="gearSubHeadWeight">WT</div>
         </div>
-        <div class="gearEntry">
+        <div class="gearEntry" id="gform0">
           <input type="checkbox" class="gearCheckbox">
-          <input type="text" class="gearInputFields" id="ge0">
-          <input type="text" class="gearInputFieldsWeight" id="gw0">
+          <input type="text" class="gearInputFields">
+          <input type="text" class="gearInputFieldsWeight">
         </div>
       </form>
       <div class="gearTotal">
         <div class="gearTotalTitle">Total Weight</div>
-        <input type="text" class="gearInputFieldsWeightTotal" id="gwT">
+        <input type="text" class="gearInputFieldsWeightTotal">
       </div>
     </div>
     <div class="load">
@@ -979,9 +979,9 @@
     <div class="feats">
       <div class="featsHeader">
       <div class="featsTitle">Feats</div>
-      <input type="button" class="featsBtn" value="+" onclick="spawnFeat()"><input type="button" class="featsBtnDelete" value="-" onclick="delFeat()">
+      <input type="button" class="featsBtn" value="+" onclick="spawnFeat()" id="featsAddBtn"><input type="button" class="featsBtnDelete" value="-" onclick="delFeat()">
       </div>
-      <form class="featsCont">
+      <form class="featsCont" id="fform0">
         <input type="checkbox" class="featsCheckbox">
         <input type="text" class="featsInputFields">
       </form>
@@ -990,9 +990,9 @@
       <div class="specialAbilContent">
         <div class="specialAbilHeader">
           <div class="specialAbilTitle">Special Abilities</div>
-          <input type="button" class="specialAbilBtn" value="+" onclick="spawnAbil()"><input type="button" class="specialAbilBtnDelete" value="-" onclick="delAbil()">
+          <input type="button" class="specialAbilBtn" value="+" onclick="spawnAbil()" id="specialAbilAddBtn"><input type="button" class="specialAbilBtnDelete" value="-" onclick="delAbil()">
         </div>
-        <form class="specialAbilCont">
+        <form class="specialAbilCont" id="sform0">
           <input type="checkbox" class="specialAbilCheckbox">
           <input type="text" class="specialAbilInputFields">
         </form>
@@ -1095,9 +1095,9 @@
         <input class="domainChecks" type="checkbox">
         <input class="domainChecks" type="checkbox">
         <input class="domainChecks" type="checkbox">
-        <input class="domainInputSpell">
-        <input class="domainInputSpell">
-        <input class="domainInputSpell">
+        <input class="domainInputSpell" type="text">
+        <input class="domainInputSpell" type="text">
+        <input class="domainInputSpell" type="text">
       </div>
       <div class="thSpellCont">
         <div class="domainLevTitle">1st</div>
@@ -1110,9 +1110,9 @@
         <input class="domainChecks" type="checkbox">
         <input class="domainChecks" type="checkbox">
         <input class="domainChecks" type="checkbox">
-        <input class="domainInputSpell">
-        <input class="domainInputSpell">
-        <input class="domainInputSpell">
+        <input class="domainInputSpell" type="text">
+        <input class="domainInputSpell" type="text">
+        <input class="domainInputSpell" type="text">
       </div>
       <div class="thSpellCont">
         <div class="domainLevTitle">2nd</div>
@@ -1125,9 +1125,9 @@
         <input class="domainChecks" type="checkbox">
         <input class="domainChecks" type="checkbox">
         <input class="domainChecks" type="checkbox">
-        <input class="domainInputSpell">
-        <input class="domainInputSpell">
-        <input class="domainInputSpell">
+        <input class="domainInputSpell" type="text">
+        <input class="domainInputSpell" type="text">
+        <input class="domainInputSpell" type="text">
       </div>
       <div class="thSpellCont">
         <div class="domainLevTitle">3rd</div>
@@ -1140,9 +1140,9 @@
         <input class="domainChecks" type="checkbox">
         <input class="domainChecks" type="checkbox">
         <input class="domainChecks" type="checkbox">
-        <input class="domainInputSpell">
-        <input class="domainInputSpell">
-        <input class="domainInputSpell">
+        <input class="domainInputSpell" type="text">
+        <input class="domainInputSpell" type="text">
+        <input class="domainInputSpell" type="text">
       </div>
       <div class="thSpellCont">
         <div class="domainLevTitle">4th</div>
@@ -1155,9 +1155,9 @@
         <input class="domainChecks" type="checkbox">
         <input class="domainChecks" type="checkbox">
         <input class="domainChecks" type="checkbox">
-        <input class="domainInputSpell">
-        <input class="domainInputSpell">
-        <input class="domainInputSpell">
+        <input class="domainInputSpell" type="text">
+        <input class="domainInputSpell" type="text">
+        <input class="domainInputSpell" type="text">
       </div>
       <div class="thSpellCont">
         <div class="domainLevTitle">5th</div>
@@ -1170,9 +1170,9 @@
         <input class="domainChecks" type="checkbox">
         <input class="domainChecks" type="checkbox">
         <input class="domainChecks" type="checkbox">
-        <input class="domainInputSpell">
-        <input class="domainInputSpell">
-        <input class="domainInputSpell">
+        <input class="domainInputSpell" type="text">
+        <input class="domainInputSpell" type="text">
+        <input class="domainInputSpell" type="text">
       </div>
       <div class="thSpellCont">
         <div class="domainLevTitle">6th</div>
@@ -1185,9 +1185,9 @@
         <input class="domainChecks" type="checkbox">
         <input class="domainChecks" type="checkbox">
         <input class="domainChecks" type="checkbox">
-        <input class="domainInputSpell">
-        <input class="domainInputSpell">
-        <input class="domainInputSpell">
+        <input class="domainInputSpell" type="text">
+        <input class="domainInputSpell" type="text">
+        <input class="domainInputSpell" type="text">
       </div>
       <div class="thSpellCont">
         <div class="domainLevTitle">7th</div>
@@ -1200,9 +1200,9 @@
         <input class="domainChecks" type="checkbox">
         <input class="domainChecks" type="checkbox">
         <input class="domainChecks" type="checkbox">
-        <input class="domainInputSpell">
-        <input class="domainInputSpell">
-        <input class="domainInputSpell">
+        <input class="domainInputSpell" type="text">
+        <input class="domainInputSpell" type="text">
+        <input class="domainInputSpell" type="text">
       </div>
       <div class="thSpellCont">
         <div class="domainLevTitle">8th</div>
@@ -1215,9 +1215,9 @@
         <input class="domainChecks" type="checkbox">
         <input class="domainChecks" type="checkbox">
         <input class="domainChecks" type="checkbox">
-        <input class="domainInputSpell">
-        <input class="domainInputSpell">
-        <input class="domainInputSpell">
+        <input class="domainInputSpell" type="text">
+        <input class="domainInputSpell" type="text">
+        <input class="domainInputSpell" type="text">
       </div>
       <div class="thSpellCont">
         <div class="domainLevTitle">9th</div>
@@ -1230,9 +1230,9 @@
         <input class="domainChecks" type="checkbox">
         <input class="domainChecks" type="checkbox">
         <input class="domainChecks" type="checkbox">
-        <input class="domainInputSpell">
-        <input class="domainInputSpell">
-        <input class="domainInputSpell">
+        <input class="domainInputSpell" type="text">
+        <input class="domainInputSpell" type="text">
+        <input class="domainInputSpell" type="text">
       </div>
     </div>
   </div>
