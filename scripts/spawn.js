@@ -6,7 +6,7 @@ function spawnWeap(){
     
     var weap = document.querySelector(".weaponsScroll");
     var attach = document.createElement('div');
-    attach.innerHTML = `<form class="weapons" id="w0">
+    attach.innerHTML = `<form class="weapons" id="wform0">
     <div class="weaponsBtnCont">
   </div>
   <br>
@@ -41,7 +41,7 @@ function spawnACItem(){
     //Select the form for ACs
     let acItem = document.querySelector(".acItemsScroll");
     var attach = document.createElement('div');
-    attach.innerHTML = `<form class="acItemsForm">
+    attach.innerHTML = `<form class="acItemsForm" id="aform0">
     <div class="acItemsTitleCont">
       <div class="acItemsTitle"><input type="checkbox" class="acItemsCheck">AC Item</div>
       <input type="text" class="acItemsInput" id="acItemsTitle">
@@ -81,9 +81,9 @@ function spawnGear(){
     let g = document.querySelector('.gearContent');
     var attach = document.createElement('div');
     attach.innerHTML = `
-    <div class="gearEntry">
+    <div class="gearEntry" id="gform0">
         <input type="checkbox" class="gearCheckbox">
-        <input type="text" class="gearInputFields" id="ge0">
+        <input type="text" class="gearInputFields" id="ge">
         <input type="text" class="gearInputFieldsWeight" id="gw0">
       </div>`;
   g.appendChild(attach);
@@ -97,7 +97,7 @@ function spawnFeat(){
   
   // Use this method instead because we don't want the
   // div to conflict with the .feats flex container
-  attach.outerHTML = attach.innerHTML = `<form class="featsCont">
+  attach.outerHTML = attach.innerHTML = `<form class="featsCont" id="fform0">
   <input type="checkbox" class="featsCheckbox">
   <input type="text" class="featsInputFields">
 </form>`;
@@ -109,7 +109,7 @@ function spawnAbil(){
   let attach = document.createElement('div');  
   a.appendChild(attach);
 
-  attach.outerHTML = attach.innerHTML = `<form class="specialAbilCont">
+  attach.outerHTML = attach.innerHTML = `<form class="specialAbilCont" id="sform0">
   <input type="checkbox" class="specialAbilCheckbox">
   <input type="text" class="specialAbilInputFields">
 </form>`
