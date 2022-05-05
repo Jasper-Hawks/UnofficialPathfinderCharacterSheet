@@ -30,67 +30,67 @@
 <body>
 <form class="personalInfo">
   <div class="nameOfPCC">
-    <input type="text" id="nameOfPC">
+    <input type="text" id="nameOfPC" class="personalInfoInput">
     <hr>
     <h5>Character Name</h5>
   </div>
 
   <div class="alignC">
-    <input type="text" id="align">
+    <input type="text" id="align" class="personalInfoInput">
     <hr>
     <h5>Alignment</h5>
   </div>
 
   <div class="playerC">
-    <input type="text" id="player">
+    <input type="text" id="player" class="personalInfoInput">
     <hr>
     <h5>Player Name</h5>
   </div>
 
   <div class="characterLevelC">
-    <input type="text" id="characterLevel">
+    <input type="text" id="characterLevel" class="personalInfoInput">
     <hr>
     <h5>Character Level</h5>
   </div>
 
   <div class="deityC">
-    <input type="text" id="deity">
+    <input type="text" id="deity" class="personalInfoInput">
     <hr>
     <h5>Deity</h5>
   </div>
 
   <div class="homeC">
-    <input type="text" id="home">
+    <input type="text" id="home" class="personalInfoInput">
     <hr>
     <h5>Homeland</h5>
   </div>
 
   <div class="raceC">
-    <input type="text" id="race">
+    <input type="text" id="race" class="personalInfoInput">
     <hr>
     <h5>Race</h5>
   </div>
 
   <div class="sizeC">
-    <input type="text" id="size">
+    <input type="text" id="size" class="personalInfoInput">
     <hr>
     <h5>Size</h5>
   </div>
 
-  <div class="genderC">
-    <input type="text">
+  <div class="genderC" > 
+    <input type="text" class="personalInfoInput">
     <hr>
     <h5>Gender</h5>
   </div>
 
   <div class="weightC">
-    <input type="text" id="weight">
+    <input type="text" id="weight" class="personalInfoInput">
     <hr>
     <h5>Weight</h5>
   </div>
 
   <div class="heightC">
-    <input type="text" id="height">
+    <input type="text" id="height" class="personalInfoInput">
     <hr>
     <h5>Height</h5>
   </div>
@@ -164,9 +164,13 @@
     </div>
     <div class="hpInitContWide">
       <h6>Wounds / Current HP</h6>
-      <input type="text" id="hpCurrent" class="hpInitInputFieldsLarge">
+      <textarea class="hpInitInputFieldsLarge">
+
+      </textarea>
       <h6>Nonlethal Damage</h6>
-      <input type="text" id="nonLethal" class="hpInitInputFieldsLarge">
+      <textarea class="hpInitInputFieldsLarge">
+
+      </textarea>
     </div>
     <div class="hpInitInitCont">
       <div class="boxT">INITIATIVE<br><h7>Modifier</h7></div>
@@ -311,7 +315,7 @@
   </form>
   <form class="manuevers">
     <div class="cmb">
-      <div class="boxTWide">CMB</div>
+      <div class="cmBox">CMB</div>
       <div class="combatCont">
         <input type="text" id="cmbTotal" class="combatInputFields">
         <h4>Total</h4>
@@ -337,7 +341,7 @@
     </div>
   </div>
   <div class="cmd">
-    <div class="boxTWide">CMD</div>
+    <div class="cmBox">CMD</div>
     <div class="combatCont">
       <input type="text" id="cmdTotal" class="combatInputFields">
       <h4>Total</h4>
