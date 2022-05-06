@@ -21,7 +21,7 @@ function getData() {
 
   //Find all of the fields that can be modified and find all of the fields that have unique
   // ID's so that we know how many the user generated.
-  var nodes = document.querySelectorAll('input[type=text],[id^=wform],input[type=checkbox],[id^=aform],[id^=gform],[id^=fform],[id^=sform]');
+  var nodes = document.querySelectorAll('input[type=text],[id^=wform],input[type=checkbox],[id^=aform],[id^=gform],[id^=fform],[id^=sform],textarea');
   var nodeValues = [];
   var w = 0; // This variable represents weapon entries
   var ac = 0; // This entry represents AC items

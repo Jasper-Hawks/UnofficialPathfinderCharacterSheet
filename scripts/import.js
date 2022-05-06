@@ -9,7 +9,8 @@ const input = document.querySelector('input[type="file"]')
           reader.onload = function(){
   
               //TODO Rename this variable
-              const a = reader.result.split(",")
+              const regex = /\b,\b/mg;
+              const a = reader.result.split(regex)
               console.log(a)
               const weaponsBtn = document.querySelector('#AddBtn');
               const acItemsBtn = document.querySelector('#acItemsAddBtn');
@@ -45,7 +46,7 @@ const input = document.querySelector('input[type="file"]')
                 specBtn.click();
 
               }
-              const inputFields = document.querySelectorAll('input[type=text],input[type=checkbox]')
+              const inputFields = document.querySelectorAll('input[type=text],input[type=checkbox],textarea')
               console.log(inputFields)
               // Populate text fields with values
               for (let i = 0; i < inputFields.length; ++i){

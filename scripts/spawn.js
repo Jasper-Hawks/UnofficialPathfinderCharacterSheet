@@ -105,7 +105,7 @@ function spawnFeat(){
 }
 function spawnAbil(){
 
-  let a = document.querySelector('.specialAbilContent');
+  let a = document.querySelector('.specialAbil');
   let attach = document.createElement('div');  
   a.appendChild(attach);
 

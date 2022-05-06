@@ -23,7 +23,7 @@
 <!-- <img class="sheet" src="Images/CharacterSheet.webp"> -->
 <input type="file" class="manInput" value="Import" onclick="">
 <input type="button" class="manInput" value="Export" onclick="getData()">
-<input type="button" class="pgInput" value="/" onclick="goToEquip()">
+<input type="button" class="pgInput" value="\" onclick="goToEquip()">
 <br>
 <div id="pg1">
 <img class="logo" src="Images/pathfinder_cropped.jpg">
@@ -164,13 +164,9 @@
     </div>
     <div class="hpInitContWide">
       <h6>Wounds / Current HP</h6>
-      <textarea class="hpInitInputFieldsLarge">
-
-      </textarea>
+      <textarea class="hpInitInputFieldsLarge"></textarea>
       <h6>Nonlethal Damage</h6>
-      <textarea class="hpInitInputFieldsLarge">
-
-      </textarea>
+      <textarea class="hpInitInputFieldsLarge"></textarea>
     </div>
     <div class="hpInitInitCont">
       <div class="boxT">INITIATIVE<br><h7>Modifier</h7></div>
@@ -991,7 +987,6 @@
       </form>
     </div>
     <div class="specialAbil">
-      <div class="specialAbilContent">
         <div class="specialAbilHeader">
           <div class="specialAbilTitle">Special Abilities</div>
           <input type="button" class="specialAbilBtn" value="+" onclick="spawnAbil()" id="specialAbilAddBtn"><input type="button" class="specialAbilBtnDelete" value="-" onclick="delAbil()">
@@ -1000,7 +995,6 @@
           <input type="checkbox" class="specialAbilCheckbox">
           <input type="text" class="specialAbilInputFields">
         </form>
-    </div>
     </div>
   </div>
   </div>
@@ -1099,9 +1093,7 @@
         <input class="domainChecks" type="checkbox">
         <input class="domainChecks" type="checkbox">
         <input class="domainChecks" type="checkbox">
-        <input class="domainInputSpell" type="text">
-        <input class="domainInputSpell" type="text">
-        <input class="domainInputSpell" type="text">
+        <textarea class="domainSpellText"></textarea>
       </div>
       <div class="thSpellCont">
         <div class="domainLevTitle">1st</div>
@@ -1114,9 +1106,7 @@
         <input class="domainChecks" type="checkbox">
         <input class="domainChecks" type="checkbox">
         <input class="domainChecks" type="checkbox">
-        <input class="domainInputSpell" type="text">
-        <input class="domainInputSpell" type="text">
-        <input class="domainInputSpell" type="text">
+        <textarea class="domainSpellText"></textarea>
       </div>
       <div class="thSpellCont">
         <div class="domainLevTitle">2nd</div>
@@ -1129,9 +1119,7 @@
         <input class="domainChecks" type="checkbox">
         <input class="domainChecks" type="checkbox">
         <input class="domainChecks" type="checkbox">
-        <input class="domainInputSpell" type="text">
-        <input class="domainInputSpell" type="text">
-        <input class="domainInputSpell" type="text">
+        <textarea class="domainSpellText"></textarea>
       </div>
       <div class="thSpellCont">
         <div class="domainLevTitle">3rd</div>
@@ -1144,9 +1132,7 @@
         <input class="domainChecks" type="checkbox">
         <input class="domainChecks" type="checkbox">
         <input class="domainChecks" type="checkbox">
-        <input class="domainInputSpell" type="text">
-        <input class="domainInputSpell" type="text">
-        <input class="domainInputSpell" type="text">
+        <textarea class="domainSpellText"></textarea>
       </div>
       <div class="thSpellCont">
         <div class="domainLevTitle">4th</div>
@@ -1159,9 +1145,7 @@
         <input class="domainChecks" type="checkbox">
         <input class="domainChecks" type="checkbox">
         <input class="domainChecks" type="checkbox">
-        <input class="domainInputSpell" type="text">
-        <input class="domainInputSpell" type="text">
-        <input class="domainInputSpell" type="text">
+        <textarea class="domainSpellText"></textarea>
       </div>
       <div class="thSpellCont">
         <div class="domainLevTitle">5th</div>
@@ -1174,9 +1158,7 @@
         <input class="domainChecks" type="checkbox">
         <input class="domainChecks" type="checkbox">
         <input class="domainChecks" type="checkbox">
-        <input class="domainInputSpell" type="text">
-        <input class="domainInputSpell" type="text">
-        <input class="domainInputSpell" type="text">
+        <textarea class="domainSpellText"></textarea>
       </div>
       <div class="thSpellCont">
         <div class="domainLevTitle">6th</div>
@@ -1189,9 +1171,7 @@
         <input class="domainChecks" type="checkbox">
         <input class="domainChecks" type="checkbox">
         <input class="domainChecks" type="checkbox">
-        <input class="domainInputSpell" type="text">
-        <input class="domainInputSpell" type="text">
-        <input class="domainInputSpell" type="text">
+        <textarea class="domainSpellText"></textarea>
       </div>
       <div class="thSpellCont">
         <div class="domainLevTitle">7th</div>
@@ -1204,9 +1184,7 @@
         <input class="domainChecks" type="checkbox">
         <input class="domainChecks" type="checkbox">
         <input class="domainChecks" type="checkbox">
-        <input class="domainInputSpell" type="text">
-        <input class="domainInputSpell" type="text">
-        <input class="domainInputSpell" type="text">
+        <textarea class="domainSpellText"></textarea>
       </div>
       <div class="thSpellCont">
         <div class="domainLevTitle">8th</div>
@@ -1219,9 +1197,8 @@
         <input class="domainChecks" type="checkbox">
         <input class="domainChecks" type="checkbox">
         <input class="domainChecks" type="checkbox">
-        <input class="domainInputSpell" type="text">
-        <input class="domainInputSpell" type="text">
-        <input class="domainInputSpell" type="text">
+        <textarea class="domainSpellText"></textarea>
+
       </div>
       <div class="thSpellCont">
         <div class="domainLevTitle">9th</div>
@@ -1234,9 +1211,8 @@
         <input class="domainChecks" type="checkbox">
         <input class="domainChecks" type="checkbox">
         <input class="domainChecks" type="checkbox">
-        <input class="domainInputSpell" type="text">
-        <input class="domainInputSpell" type="text">
-        <input class="domainInputSpell" type="text">
+        <textarea class="domainSpellText"></textarea>
+
       </div>
     </div>
   </div>
