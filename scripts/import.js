@@ -1,15 +1,13 @@
-//TODO Escape commas
-//TODO Stop getting elements with ids
 const input = document.querySelector('input[type="file"]')
       input.addEventListener('change', function(e){
 
-        if(confirm("Would you like to import this data?") == true){
+        if(showModal("Would you like to import this data? (This will delete the current character)","import") == true){
           console.log(input.file); //Testing stuff, remove later
           const reader = new FileReader()
           reader.onload = function(){
-  
-              //TODO Rename this variable
-              const regex = /\b,\b/mg;
+
+              const regex = /,/mg;
+                //TODO Rename this variable
               const a = reader.result.split(regex)
               console.log(a)
               const weaponsBtn = document.querySelector('#AddBtn');
@@ -46,16 +44,42 @@ const input = document.querySelector('input[type="file"]')
                 specBtn.click();
 
               }
+
+              //Scrub the imported data for any comma HTML codes and convert 
+              // those codes to commas now that the data has been segmented
+              //properly
+
+              for (let i =0; i < a.length;i++){
+
+                //If a string in the array contains the following HTML
+                // code for commas
+                if (a[i].includes('&#44')){
+
+                  //Turn that code back into a comma. This will
+                  // not disrupt the csv and people can have
+                  // characters with commas in their names
+                  a[i] = a[i].replace(/&#44/g,',')
+
+                }
+
+              }
+
+              //Find all of the input fields and make an array named inputFields out of them
               const inputFields = document.querySelectorAll('input[type=text],input[type=checkbox],textarea')
-              console.log(inputFields)
+              console.log(inputFields) //TESTING TESTING
+
               // Populate text fields with values
               for (let i = 0; i < inputFields.length; ++i){
                 if (inputFields[i].type != "checkbox"){
                   
-                  inputFields[i].value = a[i];
+                    inputFields[i].value = a[i];
+
         
                 }else{
                   
+                  // If we find a checkbox populate checkbox fields
+                  // not input fields
+
                   let bool = a[i] == "true" ? true : false;
                   inputFields[i].checked = bool;
                   // console.log(!!a[i]);

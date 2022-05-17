@@ -21,6 +21,17 @@
 
 </head>
 <!-- <img class="sheet" src="Images/CharacterSheet.webp"> -->
+<div class="modal" id="modal">
+  <div class="modalContent">
+    <div class="modalContentCont">
+    <div id="modalText" class="modalText"></div>
+    <div class="modalBtnCont">
+      <input type="button" id="modalYes" class="modalBtn" value="Yes" style="background-color: red;color: white;">
+      <input type="button" id="modalNo" class="modalBtn" value="No">
+    </div>
+  </div>
+  </div>
+</div>
 <div class="mainContent">
 <input type="file" class="manInput" value="Import" onclick="">
 <input type="button" class="manInput" value="Export" onclick="getData()">
@@ -368,7 +379,7 @@
   </form>
   <div class="weaponsBtnCont">
     <input type="button" class="weaponsBtn" value="+" onclick="spawnWeap()" id="AddBtn">
-    <input type="button" class="weaponsDelBtn" value="-" onclick="delWeap(this);">
+    <input type="button" class="weaponsDelBtn" value="-" onclick="showModal('Would you like to remove the selected weapon entires?','weap')">
 </div>
   <div class="weaponsScroll"> 
     <form class="weapons" id="wform0">
@@ -873,7 +884,7 @@
 <div id="pg2">
   <div class="mainPg2">
   <div class="acItems">
-  <input type="button" class="acItemsBtn" onclick="spawnACItem()" value="+" id="acItemsAddBtn"> <input type="button" class="acItemsBtnDelete" onclick="delACItem()" value="-"><br>
+  <input type="button" class="acItemsBtn" onclick="spawnACItem()" value="+" id="acItemsAddBtn"> <input type="button" class="acItemsBtnDelete" onclick="showModal('Would you like to remove the selected AC Items?','ac')" value="-"><br>
   <div class="acItemsScroll">
     <form class="acItemsForm" id="aform0">
       <div class="acItemsTitleCont">
@@ -917,7 +928,7 @@
   <div class="leftColumnPg2">
     <div class="gear">
       <div class="gearTitle">Gear</div>
-      <input type="button" class="gearBtn" value="+" onclick="spawnGear()" id="gearAddBtn"><input type="button" class="gearBtnDelete" value="-" onclick="delGear()">
+      <input type="button" class="gearBtn" value="+" onclick="spawnGear()" id="gearAddBtn"><input type="button" class="gearBtnDelete" value="-" onclick="showModal('Would you like to remove the selected gear entries?','gear')">
       <form class="gearContent" id="g0">
         <div class="gearTitles">
           <div class="gearSubHeadItem">Item</div>
@@ -980,7 +991,7 @@
     <div class="feats">
       <div class="featsHeader">
       <div class="featsTitle">Feats</div>
-      <input type="button" class="featsBtn" value="+" onclick="spawnFeat()" id="featsAddBtn"><input type="button" class="featsBtnDelete" value="-" onclick="delFeat()">
+      <input type="button" class="featsBtn" value="+" onclick="spawnFeat()" id="featsAddBtn"><input type="button" class="featsBtnDelete" value="-" onclick="showModal('Would you like to remove the selected feats?','feat')">
       </div>
       <form class="featsCont" id="fform0">
         <input type="checkbox" class="featsCheckbox">
@@ -990,7 +1001,7 @@
     <div class="specialAbil">
         <div class="specialAbilHeader">
           <div class="specialAbilTitle">Special Abilities</div>
-          <input type="button" class="specialAbilBtn" value="+" onclick="spawnAbil()" id="specialAbilAddBtn"><input type="button" class="specialAbilBtnDelete" value="-" onclick="delAbil()">
+          <input type="button" class="specialAbilBtn" value="+" onclick="spawnAbil()" id="specialAbilAddBtn"><input type="button" class="specialAbilBtnDelete" value="-" onclick="showModal('Would you like to remove the selected abilities?','abil')">
         </div>
         <form class="specialAbilCont" id="sform0">
           <input type="checkbox" class="specialAbilCheckbox">
@@ -1225,7 +1236,6 @@
 <script>
       function delGear(){
 
-    if(confirm("Would you like to delete this gear?")){
       // Find all check boxes marked to be deleted
       let checks = document.querySelectorAll(".gearCheckbox");
 
@@ -1241,14 +1251,10 @@
           checks[i].parentElement.remove();
 
         }
-
       }
-
-    }
     }
       function delFeat(){
 
-      if (confirm("Would you like to delete these feats?")){
 
         let checks = document.querySelectorAll(".featsCheckbox");
 
@@ -1262,34 +1268,29 @@
 
         }
 
-      }
-
   }
     
     function delACItem(){
 
-      if(confirm("Would you like to delete this gear?")){
-        // Find all check boxes marked to be deleted
+        // Returns an array of elements with the class acItemsCheck
         let checks = document.querySelectorAll(".acItemsCheck");
 
-        // Go through them all to see if they are checked. If they are
-        // delete them.
+        // Go through the array and remove the element
 
         for (let i = 0; i < checks.length; i++){
 
           if (checks[i].checked){
 
+            // Remove the parent element that way we don't
+            // delete the checkbox itself
             checks[i].parentElement.remove();
 
           }
 
         }
-
-      }
     }
 
-    function delWeap(ele){
-      if (confirm("Would you like to delete these abilities?")){
+    function delWeap(){
 
       let checks = document.querySelectorAll(".weaponsCheckbox");
 
@@ -1303,13 +1304,10 @@
 
       }
 
-      }
         
     }
 
     function delAbil(){
-
-      if (confirm("Would you like to delete these abilities?")){
 
       let checks = document.querySelectorAll(".specialAbilCheckbox");
 
@@ -1323,9 +1321,110 @@
 
       }
 
-      }
-
     }
+
+    function showModal(prompt,type){
+
+        m = document.getElementById("modal");
+        m.style.display = "flex"
+
+        txt = document.getElementById("modalText")
+        txt.innerHTML = prompt;
+
+        if (type == "weap"){
+
+          document.getElementById("modalYes").addEventListener("click", function(){
+            
+            m.style.display = "none";
+            delWeap();
+
+          })
+
+          document.getElementById("modalNo").addEventListener("click",function(){
+            
+            m.style.display = "none";
+
+        });
+
+        }else if (type == "abil"){
+
+          document.getElementById("modalYes").addEventListener("click", function(){
+            
+            m.style.display = "none";
+            delAbil();
+
+          })
+
+          document.getElementById("modalNo").addEventListener("click",function(){
+            
+            m.style.display = "none";
+
+        });
+
+        }else if (type == "feat"){
+
+          document.getElementById("modalYes").addEventListener("click", function(){
+            
+            m.style.display = "none";
+            delFeat();
+
+          })
+
+          document.getElementById("modalNo").addEventListener("click",function(){
+            
+            m.style.display = "none";
+
+        });
+      }else if (type == "ac"){
+
+          document.getElementById("modalYes").addEventListener("click", function clickEvent(){
+            
+            m.style.display = "none";
+            delACItem();
+
+          })
+
+          document.getElementById("modalNo").addEventListener("click",function clickEvent(){
+            
+            m.style.display = "none";
+
+        });
+      
+      }else if (type == "gear"){
+
+        document.getElementById("modalYes").addEventListener("click", function clickEvent(){
+            
+            m.style.display = "none";
+            delGear();
+
+          })
+
+          document.getElementById("modalNo").addEventListener("click",function clickEvent(){
+            
+            m.style.display = "none";
+
+        });
+
+      }else if (type == "import"){
+
+        document.getElementById("modalYes").addEventListener("click", function clickEvent(){
+          
+          m.style.display = "none";
+          return true;
+
+
+        })
+
+        document.getElementById("modalNo").addEventListener("click",function clickEvent(){
+          
+          m.style.display = "none";
+          return false
+
+        });
+ 
+      }
+  }
+
 </script>
 </body>
 

@@ -13,52 +13,68 @@ const download = function (data){
   }
 //TODO Rename this
 function getData() {
-  // We need to also find out how many entries were created for weapons/spells/equipment
-  // so that we can populate the site with those fields before we write to a csv. That
-  // way importing isnt a disaster.
-
   //TEXT FIELD VALUES
 
-  //Find all of the fields that can be modified and find all of the fields that have unique
-  // ID's so that we know how many the user generated.
+  //Find all of the fields that can be modified and can be created
   var nodes = document.querySelectorAll('input[type=text],[id^=wform],input[type=checkbox],[id^=aform],[id^=gform],[id^=fform],[id^=sform],textarea');
-  var nodeValues = [];
-  var w = 0; // This variable represents weapon entries
-  var ac = 0; // This entry represents AC items
-  var ge = 0; // This entry represents Gear 
-  var fe = 0; // This var represents Feats
-  var sp = 0; // This var represents Special Abilities
+  var nodeValues = []; // This array will collect the values of the nodes
+  var w = 0; // This variable represents the number of weapon entries
+  var ac = 0; // This entry represents the number of AC items entries
+  var ge = 0; // This entry represents the number of Gear  entries
+  var fe = 0; // This var represents the number of Feats entries
+  var sp = 0; // This var represents the number of Special Abilities entries
   console.log(nodes);
 
-  //Then push all of the values of those nodes to the 
+  //Go through each entry in the nodes array
   for (var k = 0; k < nodes.length; ++k){
-      if (nodes[k].type == "checkbox"){
+      try{
+
+        for (let i = 0; i < nodes.length; ++i){
+
+          let seg = nodes[k].value.split("");
+
+          for (j = 0; j < seg.length; ++j){
+
+             seg[j] = seg[j].replace(/,/g,'&#44')
+
+          }
+          seg[j] = seg.join("")
+          nodes[k].value = seg[j]
+        }
+
+        if (nodes[k].type == "checkbox"){
       
-        nodeValues.push(nodes[k].checked);
+          nodeValues.push(nodes[k].checked);
+  
+        }else if (nodes[k].id.match(/wform[0-9]/g)){
+  
+          w += 1;
+  
+        } else if (nodes[k].id.match(/aform[0-9]/g)){
+  
+          ac += 1;
+        
+        }else if (nodes[k].id.match(/gform[0-9]/g)){
+  
+          ge += 1;
+  
+        }else if (nodes[k].id.match(/fform[0-9]/g)){
+  
+          fe += 1;
+  
+        }else if (nodes[k].id.match(/sform[0-9]/g)){
+  
+          sp += 1;
+  
+        }else{
+  
+        nodeValues.push(nodes[k].value);
+  
+        }
 
-      }else if (nodes[k].id.match(/wform[0-9]/g)){
+      }catch(TypeError){
 
-        w += 1;
-
-      } else if (nodes[k].id.match(/aform[0-9]/g)){
-
-        ac += 1;
-      
-      }else if (nodes[k].id.match(/gform[0-9]/g)){
-
-        ge += 1;
-
-      }else if (nodes[k].id.match(/fform[0-9]/g)){
-
-        fe += 1;
-
-      }else if (nodes[k].id.match(/sform[0-9]/g)){
-
-        sp += 1;
-
-      }else{
-
-      nodeValues.push(nodes[k].value);
+        continue
 
       }
 
@@ -70,10 +86,30 @@ function getData() {
   nodeValues.push(w,ac,ge,fe,sp);
 
 
-  console.log(nodeValues);
 
-  // Come back to this
 
   download(nodeValues);
+
+
+  // Once the user presses export all of the commas
+  // in all of the input fields get changed to the HTML
+  // code &#44. This for loop replaces those codes with 
+  // commas for a better user experience
+  for (let i = 0; i < nodeValues.length; i++){
+    try{
+
+      if (nodeValues[i].includes('&#44')){
+        
+        nodes[i].value = nodeValues[i].replace(/&#44/g,',')
+
+      }
+
+    }catch(TypeError){
+
+      continue
+
+    }
+
+  }
 
 }
