@@ -33,7 +33,7 @@
   </div>
 </div>
 <div class="mainContent">
-<input type="file" class="manInput" value="Import" onclick="">
+<input type="file" class="manInput" value="Import">
 <input type="button" class="manInput" value="Export" onclick="getData()">
 <input type="button" class="pgInput" value="\" onclick="goToEquip()">
 <br>
@@ -1326,10 +1326,13 @@
     function showModal(prompt,type){
 
         m = document.getElementById("modal");
-        m.style.display = "flex"
+        m.style.display = "flex";
 
-        txt = document.getElementById("modalText")
+        txt = document.getElementById("modalText");
         txt.innerHTML = prompt;
+
+        let yesBtn = document.getElementById("modalYes");
+        let noBtn = document.getElementById("modalNo");
 
         if (type == "weap"){
 
@@ -1377,14 +1380,14 @@
         });
       }else if (type == "ac"){
 
-          document.getElementById("modalYes").addEventListener("click", function clickEvent(){
+          document.getElementById("modalYes").addEventListener("click", function (){
             
             m.style.display = "none";
             delACItem();
 
           })
 
-          document.getElementById("modalNo").addEventListener("click",function clickEvent(){
+          document.getElementById("modalNo").addEventListener("click",function (){
             
             m.style.display = "none";
 
@@ -1392,14 +1395,14 @@
       
       }else if (type == "gear"){
 
-        document.getElementById("modalYes").addEventListener("click", function clickEvent(){
+        document.getElementById("modalYes").addEventListener("click", function (){
             
             m.style.display = "none";
             delGear();
 
           })
 
-          document.getElementById("modalNo").addEventListener("click",function clickEvent(){
+          document.getElementById("modalNo").addEventListener("click",function (){
             
             m.style.display = "none";
 
@@ -1407,21 +1410,31 @@
 
       }else if (type == "import"){
 
-        document.getElementById("modalYes").addEventListener("click", function clickEvent(){
+        document.getElementById("modalYes").addEventListener("click", function (){
           
           m.style.display = "none";
-          return true;
-
+          importData();
 
         })
 
-        document.getElementById("modalNo").addEventListener("click",function clickEvent(){
+        document.getElementById("modalNo").addEventListener("click",function (){
           
           m.style.display = "none";
-          return false
 
         });
  
+      }else{ // This acts as the error handling modal
+        noBtn.style.display = "none";
+        yesBtn.style.backgroundColor = "grey";
+        yesBtn.value = "Ok";
+        document.getElementById("modalYes").addEventListener("click", function (){
+          
+          m.style.display = "none";
+          noBtn.style.display = "inline";
+          yesBtn.style.backgroundColor = "red";
+          yesBtn.value = "Yes";
+        })
+
       }
   }
 

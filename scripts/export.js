@@ -1,7 +1,19 @@
+
 const download = function (data){
 
+    //Create a blob (Binary Large Object) that will
+    //act as the file that we need to export. The
+    // data parameter will be the array from the 
+    // getData function
     const blob = new Blob([data], {type: 'text/csv'});
+
+    //Create a url so that the user may download the
+    // blob and its contents
     const url = window.URL.createObjectURL(blob);
+
+    //Create a hyperlink and give it attributes
+    // that won't interfere with the site. Set
+    // its url to the link pointing to the blob.
     const a = document.createElement('a');
     a.setAttribute('hidden','');
     a.setAttribute('href',url);
@@ -9,6 +21,8 @@ const download = function (data){
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
+    // Then click the link for the user
+    // and delete it from the webpage
     
   }
 //TODO Rename this
