@@ -1,28 +1,28 @@
-//TODO Rename all of these functions
-const input = document.querySelector('input[type="file"]')
+// TODO Modals are not functioning properly the first time you try to delete an item
+// and error will be returned
 
-input.addEventListener('change', function(){
+const fileField = document.querySelector('input[type="file"]')
+
+fileField.addEventListener('change', function(){
   showModal("Would you like to import a character via a CSV file? (Your current character will be deleted)","import")
-
 },false)
 
-
 function importData(){
-
-  console.log(input.file); //Testing stuff, remove later
 
   // Create a FileReader so that we can read the contents
   // of the file 
   const reader = new FileReader()
 
   // Read the file uploaded as plain text
-  // TODO ERROR HANDLING
-  reader.readAsText(input.files[0])
+  
+  try{
+
+    reader.readAsText(fileField.files[0])
+
+  }catch (TypeError){}
 
   //Check to see if a file ends with the .csv file extension
-  // console.log(input.value)
-  // console.log(input.value.match('/\.csv/g'));
-  if (input.value.match(/\.csv/g)){
+  if (fileField.value.match(/\.csv/g)){
     // Once a file can be read successfully
     // run this function
     reader.onload = function(){
@@ -111,10 +111,9 @@ function importData(){
   }
 
   }else{
-
-    showModal("Error: The file you tried to import is invalid. Please try importing a CSV that has been made on Jasper's Unofficial Pathfinder character sheet.")
+    console.log(fileField.value)
+    console.log("I am going into the error statemetn")
+    showModal("Error: The file you tried to import is invalid. Please try importing a CSV that has been made on Jasper's Unofficial Pathfinder character sheet.","error")
 
   }
-
-
 }

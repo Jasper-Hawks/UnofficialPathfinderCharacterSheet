@@ -181,7 +181,7 @@
       <textarea class="hpInitInputFieldsLarge"></textarea>
     </div>
     <div class="hpInitInitCont">
-      <div class="boxT">INITIATIVE<br><h7>Modifier</h7></div>
+      <div class="boxT">INITIATIVE</div>
       <div class="hpInitContSmall">
         <input type="text" id="initTotal" class="hpInitInputFieldsSmall">
         <h6>Total</h6>
@@ -413,7 +413,7 @@
 </div>
 <form class="speedSkills">
   <div class="speedCont">
-    <div class="speedBoxT">SPEED <br>Land</div>
+    <div class="speedBoxT">SPEED</div>
       <div class="baseSpeedCont">
         <input type="text" id="baseSpeed" class="speedInputFields"><br>
         <h6 class="speedHeading">Base Speed</h6>
@@ -825,7 +825,7 @@
   </div>
   <div class="skillsRow">
     <input type="checkbox" id="spellCProf" class="skillsRadio">
-    <h5 class="skillsDetailedT">Spellcraft*</h5>
+    <h5 class="skillsDetailedT">Spellcraft</h5>
     <input type="text" id="spellCBonus" class="skillsInputFields">
     <h5 class="skillsEqualsT">= Int</h5>
     <input type="text" id="spellCAbilMod" class="skillsInputFields">
@@ -869,7 +869,7 @@
   </div>
   <div class="skillsRow">
     <input type="checkbox" id="useMProf" class="skillsRadio">
-    <h5 class="skillsDetailedT">Use Magical Device*</h5>
+    <h5 class="skillsDetailedT">Use Magical Device</h5>
     <input type="text" id="useMBonus" class="skillsInputFields">
     <h5 class="skillsEqualsT">= Cha</h5>
     <input type="text" id="useMAbilMod" class="skillsInputFields">
@@ -947,24 +947,28 @@
     </div>
     <div class="load">
       <div class="loadCont">
-      <div class="loadTitleCont">
-        <div class="loadTitle">Light<br>Load</div><br>
-        <div class="loadTitle">Med<br>Load</div><br>
-        <div class="loadTitle">Heavy<br>Load</div><br>
-      </div>
-      <div class="loadInputCont">
-        <input type="text" class="loadInput">
-        <input type="text" class="loadInput">
+        <div class="loadWrapper">
+        <div class="loadTitle">Light<br>Load</div>
         <input type="text" class="loadInput">
       </div>
-      <div class="loadTitleCont">
-        <div class="loadTitle">Lift<br>Over</div><br>
-        <div class="loadTitle">Lift<br>Off</div><br>
-        <div class="loadTitle">Drag<br>Push</div><br>
+      <div class="loadWrapper">
+        <div class="loadTitle">Med<br>Load</div>
+        <input type="text" class="loadInput">
       </div>
-      <div class="loadInputCont">
+      <div class="loadWrapper">
+        <div class="loadTitle">Heavy<br>Load</div>
         <input type="text" class="loadInput">
+      </div>
+      <div class="loadWrapper">
+        <div class="loadTitle">Lift<br>Over</div>
         <input type="text" class="loadInput">
+      </div>
+      <div class="loadWrapper">
+        <div class="loadTitle">Lift<br>Off</div>
+        <input type="text" class="loadInput">
+      </div>
+      <div class="loadWrapper">
+        <div class="loadTitle">Drag<br>Push</div>
         <input type="text" class="loadInput">
       </div>
     </div>
@@ -1234,6 +1238,8 @@
   <div class="footText">  Website created by <a href="https://jasperhawks.com/">Jasper H</a>. The Pathfinder Roleplaying Game is owned by <a href="https://paizo.com">Paizo Inc</a>. More legal information can be found <a href="legal.html">here</a>.</div>
 </div>
 <script>
+ 
+
       function delGear(){
 
       // Find all check boxes marked to be deleted
@@ -1333,7 +1339,7 @@
 
         let yesBtn = document.getElementById("modalYes");
         let noBtn = document.getElementById("modalNo");
-
+        console.log(type)
         if (type == "weap"){
 
           document.getElementById("modalYes").addEventListener("click", function(){
@@ -1423,7 +1429,7 @@
 
         });
  
-      }else{ // This acts as the error handling modal
+      }else if (type=="error"){ // This acts as the error handling modal
         noBtn.style.display = "none";
         yesBtn.style.backgroundColor = "grey";
         yesBtn.value = "Ok";

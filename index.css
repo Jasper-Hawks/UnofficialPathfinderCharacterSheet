@@ -3,7 +3,7 @@
 html,body{
 
     font-size: 100%;
-    height:100%;
+    overflow-y: auto;
 
 }
 .mainContent{
@@ -295,7 +295,7 @@ input{
     font-weight: bold;
     width:4.5rem;
     height:2rem;
-    vertical-align: top;
+    vertical-align: middle;
     margin-right:2px;
     display:inline-block;
 
@@ -462,7 +462,8 @@ input{
     color:white;
     text-align: center;
     font-size: .9rem;
-    padding-top: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     height: auto;
     font-weight: bold;
     vertical-align: top;
@@ -547,7 +548,7 @@ input{
     font-size: 1.5rem;
     padding-top: 20px;
     font-weight: bold;
-    width:100%;
+    width:95%;
     height:3rem;
     margin-right:2px;
     display:inline-block;
@@ -724,6 +725,11 @@ input{
     display:inline-block;
     
     
+}
+.combat{
+
+    margin-top: .3rem;
+
 }
 .combatBaseBox{
 
@@ -1090,7 +1096,7 @@ input{
 .gear{
 
     width: 100%;
-    height: 50vh;
+    height: 40rem;
     border: 2px solid black;
     overflow-y: auto;
 
@@ -1347,33 +1353,28 @@ input{
 }
 .loadCont{
 
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    width: 100%;
 
 }
-.loadTitleCont{
+.loadWrapper{
 
-    width: 3em;
-    
+    width: 45%;
+    height: 3rem;
 
 }
 .loadTitle{
 
     text-align: center;
     font-size: .9rem;
-    margin-top: 12%;
-
-}
-.loadInputCont{
-
-    width: 20%;
+    vertical-align:middle;
+    width: 40%;
 
 }
 .loadInput{
 
+    width: 40%;
+    vertical-align: middle;
     font-size: 1rem;
-    margin-top: 1em;
 
 }
 .specialAbil{
