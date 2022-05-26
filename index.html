@@ -493,9 +493,13 @@
     <h5> + </h5>
     <input type="text" id="cliMiscMod" class="skillsInputFieldsMisc">
     </div>
-    <div class="skillsRow">
+    <div class="skillsRow" id="craftSkillsRow">
     <input type="checkbox" id="cra1Prof" class="skillsRadio">
-    <h5 class="skillsDetailedT">Craft</h5>
+    <h5 class="skillsDetailedT">Craft
+      <input type="text"
+      <input type="text" class="skillsCustomFields">
+      <input type="button" class="skillsBtn" value="+" onclick="spawnCraft()" style="background-color:grey;">
+    </h5>
     <input type="text" id="cra1Bonus" class="skillsInputFields">
     <h5 class="skillsEqualsT">= Int</h5>
     <input type="text" id="cra1AbilMod" class="skillsInputFields">
@@ -504,28 +508,6 @@
     <h5> + </h5>
     <input type="text" id="cra1MiscMod" class="skillsInputFieldsMisc">
     </div>
-    <div class="skillsRow">
-    <input type="checkbox" id="cra2Prof" class="skillsRadio">
-    <h5 class="skillsDetailedT">Craft</h5>
-    <input type="text" id="cra2Bonus" class="skillsInputFields">
-    <h5 class="skillsEqualsT">= Int</h5>
-    <input type="text" id="cra2AbilMod" class="skillsInputFields">
-    <h5> + </h5>
-    <input type="text" id="cra2RankMod" class="skillsInputFields">
-    <h5> + </h5>
-    <input type="text" id="cra2MiscMod" class="skillsInputFieldsMisc">
-  </div>
-  <div class="skillsRow">
-    <input type="checkbox" id="cra3Prof" class="skillsRadio">
-    <h5 class="skillsDetailedT">Craft</h5>
-    <input type="text" id="cra3Bonus" class="skillsInputFields">
-    <h5 class="skillsEqualsT">= Int</h5>
-    <input type="text" id="cra3AbilMod" class="skillsInputFields">
-    <h5> + </h5>
-    <input type="text" id="cra3RankMod" class="skillsInputFields">
-    <h5> + </h5>
-    <input type="text" id="cra3MiscMod" class="skillsInputFieldsMisc">
-  </div>
   <div class="skillsRow">
     <input type="checkbox" id="dipProf" class="skillsRadio">
     <h5 class="skillsDetailedT">Diplomacy</h5>
@@ -1240,42 +1222,43 @@
 <script>
  
 
-      function delGear(){
+    function delGear(){
 
-      // Find all check boxes marked to be deleted
-      let checks = document.querySelectorAll(".gearCheckbox");
+    // Find all check boxes marked to be deleted
+    let checks = document.querySelectorAll(".gearCheckbox");
 
-      // Go through them all to see if they are checked. If they are
-      // delete them.
+    // Go through them all to see if they are checked. If they are
+    // delete them.
 
-      // Repeat this for every other script that needs to delete entries
+    // Repeat this for every other script that needs to delete entries
+
+    for (let i = 0; i < checks.length; i++){
+
+      if (checks[i].checked){
+
+        checks[i].parentElement.remove();
+
+      }
+    }
+  }
+  
+    function delFeat(){
+
+
+      let checks = document.querySelectorAll(".featsCheckbox");
 
       for (let i = 0; i < checks.length; i++){
 
         if (checks[i].checked){
 
-          checks[i].parentElement.remove();
+          checks[i].parentElement.remove()
 
         }
+
       }
-    }
-      function delFeat(){
 
-
-        let checks = document.querySelectorAll(".featsCheckbox");
-
-        for (let i = 0; i < checks.length; i++){
-
-          if (checks[i].checked){
-
-            checks[i].parentElement.remove()
-
-          }
-
-        }
-
-  }
-    
+}
+  
     function delACItem(){
 
         // Returns an array of elements with the class acItemsCheck
@@ -1327,6 +1310,13 @@
 
       }
 
+    }
+
+    function delCraft(el){
+
+      let entry = el.parentElement.parentElement
+      entry.remove()
+      
     }
 
     function showModal(prompt,type){

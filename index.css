@@ -622,6 +622,21 @@ input{
     font-size:1.2rem;
 
 }
+.skillsBtn{
+
+    margin-left: .1rem;
+    width: 2rem;
+    height: auto;
+
+}
+.skillsCustomFields{
+
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    width: 35%;
+
+}
 .armorClass{
 
     vertical-align:bottom;

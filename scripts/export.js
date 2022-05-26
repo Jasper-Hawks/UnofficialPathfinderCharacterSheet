@@ -30,10 +30,13 @@ function getData() {
   //TEXT FIELD VALUES
 
   //Find all of the fields that can be modified and can be created
-  var nodes = document.querySelectorAll('input[type=text],[id^=wform],input[type=checkbox],[id^=aform],[id^=gform],[id^=fform],[id^=sform],textarea');
+  var nodes = document.querySelectorAll('input[type=text],[id^=wform],input[type=checkbox],[id^=aform],[id^=gform],[id^=fform],[id^=sform],textarea,[id^=craftSkills],[id^=performSkills],[id^=professionSkills]');
   var nodeValues = []; // This array will collect the values of the nodes
   var w = 0; // This variable represents the number of weapon entries
   var ac = 0; // This entry represents the number of AC items entries
+  var cr = 0; // This entry represents the number of Craft skill entries
+  var pe = 0; // This entry represents the number of Perform skill entries
+  var pr = 0; // This entry represents the number of Profession skill entries
   var ge = 0; // This entry represents the number of Gear  entries
   var fe = 0; // This var represents the number of Feats entries
   var sp = 0; // This var represents the number of Special Abilities entries
@@ -80,6 +83,18 @@ function getData() {
   
           sp += 1;
   
+        }else if (nodes[k].id.match(/craftSkills/g)){
+
+          cr += 1;
+
+        }else if (nodes[k].id.match(/performSkills/g)){
+
+          pe += 1;
+
+        }else if (nodes[k].id.match(/professionSkills/g)){
+
+          pr += 1
+
         }else{
   
         nodeValues.push(nodes[k].value);
@@ -97,7 +112,7 @@ function getData() {
   // for all forms where entries can be created
 
   // We'll go top to bottom left to right
-  nodeValues.push(w,ac,ge,fe,sp);
+  nodeValues.push(w,ac,cr,pe,pr,ge,fe,sp);
 
 
 

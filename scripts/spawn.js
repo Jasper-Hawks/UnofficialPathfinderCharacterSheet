@@ -115,3 +115,28 @@ function spawnAbil(){
 </form>`
 
 }
+function spawnCraft(){
+
+  let c = document.querySelector('#craftSkillsRow');
+  let attach = document.createElement('div');
+  c.appendChild(attach);
+
+  attach.outerHTML = attach.innerHTML =`
+  <div class="skillsRow" id="craftSkillsRow">
+  <input type="checkbox" id="cra1Prof" class="skillsRadio">
+  <h5 class="skillsDetailedT">Craft
+    <input type="text"
+    <input type="text" class="skillsCustomFields">
+    <input type="button" class="skillsBtn" value="-" onclick="delCraft(this)" style="background-color:red;">
+  </h5>
+  <input type="text" id="cra1Bonus" class="skillsInputFields">
+  <h5 class="skillsEqualsT">= Int</h5>
+  <input type="text" id="cra1AbilMod" class="skillsInputFields">
+  <h5> + </h5>
+  <input type="text" id="cra1RankMod" class="skillsInputFields">
+  <h5> + </h5>
+  <input type="text" id="cra1MiscMod" class="skillsInputFieldsMisc">
+  </div>
+  `
+
+}
