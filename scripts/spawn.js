@@ -140,3 +140,53 @@ function spawnCraft(){
   `
 
 }
+
+function spawnPerf(){
+
+  let p = document.querySelector('#performSkillsRow');
+  let attach = document.createElement('div');
+  p.appendChild(attach)
+
+  attach.outerHTML = attach.innerHTML = `
+  <div class="skillsRow" id="performSkillsRow">
+  <input type="checkbox" id="perf1Prof" class="skillsRadio">
+  <h5 class="skillsDetailedT">Perform
+    <input type="text" class="skillsCustomFields">
+    <input type="button" class="skillsBtn" value="-" onclick="delPerf(this)" style="background-color:red;">
+  </h5>
+  <input type="text" id="perf1Bonus" class="skillsInputFields">
+  <h5 class="skillsEqualsT">= Cha</h5>
+  <input type="text" id="perf1AbilMod" class="skillsInputFields">
+  <h5> + </h5>
+  <input type="text" id="perf1RankMod" class="skillsInputFields">
+  <h5> + </h5>
+  <input type="text" id="perf1MiscMod" class="skillsInputFieldsMisc">
+</div>
+  `;
+
+}
+
+function spawnProf(){
+
+  let p = document.querySelector('#professionSkillsRow');
+  let attach = document.createElement('div');
+  p.appendChild(attach);
+
+  attach.outerHTML = attach.innerHTML = `
+  <div class="skillsRow" id="professionSkillsRow">
+  <input type="checkbox" id="pro1Prof" class="skillsRadio">
+  <h5 class="skillsDetailedT">Profession
+    <input type="text" class="skillsCustomFields" style="width: 30%;">
+    <input type="button" class="skillsBtn" value="-" onclick="delProf(this)" style="background-color:red;">
+  </h5>
+  <input type="text" id="pro1Bonus" class="skillsInputFields">
+  <h5 class="skillsEqualsT">= Wis</h5>
+  <input type="text" id="pro1AbilMod" class="skillsInputFields">
+  <h5> + </h5>
+  <input type="text" id="pro1RankMod" class="skillsInputFields">
+  <h5> + </h5>
+  <input type="text" id="pro1MiscMod" class="skillsInputFieldsMisc">
+</div>
+  `
+
+}

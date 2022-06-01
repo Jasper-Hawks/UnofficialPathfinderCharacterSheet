@@ -496,9 +496,8 @@
     <div class="skillsRow" id="craftSkillsRow">
     <input type="checkbox" id="cra1Prof" class="skillsRadio">
     <h5 class="skillsDetailedT">Craft
-      <input type="text"
       <input type="text" class="skillsCustomFields">
-      <input type="button" class="skillsBtn" value="+" onclick="spawnCraft()" style="background-color:grey;">
+      <input type="button" class="skillsBtn" value="+" id="craftAddBtn" onclick="spawnCraft()" style="background-color:grey;">
     </h5>
     <input type="text" id="cra1Bonus" class="skillsInputFields">
     <h5 class="skillsEqualsT">= Int</h5>
@@ -728,9 +727,12 @@
     <h5> + </h5>
     <input type="text" id="percMiscMod" class="skillsInputFieldsMisc">
   </div>
-  <div class="skillsRow">
+  <div class="skillsRow" id="performSkillsRow">
     <input type="checkbox" id="perf1Prof" class="skillsRadio">
-    <h5 class="skillsDetailedT">Perform ___</h5>
+    <h5 class="skillsDetailedT">Perform
+      <input type="text" class="skillsCustomFields">
+      <input type="button" class="skillsBtn" value="+" id="perfAddBtn" onclick="spawnPerf()" style="background-color:grey;">
+    </h5>
     <input type="text" id="perf1Bonus" class="skillsInputFields">
     <h5 class="skillsEqualsT">= Cha</h5>
     <input type="text" id="perf1AbilMod" class="skillsInputFields">
@@ -739,20 +741,12 @@
     <h5> + </h5>
     <input type="text" id="perf1MiscMod" class="skillsInputFieldsMisc">
   </div>
-  <div class="skillsRow">
-    <input type="checkbox" id="perf2Prof" class="skillsRadio">
-    <h5 class="skillsDetailedT">Perform ___</h5>
-    <input type="text" id="perf2Bonus" class="skillsInputFields">
-    <h5 class="skillsEqualsT">= Cha</h5>
-    <input type="text" id="perf2AbilMod" class="skillsInputFields">
-    <h5> + </h5>
-    <input type="text" id="perf2RankMod" class="skillsInputFields">
-    <h5> + </h5>
-    <input type="text" id="perf2MiscMod" class="skillsInputFieldsMisc">
-  </div>
-  <div class="skillsRow">
+  <div class="skillsRow" id="professionSkillsRow">
     <input type="checkbox" id="pro1Prof" class="skillsRadio">
-    <h5 class="skillsDetailedT">Profession ___</h5>
+    <h5 class="skillsDetailedT">Profession
+      <input type="text" class="skillsCustomFields" style="width: 30%;">
+      <input type="button" class="skillsBtn" value="+" id="profAddBtn" onclick="spawnProf()" style="background-color:grey;">
+    </h5>
     <input type="text" id="pro1Bonus" class="skillsInputFields">
     <h5 class="skillsEqualsT">= Wis</h5>
     <input type="text" id="pro1AbilMod" class="skillsInputFields">
@@ -760,17 +754,6 @@
     <input type="text" id="pro1RankMod" class="skillsInputFields">
     <h5> + </h5>
     <input type="text" id="pro1MiscMod" class="skillsInputFieldsMisc">
-  </div>
-  <div class="skillsRow">
-    <input type="checkbox" id="pro2Prof" class="skillsRadio">
-    <h5 class="skillsDetailedT">Profession ___</h5>
-    <input type="text" id="pro2Bonus" class="skillsInputFields">
-    <h5 class="skillsEqualsT">= Wis</h5>
-    <input type="text" id="pro2AbilMod" class="skillsInputFields">
-    <h5> + </h5>
-    <input type="text" id="pro2RankMod" class="skillsInputFields">
-    <h5> + </h5>
-    <input type="text" id="pro2MiscMod" class="skillsInputFieldsMisc">
   </div>
   <div class="skillsRow">
     <input type="checkbox" id="rideProf" class="skillsRadio">
@@ -1317,6 +1300,20 @@
       let entry = el.parentElement.parentElement
       entry.remove()
       
+    }
+
+    function delPerf(el){
+
+      let entry = el.parentElement.parentElement
+      entry.remove()
+
+    }
+
+    function delProf(el){
+
+      let entry = el.parentElement.parentElement
+      entry.remove()
+
     }
 
     function showModal(prompt,type){

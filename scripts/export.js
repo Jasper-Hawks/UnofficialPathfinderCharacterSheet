@@ -40,33 +40,47 @@ function getData() {
   var ge = 0; // This entry represents the number of Gear  entries
   var fe = 0; // This var represents the number of Feats entries
   var sp = 0; // This var represents the number of Special Abilities entries
-  console.log(nodes);
+  console.log(nodes); // TESTING TESTING
 
   //Go through each entry in the nodes array
   for (var k = 0; k < nodes.length; ++k){
       try{
 
         for (let i = 0; i < nodes.length; ++i){
-
           let seg = nodes[k].value.split("");
 
           for (j = 0; j < seg.length; ++j){
 
-             seg[j] = seg[j].replace(/,/g,'&#44')
+              seg[j] = seg[j].replace(/,/g,'&#44')
 
           }
           seg[j] = seg.join("")
           nodes[k].value = seg[j]
-        }
+      }
+      }catch(TypeError){
 
+        continue
+
+      }finally{
         if (nodes[k].type == "checkbox"){
       
           nodeValues.push(nodes[k].checked);
   
         }else if (nodes[k].id.match(/wform[0-9]/g)){
-  
           w += 1;
   
+        }else if (nodes[k].id.match(/craftSkills/g)){
+
+          cr += 1;
+
+        }else if (nodes[k].id.match(/performSkills/g)){
+
+          pe += 1;
+
+        }else if (nodes[k].id.match(/professionSkills/g)){
+
+          pr += 1;
+
         } else if (nodes[k].id.match(/aform[0-9]/g)){
   
           ac += 1;
@@ -83,40 +97,22 @@ function getData() {
   
           sp += 1;
   
-        }else if (nodes[k].id.match(/craftSkills/g)){
-
-          cr += 1;
-
-        }else if (nodes[k].id.match(/performSkills/g)){
-
-          pe += 1;
-
-        }else if (nodes[k].id.match(/professionSkills/g)){
-
-          pr += 1
-
         }else{
   
         nodeValues.push(nodes[k].value);
   
         }
 
-      }catch(TypeError){
-
-        continue
-
       }
-
   }
   // Append the amount of entries the user created
   // for all forms where entries can be created
 
   // We'll go top to bottom left to right
-  nodeValues.push(w,ac,cr,pe,pr,ge,fe,sp);
+  nodeValues.push(w,cr,pe,pr,ac,ge,fe,sp);
 
 
-
-
+  console.log(nodeValues)
   download(nodeValues);
 
 

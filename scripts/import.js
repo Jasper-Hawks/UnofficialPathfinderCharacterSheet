@@ -8,18 +8,13 @@ fileField.addEventListener('change', function(){
 },false)
 
 function importData(){
-
+  try{
   // Create a FileReader so that we can read the contents
   // of the file 
   const reader = new FileReader()
 
   // Read the file uploaded as plain text
-  
-  try{
-
-    reader.readAsText(fileField.files[0])
-
-  }catch (TypeError){}
+  reader.readAsText(fileField.files[0])
 
   //Check to see if a file ends with the .csv file extension
   if (fileField.value.match(/\.csv/g)){
@@ -30,8 +25,11 @@ function importData(){
       const regex = /,/mg;
         //TODO Rename this variable
       const a = reader.result.split(regex)
-      console.log(a)
+      console.log(a) //TESTING TESTING
       const weaponsBtn = document.querySelector('#AddBtn');
+      const craftBtn = document.querySelector('#craftAddBtn');
+      const perfBtn = document.querySelector('#perfAddBtn');
+      const profBtn = document.querySelector('#profAddBtn')
       const acItemsBtn = document.querySelector('#acItemsAddBtn');
       const gearBtn = document.querySelector('#gearAddBtn');
       const featsBtn = document.querySelector('#featsAddBtn');
@@ -39,10 +37,24 @@ function importData(){
   
       // Create the same number of weapon entries that the user had when
       // they exported. So that data wont be placed in wrong positions
-      
-      for (let j = 0; j < Number(a[a.length - 5]) - 1; ++j){
+      for (let j = 0; j < Number(a[a.length - 8]) - 1; ++j){
   
         weaponsBtn.click();
+  
+      }
+      for (let j = 0; j < Number(a[a.length - 7]) - 1; ++j){
+  
+        craftBtn.click();
+  
+      }
+      for (let j = 0; j < Number(a[a.length - 6]) - 1; ++j){
+  
+        perfBtn.click();
+  
+      }
+      for (let j = 0; j < Number(a[a.length - 5]) - 1; ++j){
+  
+        profBtn.click();
   
       }
       for (let i = 0; i < Number(a[a.length - 4]) - 1; ++i){
@@ -111,9 +123,12 @@ function importData(){
   }
 
   }else{
-    console.log(fileField.value)
-    console.log("I am going into the error statemetn")
     showModal("Error: The file you tried to import is invalid. Please try importing a CSV that has been made on Jasper's Unofficial Pathfinder character sheet.","error")
+
+  }
+  }catch (e){
+
+    showModal("Importing Error: " + e + ". If this problem persists please reach out to Jasper Hawks.","error")
 
   }
 }
