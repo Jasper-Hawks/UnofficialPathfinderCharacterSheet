@@ -1,9 +1,14 @@
+// This file deals with spawning in new entries when the user clicks
+// certain buttons
+
+// Each function finds the entries parent element, and attaches
+// raw HTML to the parent, creating a new entry. 
 function spawnWeap(){
 
     // Create a clone of an element with class weapons
     // set it's class attribute
     // then append it to the bottom of the weapons section 
-    
+  
     var weap = document.querySelector(".weaponsScroll");
     var attach = document.createElement('div');
     attach.innerHTML = `<form class="weapons" id="wform0">

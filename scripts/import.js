@@ -1,14 +1,17 @@
-// TODO Modals are not functioning properly the first time you try to delete an item
-// and error will be returned
+// This file deals with the importing of csv files previously created
+// in the character sheet.
 
+// Find the area where the user inputs their file.
 const fileField = document.querySelector('input[type="file"]')
 
+// Wait for any change on the input area. Then show a modal prompting
+// the user to confirm whether they would like to import their file
+// or not.
 fileField.addEventListener('change', function(){
   showModal("Would you like to import a character via a CSV file? (Your current character will be deleted)","import")
 },false)
 
 function importData(){
-  try{
   // Create a FileReader so that we can read the contents
   // of the file 
   const reader = new FileReader()
@@ -22,10 +25,16 @@ function importData(){
     // run this function
     reader.onload = function(){
 
+      // Make a pattern that we will user to seperate the 
+      // values in the file.
       const regex = /,/mg;
-        //TODO Rename this variable
-      const a = reader.result.split(regex)
-      console.log(a) //TESTING TESTING
+
+      // When those files are parsed out and we have an array
+      // of comma seperated values assign those to a variable.
+      const values = reader.result.split(regex)
+      console.log(values) //TESTING TESTING
+
+      // Find all of the buttons that can be used to make entries.
       const weaponsBtn = document.querySelector('#AddBtn');
       const craftBtn = document.querySelector('#craftAddBtn');
       const perfBtn = document.querySelector('#perfAddBtn');
@@ -37,42 +46,42 @@ function importData(){
   
       // Create the same number of weapon entries that the user had when
       // they exported. So that data wont be placed in wrong positions
-      for (let j = 0; j < Number(a[a.length - 8]) - 1; ++j){
+      for (let j = 0; j < Number(values[values.length - 8]) - 1; ++j){
   
         weaponsBtn.click();
   
       }
-      for (let j = 0; j < Number(a[a.length - 7]) - 1; ++j){
+      for (let j = 0; j < Number(values[values.length - 7]) - 1; ++j){
   
         craftBtn.click();
   
       }
-      for (let j = 0; j < Number(a[a.length - 6]) - 1; ++j){
+      for (let j = 0; j < Number(values[values.length - 6]) - 1; ++j){
   
         perfBtn.click();
   
       }
-      for (let j = 0; j < Number(a[a.length - 5]) - 1; ++j){
+      for (let j = 0; j < Number(values[values.length - 5]) - 1; ++j){
   
         profBtn.click();
   
       }
-      for (let i = 0; i < Number(a[a.length - 4]) - 1; ++i){
+      for (let i = 0; i < Number(values[values.length - 4]) - 1; ++i){
   
         acItemsBtn.click();
   
       }
-      for (let i = 0; i < Number(a[a.length - 3]) - 1; ++i){
+      for (let i = 0; i < Number(values[values.length - 3]) - 1; ++i){
   
         gearBtn.click();
   
       }
-      for (let i = 0; i < Number(a[a.length - 2]) - 1; ++i){
+      for (let i = 0; i < Number(values[values.length - 2]) - 1; ++i){
   
         featsBtn.click();
   
       }
-      for (let i = 0; i < Number(a[a.length - 1]) - 1; ++i){
+      for (let i = 0; i < Number(values[values.length - 1]) - 1; ++i){
   
         specBtn.click();
   
@@ -82,16 +91,16 @@ function importData(){
       // those codes to commas now that the data has been segmented
       //properly
   
-      for (let i =0; i < a.length;i++){
+      for (let i = 0; i < values.length;i++){
   
         //If a string in the array contains the following HTML
         // code for commas
-        if (a[i].includes('&#44')){
+        if (values[i].includes('&#44')){
   
           //Turn that code back into a comma. This will
           // not disrupt the csv and people can have
           // characters with commas in their names
-          a[i] = a[i].replace(/&#44/g,',')
+          values[i] = values[i].replace(/&#44/g,',')
   
         }
   
@@ -105,7 +114,7 @@ function importData(){
       for (let i = 0; i < inputFields.length; ++i){
         if (inputFields[i].type != "checkbox"){
           
-            inputFields[i].value = a[i];
+            inputFields[i].value = values[i];
   
   
         }else{
@@ -113,7 +122,7 @@ function importData(){
           // If we find a checkbox populate checkbox fields
           // not input fields
   
-          let bool = a[i] == "true" ? true : false;
+          let bool = values[i] == "true" ? true : false;
           inputFields[i].checked = bool;
   
         }
@@ -123,12 +132,9 @@ function importData(){
   }
 
   }else{
+    // Otherwise tell the user that the file is invalid and do not import the
+    // data.
     showModal("Error: The file you tried to import is invalid. Please try importing a CSV that has been made on Jasper's Unofficial Pathfinder character sheet.","error")
-
-  }
-  }catch (e){
-
-    showModal("Importing Error: " + e + ". If this problem persists please reach out to Jasper Hawks.","error")
 
   }
 }
