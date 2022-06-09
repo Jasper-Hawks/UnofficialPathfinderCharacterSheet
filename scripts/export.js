@@ -40,28 +40,44 @@ function getData() {
   var ge = 0; // This entry represents the number of Gear  entries
   var fe = 0; // This var represents the number of Feats entries
   var sp = 0; // This var represents the number of Special Abilities entries
-  console.log(nodes); // TESTING TESTING
 
   //Go through each entry in the nodes array
   for (var k = 0; k < nodes.length; ++k){
+      // Wrap going through the array in a try catch finally block
+      // because you cant assign UNDEFINED values to nodes. And since
+      // checkbox input fields don't have any value and return undefined
+      // the for loop wouldn't work.
       try{
-
-        for (let i = 0; i < nodes.length; ++i){
+          // Split each entry in the nodes array into an array 
+          // of letters that make up the entry
           let seg = nodes[k].value.split("");
 
+          // Go through those letters and try to find a comma
+          // to replace
           for (j = 0; j < seg.length; ++j){
 
               seg[j] = seg[j].replace(/,/g,'&#44')
 
           }
+          // Join the letters back together
           seg[j] = seg.join("")
+          console.log(seg[j])
+          // Assign the new comma escaped value to 
+          // the array for exporting
           nodes[k].value = seg[j]
-      }
+
       }catch(TypeError){
 
+        // When the try block comes across a checkbox
+        // we don't want it to do anything but execute
+        // the finally block.
         continue
 
       }finally{
+        // Every value has to go through this if statement
+        // so that we can count the amount of entries a user
+        // created, along with any checkboxes the user may have
+        // activated.
         if (nodes[k].type == "checkbox"){
       
           nodeValues.push(nodes[k].checked);
@@ -98,6 +114,9 @@ function getData() {
           sp += 1;
   
         }else{
+        // If the value goes through all of those ifs
+        // then it is a value that belongs in one of the
+        // text entries. We push it to the values array.
   
         nodeValues.push(nodes[k].value);
   

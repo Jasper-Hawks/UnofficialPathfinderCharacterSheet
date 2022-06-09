@@ -32,7 +32,6 @@ function importData(){
       // When those files are parsed out and we have an array
       // of comma seperated values assign those to a variable.
       const values = reader.result.split(regex)
-      console.log(values) //TESTING TESTING
 
       // Find all of the buttons that can be used to make entries.
       const weaponsBtn = document.querySelector('#AddBtn');
@@ -108,7 +107,6 @@ function importData(){
   
       //Find all of the input fields and make an array named inputFields out of them
       const inputFields = document.querySelectorAll('input[type=text],input[type=checkbox],textarea')
-      console.log(inputFields) //TESTING TESTING
   
       // Populate text fields with values
       for (let i = 0; i < inputFields.length; ++i){
