@@ -812,8 +812,6 @@ input{
 
     width: 100%;
     height: auto;
-
-    padding-top: 2%;
     display: inline-block;
 
 }
@@ -821,7 +819,6 @@ input{
 
     height: 30rem;
     width:100%;
-    padding-top: 2%;
     overflow-y: auto;
 
 }

@@ -77,8 +77,6 @@ function spawnACItem(){
     </div>
   </form>`
   acItem.appendChild(attach);
-    
-
 
 }
 function spawnGear(){
@@ -132,7 +130,7 @@ function spawnCraft(){
   <h5 class="skillsDetailedT">Craft
     <input type="text"
     <input type="text" class="skillsCustomFields">
-    <input type="button" class="skillsBtn" value="-" onclick="delCraft(this)" style="background-color:red;">
+    <input type="button" class="skillsBtn" value="&#10134;" onclick="delCraft(this)" style="background-color:red;">
   </h5>
   <input type="text" id="cra1Bonus" class="skillsInputFields">
   <h5 class="skillsEqualsT">= Int</h5>
@@ -157,7 +155,7 @@ function spawnPerf(){
   <input type="checkbox" id="perf1Prof" class="skillsRadio">
   <h5 class="skillsDetailedT">Perform
     <input type="text" class="skillsCustomFields">
-    <input type="button" class="skillsBtn" value="-" onclick="delPerf(this)" style="background-color:red;">
+    <input type="button" class="skillsBtn" value="&#10134;" onclick="delPerf(this)" style="background-color:red;">
   </h5>
   <input type="text" id="perf1Bonus" class="skillsInputFields">
   <h5 class="skillsEqualsT">= Cha</h5>
@@ -182,7 +180,7 @@ function spawnProf(){
   <input type="checkbox" id="pro1Prof" class="skillsRadio">
   <h5 class="skillsDetailedT">Profession
     <input type="text" class="skillsCustomFields" style="width: 30%;">
-    <input type="button" class="skillsBtn" value="-" onclick="delProf(this)" style="background-color:red;">
+    <input type="button" class="skillsBtn" value="&#10134;" onclick="delProf(this)" style="background-color:red;">
   </h5>
   <input type="text" id="pro1Bonus" class="skillsInputFields">
   <h5 class="skillsEqualsT">= Wis</h5>
