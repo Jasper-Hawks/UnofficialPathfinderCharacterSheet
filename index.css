@@ -768,6 +768,15 @@ input{
     padding: 10px;
 
 }
+.cmOperators{
+
+    margin: .5rem .5rem;
+    padding-top: .5rem;
+    font-size: 1rem;
+    display: inline-block;
+    vertical-align:top;
+
+}
 .combatCont{
 
     width: 8%;
@@ -1326,10 +1335,9 @@ input{
 }
 .featsInputFields{
 
-    width: 90%;
-    flex-grow: 6;
-    
-
+    min-width: 95%;
+    max-width: 95%;
+    font-size: 1.3em;
 
 }
 .featsCont{
@@ -1340,9 +1348,8 @@ input{
 }
 .featsCheckbox{
 
-    width: 2%;
-    flex-grow: 1;
-    margin-right: .3vw;
+    width: 1rem;
+    margin-right: .2rem;
 
 }
 .featsBtn{
@@ -1430,10 +1437,9 @@ input{
 }
 .specialAbilInputFields{
 
-    width: 90%;
-    flex-grow: 6;
-    
-
+    min-width: 95%;
+    max-width: 95%;
+    font-size: 1.3em;
 
 }
 .specialAbilCont{
@@ -1444,9 +1450,8 @@ input{
 }
 .specialAbilCheckbox{
 
-    width: 2%;
-    flex-grow: 1;
-    margin-right: .3vw;
+    width: 1rem;
+    margin-right: .2rem;
 
 }
 .specialAbilBtn{

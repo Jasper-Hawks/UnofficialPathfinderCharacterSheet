@@ -102,8 +102,8 @@ function spawnFeat(){
   // div to conflict with the .feats flex container
   attach.outerHTML = attach.innerHTML = `<form class="featsCont" id="fform0">
   <input type="checkbox" class="featsCheckbox">
-  <input type="text" class="featsInputFields">
-</form>`;
+  <textarea class="featsInputFields"></textarea>
+  </form>`;
 
 }
 function spawnAbil(){
