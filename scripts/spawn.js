@@ -118,78 +118,55 @@ function spawnAbil(){
 </form>`
 
 }
-function spawnCraft(){
-
-  let c = document.querySelector('#craftSkillsRow');
+// Create one function that deals with the spawning of all skill entries
+function spawnSkill(skill){
+  
+  let atr =  "" // This varariable represents the atribute that skill uses WIS INT or CHA
+  let s = document.querySelector('#' + skill + "SkillsRow");
   let attach = document.createElement('div');
-  c.appendChild(attach);
+  s.appendChild(attach); 
 
-  attach.outerHTML = attach.innerHTML =`
-  <div class="skillsRow" id="craftSkillsRow">
-  <input type="checkbox" id="cra1Prof" class="skillsRadio">
-  <h5 class="skillsDetailedT">Craft
+  // This will be used in order to change the name of the skill
+  // in the HTML and to format it properly
+  skill = skill.split("")
+  skill[0] = skill[0].toUpperCase();
+  skill = skill.join("");
+        
+  // Each skill has different attributes that they use and they will be set with the
+  // following if/else if statements
+  if (skill == "Profession"){
+
+    atr = "Wis"
+
+  }else if (skill == "Perform"){
+
+    atr = "Cha"
+
+  }else{ 
+    // The only way this function will be called is within the context of spawning skills.
+    // We do not need to define craft because skills can only be one of three options. If it is
+    // neither Profession or Perform is must be Craft
+
+    atr = "Int"
+
+  }
+
+  attach.outHTML = attach.innerHTML = `
+  <div class="skillsRow" >
+  <input type="checkbox" class="skillsRadio">
+  <h5 class="skillsDetailedT">` + skill + `
     <input type="text"
     <input type="text" class="skillsCustomFields">
-    <input type="button" class="skillsBtn" value="&#10134;" onclick="delCraft(this)" style="background-color:red;">
+    <input type="button" class="skillsBtn" value="&#10134;" onclick="delSkill(this)" style="background-color:red;">
   </h5>
-  <input type="text" id="cra1Bonus" class="skillsInputFields">
-  <h5 class="skillsEqualsT">= Int</h5>
-  <input type="text" id="cra1AbilMod" class="skillsInputFields">
+  <input type="text" class="skillsInputFields">
+  <h5 class="skillsEqualsT">= ` + atr + `</h5>
+  <input type="text" class="skillsInputFields">
   <h5> + </h5>
-  <input type="text" id="cra1RankMod" class="skillsInputFields">
+  <input type="text" class="skillsInputFields">
   <h5> + </h5>
-  <input type="text" id="cra1MiscMod" class="skillsInputFieldsMisc">
+  <input type="text" class="skillsInputFieldsMisc">
   </div>
-  `
-
-}
-
-function spawnPerf(){
-
-  let p = document.querySelector('#performSkillsRow');
-  let attach = document.createElement('div');
-  p.appendChild(attach)
-
-  attach.outerHTML = attach.innerHTML = `
-  <div class="skillsRow" id="performSkillsRow">
-  <input type="checkbox" id="perf1Prof" class="skillsRadio">
-  <h5 class="skillsDetailedT">Perform
-    <input type="text" class="skillsCustomFields">
-    <input type="button" class="skillsBtn" value="&#10134;" onclick="delPerf(this)" style="background-color:red;">
-  </h5>
-  <input type="text" id="perf1Bonus" class="skillsInputFields">
-  <h5 class="skillsEqualsT">= Cha</h5>
-  <input type="text" id="perf1AbilMod" class="skillsInputFields">
-  <h5> + </h5>
-  <input type="text" id="perf1RankMod" class="skillsInputFields">
-  <h5> + </h5>
-  <input type="text" id="perf1MiscMod" class="skillsInputFieldsMisc">
-</div>
-  `;
-
-}
-
-function spawnProf(){
-
-  let p = document.querySelector('#professionSkillsRow');
-  let attach = document.createElement('div');
-  p.appendChild(attach);
-
-  attach.outerHTML = attach.innerHTML = `
-  <div class="skillsRow" id="professionSkillsRow">
-  <input type="checkbox" id="pro1Prof" class="skillsRadio">
-  <h5 class="skillsDetailedT">Profession
-    <input type="text" class="skillsCustomFields" style="width: 30%;">
-    <input type="button" class="skillsBtn" value="&#10134;" onclick="delProf(this)" style="background-color:red;">
-  </h5>
-  <input type="text" id="pro1Bonus" class="skillsInputFields">
-  <h5 class="skillsEqualsT">= Wis</h5>
-  <input type="text" id="pro1AbilMod" class="skillsInputFields">
-  <h5> + </h5>
-  <input type="text" id="pro1RankMod" class="skillsInputFields">
-  <h5> + </h5>
-  <input type="text" id="pro1MiscMod" class="skillsInputFieldsMisc">
-</div>
   `
 
 }

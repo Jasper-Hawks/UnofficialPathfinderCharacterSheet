@@ -87,34 +87,13 @@ function delAbil(){
 
 }
 
-// TODO eventually refactor this to be one function that works for all
-// skill entries. Since they are all structured in the same way we can
-// reuse the code without having to write 3 different functions
-
-// The skill entries are written differently because they don't behave
-// the same as item entries
-function delCraft(el){
+function delSkill(el){
     // Call the function and specify the element as the el parameter
 
     // Find the parent's parent of the el parameter
     let entry = el.parentElement.parentElement
-
-    //Remove it.
-    entry.remove()
     
-    // This function is repeated for all other skill entires
-}
-
-function delPerf(el){
-
-    let entry = el.parentElement.parentElement
-    entry.remove()
-
-}
-
-function delProf(el){
-
-    let entry = el.parentElement.parentElement
+    //Remove it.
     entry.remove()
 
 }

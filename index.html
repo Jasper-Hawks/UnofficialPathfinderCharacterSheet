@@ -11,7 +11,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="" />
 
-  <link rel="stylesheet" href="index.css"/>
+  <link rel="stylesheet" href="css/index.css"/>
+  <link rel="stylesheet" href="css/font/Luxi Mono/web fonts/luximono_regular_macroman/stylesheet.css">
+  <link rel="stylesheet" href="css/font/Nimbus Sans/web fonts/nimbussansl_regular_macroman/stylesheet.css"
   <script defer src="scripts/import.js"></script>
   <script defer src="scripts/export.js"></script>
   <script defer src="scripts/page.js"></script>
@@ -113,8 +115,8 @@
       <div class="attributeTC">
   
         <div class="boxAttributeT">Attributes</div>
-        <h6 class="attributeHead">Ability<br>Score</h6>
-        <h6 class="attributeHead">Ability<br>Mod</h6>
+        <h6 class="attributeHead">Abil<br>Score</h6>
+        <h6 class="attributeHead">Abil<br>Mod</h6>
         <h6 class="attributeHead">Temp<br>Adjust</h6>
         <h6 class="attributeHead">Temp<br>Mod</h6>
   
@@ -148,7 +150,7 @@
         <input type="text" id="intTempMod" class="attributeInputFields">
       </div>
       <div class="attributeC">
-        <div class="boxT">WIS Wisdom</div>
+        <div class="boxT">WIS<br>Wisdom</div>
         <input type="text" id="wisScore" class="attributeInputFields">
         <input type="text" id="wisMod" class="attributeInputFields">
         <input type="text" id="wisTempAdjust" class="attributeInputFields">
@@ -497,7 +499,7 @@
     <input type="checkbox" id="cra1Prof" class="skillsRadio">
     <h5 class="skillsDetailedT">Craft
       <input type="text" class="skillsCustomFields">
-      <input type="button" class="skillsBtn" value="&#10133;" id="craftAddBtn" onclick="spawnCraft()" style="background-color:grey;">
+      <input type="button" class="skillsBtn" value="&#10133;" id="craftAddBtn" onclick="spawnSkill('craft')" style="background-color:grey;">
     </h5>
     <input type="text" id="cra1Bonus" class="skillsInputFields">
     <h5 class="skillsEqualsT">= Int</h5>
@@ -731,7 +733,7 @@
     <input type="checkbox" id="perf1Prof" class="skillsRadio">
     <h5 class="skillsDetailedT">Perform
       <input type="text" class="skillsCustomFields">
-      <input type="button" class="skillsBtn" value="&#10133;" id="perfAddBtn" onclick="spawnPerf()" style="background-color:grey;">
+      <input type="button" class="skillsBtn" value="&#10133;" id="perfAddBtn" onclick="spawnSkill('perform')" style="background-color:grey;">
     </h5>
     <input type="text" id="perf1Bonus" class="skillsInputFields">
     <h5 class="skillsEqualsT">= Cha</h5>
@@ -745,7 +747,7 @@
     <input type="checkbox" id="pro1Prof" class="skillsRadio">
     <h5 class="skillsDetailedT">Profession
       <input type="text" class="skillsCustomFields" style="width: 30%;">
-      <input type="button" class="skillsBtn" value="&#10133;" id="profAddBtn" onclick="spawnProf()" style="background-color:grey;">
+      <input type="button" class="skillsBtn" value="&#10133;" id="profAddBtn" onclick="spawnSkill('profession')" style="background-color:grey;">
     </h5>
     <input type="text" id="pro1Bonus" class="skillsInputFields">
     <h5 class="skillsEqualsT">= Wis</h5>
