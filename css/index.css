@@ -19,7 +19,6 @@ textarea{
     overflow-y:hidden;
     color:black;
     font-family: "Nimbus Sans", Arial, sans-serif;
-    font-weight: lighter;
 
 }
 .sheet{
@@ -138,9 +137,7 @@ h6{
     color:black;
 
     width:auto;
-    /* margin-right: .2vw; */
     margin-bottom: 10px;
-    /* margin-left: 10px; */ 
     
 }
 h7{
@@ -158,13 +155,12 @@ div{
     display:inline-block;
 
 }
-.personalInfo{ /* Make this container scale down when on mobile devices*/
+.personalInfo{
 
     position: relative;
     padding-top:1%;
     width: 50%;
     display:inline-block;
-    /* height:auto; */
 
 }
 .personalInfoInput{
@@ -181,11 +177,9 @@ input{
     width:100%;
     margin:0px;
     border-color: black;
-    border-width: .2em;
-    /* TODO: Work on input fields so that they scale better */
-}
-/* 29 is the magic number DO A CODE REVIEW AFTER THIS SECTION*/
+    border-width: 2px;
 
+}
 .nameOfPCC{
 
     width:40%;
@@ -250,9 +244,6 @@ input{
 }
 .attributes{
 
-    /* position:relative; */
-    /* top:85%; */
-    /* left:22.5%; */
     width:  45%;
     display:inline-block;
 
@@ -268,7 +259,6 @@ input{
     width: 13%;
     font-size: .9rem;
     margin-left: 3%;
-    /*TODO research display: table*/
 }
 .attributeC{
 
@@ -317,7 +307,6 @@ input{
     vertical-align: top;
 
 }
-/*hpInit */
 .hpInit{
   
     width:45%;
@@ -434,7 +423,6 @@ input{
     width: 100%;
 
 }
-/* Find a way to make multiline input fields */
 #nonLethal{
 
     padding-bottom: 20px;
@@ -535,7 +523,7 @@ input{
 
 }
 .speedInputFieldsTall{
-/* Make this box taller */
+
     vertical-align: top;
     width:4vw;
     
@@ -580,7 +568,6 @@ input{
 .skillsTTot{
 
     width: 30%;
-    /* margin-left: 3%; */
 
 }
 .skillsTLong{
@@ -609,7 +596,6 @@ input{
     height:auto;
     
     display:inline;
-    /* margin-left:.4vw; */
 
 }
 .skillsInputFieldsMisc{
@@ -627,7 +613,6 @@ input{
 }
 .skillsBtn{
 
-    margin-left: .1rem;
     font-size: .8rem;
     width: 1.5rem;
     height: auto;
@@ -697,7 +682,6 @@ input{
 }
 .armorClassInputFieldsLong{
 
-    /* width: 100%; */
     flex-grow: 1;
     
 
@@ -907,13 +891,6 @@ input{
     font-size: 1.5rem;
     height: auto;
     display: block;
-    
-    /* outline-color: transparent;
-    
-    /* border-left: none;
-    border-right:none;
-    outline-color: transparent; */
-    
 
 }
 .weaponsBtnCont{
@@ -1410,7 +1387,6 @@ input{
 .specialAbil{
 
     width: 100%;
-    /* vertical-align: top; */
     height: 25rem;
     overflow-y: auto;
 
@@ -1588,5 +1564,4 @@ input{
         overflow-x: auto;
     
     }
-
 }
