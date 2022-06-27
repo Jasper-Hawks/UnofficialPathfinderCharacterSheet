@@ -378,8 +378,8 @@
   </div>
   </form>
   <div class="weaponsBtnCont">
-    <input type="button" class="weaponsBtn" value="&#10133;" onclick="spawnWeap()" id="AddBtn">
-    <input type="button" class="weaponsDelBtn" value="&#10134;" onclick="showModal('Would you like to remove the selected weapon entires?','weap')">
+    <input type="button" class="weaponsBtn" value="+" onclick="spawnWeap()" id="AddBtn">
+    <input type="button" class="weaponsDelBtn" value="-" onclick="showModal('Would you like to remove the selected weapon entires?','weap')">
 </div>
   <div class="weaponsScroll"> 
     <form class="weapons" id="wform0">
@@ -497,7 +497,7 @@
     <input type="checkbox" id="cra1Prof" class="skillsRadio">
     <h5 class="skillsDetailedT">Craft
       <input type="text" class="skillsCustomFields">
-      <input type="button" class="skillsBtn" value="&#10133;" id="craftAddBtn" onclick="spawnSkill('craft')" style="background-color:grey;">
+      <input type="button" class="skillsBtn" value="+" id="craftAddBtn" onclick="spawnSkill('craft')" style="background-color:grey;">
     </h5>
     <input type="text" id="cra1Bonus" class="skillsInputFields">
     <h5 class="skillsEqualsT">= Int</h5>
@@ -731,7 +731,7 @@
     <input type="checkbox" id="perf1Prof" class="skillsRadio">
     <h5 class="skillsDetailedT">Perform
       <input type="text" class="skillsCustomFields">
-      <input type="button" class="skillsBtn" value="&#10133;" id="perfAddBtn" onclick="spawnSkill('perform')" style="background-color:grey;">
+      <input type="button" class="skillsBtn" value="+" id="perfAddBtn" onclick="spawnSkill('perform')" style="background-color:grey;">
     </h5>
     <input type="text" id="perf1Bonus" class="skillsInputFields">
     <h5 class="skillsEqualsT">= Cha</h5>
@@ -745,7 +745,7 @@
     <input type="checkbox" id="pro1Prof" class="skillsRadio">
     <h5 class="skillsDetailedT">Profession
       <input type="text" class="skillsCustomFields" style="width: 30%;">
-      <input type="button" class="skillsBtn" value="&#10133;" id="profAddBtn" onclick="spawnSkill('profession')" style="background-color:grey;">
+      <input type="button" class="skillsBtn" value="+" id="profAddBtn" onclick="spawnSkill('profession')" style="background-color:grey;">
     </h5>
     <input type="text" id="pro1Bonus" class="skillsInputFields">
     <h5 class="skillsEqualsT">= Wis</h5>
@@ -849,7 +849,7 @@
 <div id="pg2">
   <div class="mainPg2">
   <div class="acItems">
-  <input type="button" class="acItemsBtn" onclick="spawnACItem()" value="&#10133;" id="acItemsAddBtn"> <input type="button" class="acItemsBtnDelete" onclick="showModal('Would you like to remove the selected AC Items?','ac')" value="&#10134;"><br>
+  <input type="button" class="acItemsBtn" onclick="spawnACItem()" value="+" id="acItemsAddBtn"> <input type="button" class="acItemsBtnDelete" onclick="showModal('Would you like to remove the selected AC Items?','ac')" value="-"><br>
   <div class="acItemsScroll">
     <form class="acItemsForm" id="aform0">
       <div class="acItemsTitleCont">
@@ -893,7 +893,7 @@
   <div class="leftColumnPg2">
     <div class="gear">
       <div class="gearTitle">Gear</div>
-      <input type="button" class="gearBtn" value="&#10133;" onclick="spawnGear()" id="gearAddBtn"><input type="button" class="gearBtnDelete" value="&#10134;" onclick="showModal('Would you like to remove the selected gear entries?','gear')">
+      <input type="button" class="gearBtn" value="+" onclick="spawnGear()" id="gearAddBtn"><input type="button" class="gearBtnDelete" value="-" onclick="showModal('Would you like to remove the selected gear entries?','gear')">
       <form class="gearContent" id="g0">
         <div class="gearTitles">
           <div class="gearSubHeadItem">Item</div>
@@ -964,7 +964,7 @@
     <div class="feats">
       <div class="featsHeader">
       <div class="featsTitle">Feats</div>
-      <input type="button" class="featsBtn" value="&#10133;" onclick="spawnFeat()" id="featsAddBtn"><input type="button" class="featsBtnDelete" value="&#10134;" onclick="showModal('Would you like to remove the selected feats?','feat')">
+      <input type="button" class="featsBtn" value="+" onclick="spawnFeat()" id="featsAddBtn"><input type="button" class="featsBtnDelete" value="-" onclick="showModal('Would you like to remove the selected feats?','feat')">
       </div>
       <form class="featsCont" id="fform0">
         <input type="checkbox" class="featsCheckbox">
@@ -974,7 +974,7 @@
     <div class="specialAbil">
         <div class="specialAbilHeader">
           <div class="specialAbilTitle">Special Abilities</div>
-          <input type="button" class="specialAbilBtn" value="&#10133;" onclick="spawnAbil()" id="specialAbilAddBtn"><input type="button" class="specialAbilBtnDelete" value="&#10134;" onclick="showModal('Would you like to remove the selected abilities?','abil')">
+          <input type="button" class="specialAbilBtn" value="+" onclick="spawnAbil()" id="specialAbilAddBtn"><input type="button" class="specialAbilBtnDelete" value="-" onclick="showModal('Would you like to remove the selected abilities?','abil')">
         </div>
         <form class="specialAbilCont" id="sform0">
           <input type="checkbox" class="specialAbilCheckbox">
@@ -1208,7 +1208,6 @@
 </div>
 <script>
   
-
     function showModal(prompt,type){
 
         m = document.getElementById("modal");

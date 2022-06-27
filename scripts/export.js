@@ -3,7 +3,7 @@ const download = function (data){
 
     //Create a blob (Binary Large Object) that will
     //act as the file that we need to export. The
-    // data parameter will be the array from the 
+    // data parameter will be the array from the
     // getData function
     const blob = new Blob([data], {type: 'text/csv'});
 
@@ -23,9 +23,8 @@ const download = function (data){
     document.body.removeChild(a);
     // Then click the link for the user
     // and delete it from the webpage
-    
+
   }
-//TODO Rename this
 function getData() {
   //TEXT FIELD VALUES
 
@@ -48,7 +47,7 @@ function getData() {
       // checkbox input fields don't have any value and return undefined
       // the for loop wouldn't work.
       try{
-          // Split each entry in the nodes array into an array 
+          // Split each entry in the nodes array into an array
           // of letters that make up the entry
           let seg = nodes[k].value.split("");
 
@@ -61,8 +60,7 @@ function getData() {
           }
           // Join the letters back together
           seg[j] = seg.join("")
-          console.log(seg[j])
-          // Assign the new comma escaped value to 
+          // Assign the new comma escaped value to
           // the array for exporting
           nodes[k].value = seg[j]
 
@@ -79,12 +77,12 @@ function getData() {
         // created, along with any checkboxes the user may have
         // activated.
         if (nodes[k].type == "checkbox"){
-      
+
           nodeValues.push(nodes[k].checked);
-  
+
         }else if (nodes[k].id.match(/wform[0-9]/g)){
           w += 1;
-  
+
         }else if (nodes[k].id.match(/craftSkills/g)){
 
           cr += 1;
@@ -98,28 +96,28 @@ function getData() {
           pr += 1;
 
         } else if (nodes[k].id.match(/aform[0-9]/g)){
-  
+
           ac += 1;
-        
+
         }else if (nodes[k].id.match(/gform[0-9]/g)){
-  
+
           ge += 1;
-  
+
         }else if (nodes[k].id.match(/fform[0-9]/g)){
-  
+
           fe += 1;
-  
+
         }else if (nodes[k].id.match(/sform[0-9]/g)){
-  
+
           sp += 1;
-  
+
         }else{
         // If the value goes through all of those ifs
         // then it is a value that belongs in one of the
         // text entries. We push it to the values array.
-  
+
         nodeValues.push(nodes[k].value);
-  
+
         }
 
       }
@@ -137,13 +135,13 @@ function getData() {
 
   // Once the user presses export all of the commas
   // in all of the input fields get changed to the HTML
-  // code &#44. This for loop replaces those codes with 
+  // code &#44. This for loop replaces those codes with
   // commas for a better user experience
   for (let i = 0; i < nodeValues.length; i++){
     try{
 
       if (nodeValues[i].includes('&#44')){
-        
+
         nodes[i].value = nodeValues[i].replace(/&#44/g,',')
 
       }
