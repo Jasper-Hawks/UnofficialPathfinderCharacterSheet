@@ -3,5 +3,5 @@
 - [x] Add icons to various buttons
 - [x] Refactor spawning JS so that we use less code on skill entries
 - [x] Selected font for main site and text areas
-- [ ] Figure out why importing does not work
-- [ ] Scale fontsize down for button values
+- [x] Figure out why importing does not work
+- [ ] Decrease the amount of entries the current page has to the amount made when the character was exported
