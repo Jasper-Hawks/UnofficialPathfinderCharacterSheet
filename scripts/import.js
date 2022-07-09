@@ -3,7 +3,6 @@
 
 // Find the area where the user inputs their file.
 const fileField = document.querySelector('input[type="file"]')
-
 // Wait for any change on the input area. Then show a modal prompting
 // the user to confirm whether they would like to import their file
 // or not.
