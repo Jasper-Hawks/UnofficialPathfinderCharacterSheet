@@ -4,4 +4,5 @@
 - [x] Refactor spawning JS so that we use less code on skill entries
 - [x] Selected font for main site and text areas
 - [x] Figure out why importing does not work
-- [ ] Decrease the amount of entries the current page has to the amount made when the character was exported
+- [x] Decrease the amount of entries the current page has to the amount made when the character was exported
+- [ ] One day rewrite the showModal function

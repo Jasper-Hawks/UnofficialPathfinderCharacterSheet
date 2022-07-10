@@ -152,7 +152,7 @@ function spawnSkill(skill){
   }
 
   attach.outHTML = attach.innerHTML = `
-  <div class="skillsRow" >
+  <div class="skillsRow" id="` + skill + `form0">
   <input type="checkbox" class="skillsRadio">
   <h5 class="skillsDetailedT">` + skill + `
     <input type="text"

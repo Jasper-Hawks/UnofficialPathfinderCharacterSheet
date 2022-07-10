@@ -12,7 +12,7 @@ fileField.addEventListener('change', function(){
 
 function importData(){
   // Create a FileReader so that we can read the contents
-  // of the file 
+  // of the file
   const reader = new FileReader()
 
   // Read the file uploaded as plain text
@@ -24,108 +24,106 @@ function importData(){
     // run this function
     reader.onload = function(){
 
-      // Make a pattern that we will user to seperate the 
+      // Make a pattern that we will user to seperate the
       // values in the file.
       const regex = /,/mg;
 
+      var w = document.querySelectorAll('#wform0').length;
+      // These entires are unique because they're spawn entires don't
+      // have the coresponding ID so we have to increment them by one
+      var cr = document.querySelectorAll('#Craftform0').length + 1;
+      var pe = document.querySelectorAll('#Performform0').length + 1;
+      var pr = document.querySelectorAll('#Professionform0').length + 1;
+      var ac = document.querySelectorAll('#aform0').length;
+      var ge = document.querySelectorAll('#gform0').length;
+      var fe = document.querySelectorAll('#fform0').length;
+      var sp = document.querySelectorAll('#sform0').length;
+
+      let entryVals = [w,cr,pe,pr,ac,ge,fe,sp];
+      let entryIds = ['#wform0','#Craftform0','#Performform0','#Professionform0','#aform0','#gform0','#fform0','#sform0']
       // When those files are parsed out and we have an array
       // of comma seperated values assign those to a variable.
       const values = reader.result.split(regex)
 
       // Find all of the buttons that can be used to make entries.
-      const weaponsBtn = document.querySelector('#AddBtn');
-      const craftBtn = document.querySelector('#craftAddBtn');
-      const perfBtn = document.querySelector('#perfAddBtn');
-      const profBtn = document.querySelector('#profAddBtn')
-      const acItemsBtn = document.querySelector('#acItemsAddBtn');
-      const gearBtn = document.querySelector('#gearAddBtn');
-      const featsBtn = document.querySelector('#featsAddBtn');
-      const specBtn = document.querySelector('#specialAbilAddBtn');
-  
+      let entryBtns = ['#AddBtn','#craftAddBtn','#perfAddBtn','#profAddBtn','#acItemsAddBtn','#gearAddBtn','#featsAddBtn','#specialAbilAddBtn']
+
       // Create the same number of weapon entries that the user had when
       // they exported. So that data wont be placed in wrong positions
-      for (let j = 0; j < Number(values[values.length - 8]) - 1; ++j){
-  
-        weaponsBtn.click();
-  
+
+      for (let i = 0; i < entryVals.length; i++){
+
+        // This equation finds the 8 values appened to the end of the array
+        // that represent the amount of entries the user had when they exported
+        // the file
+        let importEntries = values[(values.length - 8) + i];
+
+        // If the current amount of entries is more than the amount that the user
+        // had at the time of export
+        if (entryVals[i] > importEntries){
+          
+          for (let j = entryVals[i]; j > importEntries; j--){
+
+            // Remove the entries at the current index of entryIds
+            let entry = document.querySelector(entryIds[i]).remove();
+
+          }
+
+          // If there are more entries than those at the time of export
+        }else if (entryVals[i] < importEntries){
+
+          for (let j = entryVals[i]; j < importEntries; j++){
+
+            let btn = document.querySelector(entryBtns[i]);
+            btn.click()
+
+          }
+
+        }
+
       }
-      for (let j = 0; j < Number(values[values.length - 7]) - 1; ++j){
-  
-        craftBtn.click();
-  
-      }
-      for (let j = 0; j < Number(values[values.length - 6]) - 1; ++j){
-  
-        perfBtn.click();
-  
-      }
-      for (let j = 0; j < Number(values[values.length - 5]) - 1; ++j){
-  
-        profBtn.click();
-  
-      }
-      for (let i = 0; i < Number(values[values.length - 4]) - 1; ++i){
-  
-        acItemsBtn.click();
-  
-      }
-      for (let i = 0; i < Number(values[values.length - 3]) - 1; ++i){
-  
-        gearBtn.click();
-  
-      }
-      for (let i = 0; i < Number(values[values.length - 2]) - 1; ++i){
-  
-        featsBtn.click();
-  
-      }
-      for (let i = 0; i < Number(values[values.length - 1]) - 1; ++i){
-  
-        specBtn.click();
-  
-      }
-  
-      //Scrub the imported data for any comma HTML codes and convert 
+     
+      //Scrub the imported data for any comma HTML codes and convert
       // those codes to commas now that the data has been segmented
       //properly
-  
+
       for (let i = 0; i < values.length;i++){
-  
+
         //If a string in the array contains the following HTML
         // code for commas
         if (values[i].includes('&#44')){
-  
+
           //Turn that code back into a comma. This will
           // not disrupt the csv and people can have
           // characters with commas in their names
           values[i] = values[i].replace(/&#44/g,',')
-  
+
         }
-  
+
       }
-  
+
       //Find all of the input fields and make an array named inputFields out of them
       const inputFields = document.querySelectorAll('input[type=text],input[type=checkbox],textarea')
-  
+
       // Populate text fields with values
       for (let i = 0; i < inputFields.length; ++i){
         if (inputFields[i].type != "checkbox"){
-          
+
             inputFields[i].value = values[i];
-  
-  
+
+
         }else{
-          
+
           // If we find a checkbox populate checkbox fields
           // not input fields
-  
+
           let bool = values[i] == "true" ? true : false;
           inputFields[i].checked = bool;
-  
+
         }
-  
+
       }
-  
+
   }
 
   }else{
