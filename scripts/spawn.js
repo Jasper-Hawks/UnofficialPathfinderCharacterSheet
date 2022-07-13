@@ -114,8 +114,8 @@ function spawnAbil(){
 
   attach.outerHTML = attach.innerHTML = `<form class="specialAbilCont" id="sform0">
   <input type="checkbox" class="specialAbilCheckbox">
-  <input type="text" class="specialAbilInputFields">
-</form>`
+  <textarea type="text" class="specialAbilInputFields"></textarea>
+  </form>`;
 
 }
 // Create one function that deals with the spawning of all skill entries
