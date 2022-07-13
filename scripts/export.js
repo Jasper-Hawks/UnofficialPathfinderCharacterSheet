@@ -33,9 +33,9 @@ function getData() {
   var nodeValues = []; // This array will collect the values of the nodes
   var w = 0; // This variable represents the number of weapon entries
   var ac = 0; // This entry represents the number of AC items entries
-  var cr = -1; // This entry represents the number of Craft skill entries
-  var pe = -1; // This entry represents the number of Perform skill entries
-  var pr = -1; // This entry represents the number of Profession skill entries
+  var cr = 0; // This entry represents the number of Craft skill entries
+  var pe = 0; // This entry represents the number of Perform skill entries
+  var pr = 0; // This entry represents the number of Profession skill entries
   var ge = 0; // This entry represents the number of Gear  entries
   var fe = 0; // This var represents the number of Feats entries
   var sp = 0; // This var represents the number of Special Abilities entries
