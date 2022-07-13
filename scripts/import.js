@@ -38,6 +38,9 @@ function importData(){
       var ge = document.querySelectorAll('#gform0').length;
       var fe = document.querySelectorAll('#fform0').length;
       var sp = document.querySelectorAll('#sform0').length;
+      console.log(cr);
+      console.log(pr);
+      console.log(pe);
 
       let entryVals = [w,cr,pe,pr,ac,ge,fe,sp];
       let entryIds = ['#wform0','#Craftform0','#Performform0','#Professionform0','#aform0','#gform0','#fform0','#sform0']
