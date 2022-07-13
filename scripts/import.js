@@ -31,9 +31,9 @@ function importData(){
       var w = document.querySelectorAll('#wform0').length;
       // These entires are unique because they're spawn entires don't
       // have the coresponding ID so we have to increment them by one
-      var cr = document.querySelectorAll('#Craftform0').length + 1;
-      var pe = document.querySelectorAll('#Performform0').length + 1;
-      var pr = document.querySelectorAll('#Professionform0').length + 1;
+      var cr = document.querySelectorAll('#Craftform0').length;
+      var pe = document.querySelectorAll('#Performform0').length;
+      var pr = document.querySelectorAll('#Professionform0').length;
       var ac = document.querySelectorAll('#aform0').length;
       var ge = document.querySelectorAll('#gform0').length;
       var fe = document.querySelectorAll('#fform0').length;
@@ -65,7 +65,7 @@ function importData(){
           for (let j = entryVals[i]; j > importEntries; j--){
 
             // Remove the entries at the current index of entryIds
-            let entry = document.querySelector(entryIds[i]).remove();
+            document.querySelector(entryIds[i]).remove();
 
           }
 

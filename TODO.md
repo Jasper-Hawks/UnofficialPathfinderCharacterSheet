@@ -6,3 +6,4 @@
 - [x] Figure out why importing does not work
 - [x] Decrease the amount of entries the current page has to the amount made when the character was exported
 - [ ] One day rewrite the showModal function
+- [ ] Change the craft, perf, and pro ids to make them more consistent with the rest of the site

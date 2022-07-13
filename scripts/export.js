@@ -29,7 +29,7 @@ function getData() {
   //TEXT FIELD VALUES
 
   //Find all of the fields that can be modified and can be created
-  var nodes = document.querySelectorAll('input[type=text],[id^=wform],input[type=checkbox],[id^=aform],[id^=gform],[id^=fform],[id^=sform],textarea,[id^=craftSkills],[id^=performSkills],[id^=professionSkills]');
+  var nodes = document.querySelectorAll('input[type=text],[id^=wform],input[type=checkbox],[id^=aform],[id^=gform],[id^=fform],[id^=sform],textarea,[id^=Craftform],[id^=Performform],[id^=Professionform]');
   var nodeValues = []; // This array will collect the values of the nodes
   var w = 0; // This variable represents the number of weapon entries
   var ac = 0; // This entry represents the number of AC items entries
@@ -83,15 +83,15 @@ function getData() {
         }else if (nodes[k].id.match(/wform[0-9]/g)){
           w += 1;
 
-        }else if (nodes[k].id.match(/craftSkills/g)){
+        }else if (nodes[k].id.match(/Craftform[0-9]/g)){
 
           cr += 1;
 
-        }else if (nodes[k].id.match(/performSkills/g)){
+        }else if (nodes[k].id.match(/Performform[0-9]/g)){
 
           pe += 1;
 
-        }else if (nodes[k].id.match(/professionSkills/g)){
+        }else if (nodes[k].id.match(/Professionform[0-9]/g)){
 
           pr += 1;
 
