@@ -2,13 +2,13 @@
 // certain buttons
 
 // Each function finds the entries parent element, and attaches
-// raw HTML to the parent, creating a new entry. 
+// raw HTML to the parent, creating a new entry.
 function spawnWeap(){
 
     // Create a clone of an element with class weapons
     // set it's class attribute
-    // then append it to the bottom of the weapons section 
-  
+    // then append it to the bottom of the weapons section
+
     var weap = document.querySelector(".weaponsScroll");
     var attach = document.createElement('div');
     attach.innerHTML = `<form class="weapons" id="wform0">
@@ -80,7 +80,7 @@ function spawnACItem(){
 
 }
 function spawnGear(){
-
+    console.log("Spawn")
     let g = document.querySelector('.gearContent');
     var attach = document.createElement('div');
     attach.innerHTML = `
@@ -95,9 +95,9 @@ function spawnGear(){
 function spawnFeat(){
 
   let f = document.querySelector('.feats');
-  let attach = document.createElement('div');  
+  let attach = document.createElement('div');
   f.appendChild(attach);
-  
+
   // Use this method instead because we don't want the
   // div to conflict with the .feats flex container
   attach.outerHTML = attach.innerHTML = `<form class="featsCont" id="fform0">
@@ -109,7 +109,7 @@ function spawnFeat(){
 function spawnAbil(){
 
   let a = document.querySelector('.specialAbil');
-  let attach = document.createElement('div');  
+  let attach = document.createElement('div');
   a.appendChild(attach);
 
   attach.outerHTML = attach.innerHTML = `<form class="specialAbilCont" id="sform0">
@@ -120,18 +120,18 @@ function spawnAbil(){
 }
 // Create one function that deals with the spawning of all skill entries
 function spawnSkill(skill){
-  
+
   let atr =  "" // This varariable represents the atribute that skill uses WIS INT or CHA
   let s = document.querySelector('#' + skill + "SkillsRow");
   let attach = document.createElement('div');
-  s.appendChild(attach); 
+  s.appendChild(attach);
 
   // This will be used in order to change the name of the skill
   // in the HTML and to format it properly
   skill = skill.split("")
   skill[0] = skill[0].toUpperCase();
   skill = skill.join("");
-        
+
   // Each skill has different attributes that they use and they will be set with the
   // following if/else if statements
   if (skill == "Profession"){
@@ -142,7 +142,7 @@ function spawnSkill(skill){
 
     atr = "Cha"
 
-  }else{ 
+  }else{
     // The only way this function will be called is within the context of spawning skills.
     // We do not need to define craft because skills can only be one of three options. If it is
     // neither Profession or Perform is must be Craft

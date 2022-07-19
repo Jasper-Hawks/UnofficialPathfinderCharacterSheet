@@ -14,14 +14,15 @@ function showModal(prompt,type){
     if (type == "weap"){
 
         document.getElementById("modalYes").addEventListener("click", function(){
-        
+
         m.style.display = "none";
         delWeap();
 
-        })
+
+        },true);
 
         document.getElementById("modalNo").addEventListener("click",function(){
-        
+
         m.style.display = "none";
 
     });
@@ -29,14 +30,14 @@ function showModal(prompt,type){
     }else if (type == "abil"){
 
         document.getElementById("modalYes").addEventListener("click", function(){
-        
+
         m.style.display = "none";
         delAbil();
 
         })
 
         document.getElementById("modalNo").addEventListener("click",function(){
-        
+
         m.style.display = "none";
 
     });
@@ -44,58 +45,58 @@ function showModal(prompt,type){
     }else if (type == "feat"){
 
         document.getElementById("modalYes").addEventListener("click", function(){
-        
+
         m.style.display = "none";
         delFeat();
 
         })
 
         document.getElementById("modalNo").addEventListener("click",function(){
-        
+
         m.style.display = "none";
 
     });
     }else if (type == "ac"){
 
         document.getElementById("modalYes").addEventListener("click", function (){
-        
+
         m.style.display = "none";
         delACItem();
 
         })
 
         document.getElementById("modalNo").addEventListener("click",function (){
-        
+
         m.style.display = "none";
 
     });
-    
+
     }else if (type == "gear"){
 
     document.getElementById("modalYes").addEventListener("click", function (){
-        
+
         m.style.display = "none";
         delGear();
 
-        })
+        });
 
         document.getElementById("modalNo").addEventListener("click",function (){
-        
+
         m.style.display = "none";
 
-    });
+        });
 
     }else if (type == "import"){
 
     document.getElementById("modalYes").addEventListener("click", function (){
-        
+
         m.style.display = "none";
         importData();
 
     })
 
     document.getElementById("modalNo").addEventListener("click",function (){
-        
+
         m.style.display = "none";
 
     });
@@ -105,7 +106,7 @@ function showModal(prompt,type){
     yesBtn.style.backgroundColor = "grey";
     yesBtn.value = "Ok";
     document.getElementById("modalYes").addEventListener("click", function (){
-        
+
         m.style.display = "none";
         noBtn.style.display = "inline";
         yesBtn.style.backgroundColor = "red";

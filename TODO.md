@@ -1,4 +1,4 @@
-- [x] Work on CMD and CMB operators 
+- [x] Work on CMD and CMB operators
 - [x] Replace feats and special abils regular input with text areas
 - [x] Add icons to various buttons
 - [x] Refactor spawning JS so that we use less code on skill entries
@@ -7,3 +7,5 @@
 - [x] Decrease the amount of entries the current page has to the amount made when the character was exported
 - [ ] One day rewrite the showModal function
 - [ ] Change the craft, perf, and pro ids to make them more consistent with the rest of the site
+- [x] Fix deleteing entries after file is imported (craft,perf,prof not affected)
+- [ ] Fix deleting AC items

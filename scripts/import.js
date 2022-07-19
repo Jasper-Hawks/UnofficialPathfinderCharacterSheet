@@ -8,6 +8,7 @@ const fileField = document.querySelector('input[type="file"]')
 // or not.
 fileField.addEventListener('change', function(){
   showModal("Would you like to import a character via a CSV file? (Your current character will be deleted)","import")
+  console.log("Its me")
 },false)
 
 function importData(){
@@ -20,10 +21,11 @@ function importData(){
 
   //Check to see if a file ends with the .csv file extension
   if (fileField.value.match(/\.csv/g)){
+
     // Once a file can be read successfully
     // run this function
     reader.onload = function(){
-
+      console.log("Reading")
       // Make a pattern that we will user to seperate the
       // values in the file.
       const regex = /,/mg;
@@ -140,7 +142,8 @@ function importData(){
 
       }
 
-  }
+      fileField.value = null;
+    }
 
   }else{
     // Otherwise tell the user that the file is invalid and do not import the
