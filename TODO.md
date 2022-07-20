@@ -8,4 +8,4 @@
 - [ ] One day rewrite the showModal function
 - [ ] Change the craft, perf, and pro ids to make them more consistent with the rest of the site
 - [x] Fix deleteing entries after file is imported (craft,perf,prof not affected)
-- [ ] Fix deleting AC items
+- [x] Fix deleting AC items (Bandaid)

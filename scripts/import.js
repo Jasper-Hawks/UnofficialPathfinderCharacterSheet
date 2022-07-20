@@ -40,7 +40,7 @@ function importData(){
       var ge = document.querySelectorAll('#gform0').length;
       var fe = document.querySelectorAll('#fform0').length;
       var sp = document.querySelectorAll('#sform0').length;
-      
+
       let entryVals = [w,cr,pe,pr,ac,ge,fe,sp];
       let entryIds = ['#wform0','#Craftform0','#Performform0','#Professionform0','#aform0','#gform0','#fform0','#sform0']
       // When those files are parsed out and we have an array
@@ -63,7 +63,7 @@ function importData(){
         // If the current amount of entries is more than the amount that the user
         // had at the time of export
         if (entryVals[i] > importEntries){
-          
+
           for (let j = entryVals[i]; j > importEntries; j--){
 
             // Remove the entries at the current index of entryIds
@@ -100,7 +100,7 @@ function importData(){
         }
 
       }
-     
+
       //Scrub the imported data for any comma HTML codes and convert
       // those codes to commas now that the data has been segmented
       //properly

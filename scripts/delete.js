@@ -46,7 +46,7 @@ function delACItem(){
 
         if (entry.checked){
 
-        entry.parentElement.remove();
+        entry.parentElement.parentElement.parentElement.remove();
 
         }
 

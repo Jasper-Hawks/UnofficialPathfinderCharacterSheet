@@ -923,6 +923,11 @@ input{
     margin-top: 1vw;
 
 }
+.acItems{
+
+    width: 100%;
+
+}
 .acItemsBtn{
 
     background-color: lightgrey;
@@ -963,8 +968,13 @@ input{
 }
 .acItemsInput{
 
-    
     border-width: 3px;
+
+}
+.acItemsTotalInput{
+
+    border-width: 3px;
+    font-size: 1.3rem;
 
 }
 .acItemsTitleCont{
@@ -986,6 +996,8 @@ input{
 .acItemsBonusCont{
 
     width: 20%;
+    margin: 0;
+    font-size: 0%;
     flex-direction: column;
 
 }
@@ -995,13 +1007,14 @@ input{
     background-color: black;
     color: white;
     display: inline-block;
-    font-size: .9rem;
+    font-size: 1rem;
     width:100%;
     text-align: center;
 }
 .acItemsTypeCont{
 
     width: 20%;
+    margin: 0;
     flex-direction: column;
 
 }
@@ -1011,7 +1024,7 @@ input{
     background-color: black;
     color: white;
     display: inline-block;
-    font-size: .9rem;
+    font-size: 1rem;
     width: 100%;
     text-align: center;
 }
@@ -1027,7 +1040,7 @@ input{
     background-color: black;
     color: white;
     display: inline-block;
-    font-size: .9rem;
+    font-size: 1rem;
     width:100%;
     text-align: center;
 }
@@ -1043,7 +1056,7 @@ input{
     background-color: black;
     color: white;
     display: inline-block;
-    font-size: .9rem;
+    font-size: 1rem;
     width: 100%;
     text-align: center;
 }
@@ -1059,7 +1072,7 @@ input{
     background-color: black;
     color: white;
     display: inline-block;
-    font-size: .9rem;
+    font-size: 1rem;
     width: 100%;
     text-align: center;
 }
@@ -1075,9 +1088,15 @@ input{
     background-color: black;
     color: white;
     display: inline-block;
-    font-size: .9rem;
+    font-size: 1rem;
     width: 100%;
     text-align: center;
+}
+.acItemsTotalCont{
+
+    width: 100%;
+    flex-direction: column;
+
 }
 .acItemsTotalTitle{
 
@@ -1086,8 +1105,8 @@ input{
     color: white;
     display: inline-block;
     width: 100%;
-    font-size: 1rem;
-    height:40%;
+    font-size: 1.2rem;
+    height:100%;
     text-align: left;
 
 }
