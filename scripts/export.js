@@ -137,12 +137,13 @@ function getData() {
   // in all of the input fields get changed to the HTML
   // code &#44. This for loop replaces those codes with
   // commas for a better user experience
-  for (let i = 0; i < nodeValues.length; i++){
+//  console.log(nodes)
+  for (let i = 0; i < nodes.length; i++){
     try{
 
-      if (nodeValues[i].includes('&#44')){
+      if (nodes[i].value.includes('&#44')){
 
-        nodes[i].value = nodeValues[i].replace(/&#44/g,',')
+        nodes[i].value = nodes[i].value.replace(/&#44/g,',')
 
       }
 
